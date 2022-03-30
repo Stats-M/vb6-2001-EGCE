@@ -12,7 +12,7 @@ Begin VB.Form frmBrowser
    ScaleWidth      =   10815
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton Command3 
-      Caption         =   "Повтор"
+      Caption         =   "РџРѕРІС‚РѕСЂ"
       Height          =   350
       Left            =   9345
       TabIndex        =   23
@@ -82,7 +82,7 @@ Begin VB.Form frmBrowser
    End
    Begin VB.CommandButton Command2 
       Cancel          =   -1  'True
-      Caption         =   "Стоп"
+      Caption         =   "РЎС‚РѕРї"
       Height          =   350
       Left            =   9345
       TabIndex        =   10
@@ -90,7 +90,7 @@ Begin VB.Form frmBrowser
       Width           =   1170
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "Начать"
+      Caption         =   "РќР°С‡Р°С‚СЊ"
       Default         =   -1  'True
       Enabled         =   0   'False
       Height          =   350
@@ -127,7 +127,7 @@ Begin VB.Form frmBrowser
       Width           =   645
    End
    Begin VB.Label Label15 
-      Caption         =   "Ошибок сервера "
+      Caption         =   "РћС€РёР±РѕРє СЃРµСЂРІРµСЂР° "
       Height          =   225
       Left            =   210
       TabIndex        =   19
@@ -144,7 +144,7 @@ Begin VB.Form frmBrowser
       WordWrap        =   -1  'True
    End
    Begin VB.Label Label13 
-      Caption         =   "Ошибок закачки"
+      Caption         =   "РћС€РёР±РѕРє Р·Р°РєР°С‡РєРё"
       Height          =   225
       Left            =   210
       TabIndex        =   17
@@ -152,7 +152,7 @@ Begin VB.Form frmBrowser
       Width           =   2010
    End
    Begin VB.Label Label12 
-      Caption         =   "Общая информация:"
+      Caption         =   "РћР±С‰Р°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ:"
       Height          =   225
       Left            =   3255
       TabIndex        =   16
@@ -200,7 +200,7 @@ Begin VB.Form frmBrowser
       Y2              =   1785
    End
    Begin VB.Label Label7 
-      Caption         =   "Качалка N1 - статус:"
+      Caption         =   "РљР°С‡Р°Р»РєР° N1 - СЃС‚Р°С‚СѓСЃ:"
       Height          =   225
       Left            =   3255
       TabIndex        =   5
@@ -208,7 +208,7 @@ Begin VB.Form frmBrowser
       Width           =   1590
    End
    Begin VB.Label Label5 
-      Caption         =   "Из них обработано"
+      Caption         =   "РР· РЅРёС… РѕР±СЂР°Р±РѕС‚Р°РЅРѕ"
       Height          =   225
       Left            =   210
       TabIndex        =   4
@@ -225,7 +225,7 @@ Begin VB.Form frmBrowser
       Width           =   645
    End
    Begin VB.Label Label3 
-      Caption         =   "Найдено ссылок"
+      Caption         =   "РќР°Р№РґРµРЅРѕ СЃСЃС‹Р»РѕРє"
       Height          =   225
       Left            =   210
       TabIndex        =   2
@@ -242,7 +242,7 @@ Begin VB.Form frmBrowser
       Width           =   645
    End
    Begin VB.Label Label1 
-      Caption         =   "Закачивается страница"
+      Caption         =   "Р—Р°РєР°С‡РёРІР°РµС‚СЃСЏ СЃС‚СЂР°РЅРёС†Р°"
       Height          =   225
       Left            =   210
       TabIndex        =   0
@@ -250,66 +250,66 @@ Begin VB.Form frmBrowser
       Width           =   1905
    End
    Begin VB.Menu mnuFile 
-      Caption         =   "Файл"
+      Caption         =   "Р¤Р°Р№Р»"
       Begin VB.Menu mnuWriteAuthors 
-         Caption         =   "Записать авторов"
+         Caption         =   "Р—Р°РїРёСЃР°С‚СЊ Р°РІС‚РѕСЂРѕРІ"
       End
       Begin VB.Menu mnuExit 
-         Caption         =   "Выход"
+         Caption         =   "Р’С‹С…РѕРґ"
       End
    End
    Begin VB.Menu mnuDownload 
-      Caption         =   "Закачка"
+      Caption         =   "Р—Р°РєР°С‡РєР°"
       Begin VB.Menu mnuConnect 
-         Caption         =   "Подключиться"
+         Caption         =   "РџРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ"
       End
       Begin VB.Menu mnuHyp2 
          Caption         =   "-"
       End
       Begin VB.Menu mnuStart 
-         Caption         =   "Начать"
+         Caption         =   "РќР°С‡Р°С‚СЊ"
       End
       Begin VB.Menu mnuStop 
-         Caption         =   "Остановить"
+         Caption         =   "РћСЃС‚Р°РЅРѕРІРёС‚СЊ"
       End
       Begin VB.Menu mnuView 
-         Caption         =   "Просмотр HTML"
+         Caption         =   "РџСЂРѕСЃРјРѕС‚СЂ HTML"
       End
       Begin VB.Menu mnuHyp3 
          Caption         =   "-"
       End
       Begin VB.Menu mnuOptions 
-         Caption         =   "Настройки..."
+         Caption         =   "РќР°СЃС‚СЂРѕР№РєРё..."
       End
    End
    Begin VB.Menu mnuFavorites 
-      Caption         =   "Избранное"
+      Caption         =   "РР·Р±СЂР°РЅРЅРѕРµ"
       Begin VB.Menu mnuProse 
-         Caption         =   "Проза"
+         Caption         =   "РџСЂРѕР·Р°"
          Begin VB.Menu mnuF002 
-            Caption         =   "Прыжок"
+            Caption         =   "РџСЂС‹Р¶РѕРє"
          End
       End
       Begin VB.Menu mnuOfftop 
-         Caption         =   "Оффтопики"
+         Caption         =   "РћС„С„С‚РѕРїРёРєРё"
          Begin VB.Menu mnuF001 
-            Caption         =   "Завтрак холостяка"
+            Caption         =   "Р—Р°РІС‚СЂР°Рє С…РѕР»РѕСЃС‚СЏРєР°"
          End
       End
       Begin VB.Menu mnuF003 
-         Caption         =   "Создание клуба"
+         Caption         =   "РЎРѕР·РґР°РЅРёРµ РєР»СѓР±Р°"
       End
    End
    Begin VB.Menu mnuHelp 
-      Caption         =   "Справка"
+      Caption         =   "РЎРїСЂР°РІРєР°"
       Begin VB.Menu mnuHelpContents 
-         Caption         =   "Вызов справки"
+         Caption         =   "Р’С‹Р·РѕРІ СЃРїСЂР°РІРєРё"
       End
       Begin VB.Menu mnuHyp1 
          Caption         =   "-"
       End
       Begin VB.Menu mnuAbout 
-         Caption         =   "О программе"
+         Caption         =   "Рћ РїСЂРѕРіСЂР°РјРјРµ"
       End
    End
 End
@@ -321,40 +321,40 @@ Attribute VB_Exposed = False
 Option Explicit
 Option Compare Text
 
-Private Const MaxRetryAttempts = 3  'Максимальное число повторных попыток закачки страницы
+Private Const MaxRetryAttempts = 3  'РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ РїРѕРІС‚РѕСЂРЅС‹С… РїРѕРїС‹С‚РѕРє Р·Р°РєР°С‡РєРё СЃС‚СЂР°РЅРёС†С‹
 
-'Надеюсь, у всех компьютеры не меньше P-II? :) Кто еще не, я не виноват!
-'Специально для P-II и круче будем пользоваться только 32-х битными переменными.
-Private StartPos As Long        'Начальная позиция для вырезания подстрок
-Private EndPos As Long          'Конечная позиция для вырезания подстрок
-Private TopicNum As Long        'Номер ветки
-Private email As String         'e-mail автора (отключено в публичной версии)
-Private Nickname As String      'Ник автора
-Private msgHREF As String       'URL собственно сообщения
-Private msgHead As String       'Заголовок сообщения
-Private Indent As Long          'Отступ сообщения
-Private tokenname As String     'Разыскиваемый параметр
-Private lResult As Long         'Дополнительная переменная Long
-''LEGACY Private FirstTime(2) As Boolean 'Для правильного функционирования Inet
-Private strMess As String       'Для общения закачек с остальной программой
-Private vtData As Variant       'Рекомендовано Microsoft, для информации от качалки
-Private bDone As Boolean        'Флаги работы качалок
-Private bCancel As Boolean      'TRUE, если была нажата кнопка Cancel
-Private GettingURLs As Boolean  'Указатель для таймера, что закачивается главная страница
-Private Loading As Boolean      'При загрузке нужно обойти некоторые функции
-Private lRetry As Long           'Повторные запросы
+'РќР°РґРµСЋСЃСЊ, Сѓ РІСЃРµС… РєРѕРјРїСЊСЋС‚РµСЂС‹ РЅРµ РјРµРЅСЊС€Рµ P-II? :) РљС‚Рѕ РµС‰Рµ РЅРµ, СЏ РЅРµ РІРёРЅРѕРІР°С‚!
+'РЎРїРµС†РёР°Р»СЊРЅРѕ РґР»СЏ P-II Рё РєСЂСѓС‡Рµ Р±СѓРґРµРј РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ С‚РѕР»СЊРєРѕ 32-С… Р±РёС‚РЅС‹РјРё РїРµСЂРµРјРµРЅРЅС‹РјРё.
+Private StartPos As Long        'РќР°С‡Р°Р»СЊРЅР°СЏ РїРѕР·РёС†РёСЏ РґР»СЏ РІС‹СЂРµР·Р°РЅРёСЏ РїРѕРґСЃС‚СЂРѕРє
+Private EndPos As Long          'РљРѕРЅРµС‡РЅР°СЏ РїРѕР·РёС†РёСЏ РґР»СЏ РІС‹СЂРµР·Р°РЅРёСЏ РїРѕРґСЃС‚СЂРѕРє
+Private TopicNum As Long        'РќРѕРјРµСЂ РІРµС‚РєРё
+Private email As String         'e-mail Р°РІС‚РѕСЂР° (РѕС‚РєР»СЋС‡РµРЅРѕ РІ РїСѓР±Р»РёС‡РЅРѕР№ РІРµСЂСЃРёРё)
+Private Nickname As String      'РќРёРє Р°РІС‚РѕСЂР°
+Private msgHREF As String       'URL СЃРѕР±СЃС‚РІРµРЅРЅРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
+Private msgHead As String       'Р—Р°РіРѕР»РѕРІРѕРє СЃРѕРѕР±С‰РµРЅРёСЏ
+Private Indent As Long          'РћС‚СЃС‚СѓРї СЃРѕРѕР±С‰РµРЅРёСЏ
+Private tokenname As String     'Р Р°Р·С‹СЃРєРёРІР°РµРјС‹Р№ РїР°СЂР°РјРµС‚СЂ
+Private lResult As Long         'Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ Long
+''LEGACY Private FirstTime(2) As Boolean 'Р”Р»СЏ РїСЂР°РІРёР»СЊРЅРѕРіРѕ С„СѓРЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ Inet
+Private strMess As String       'Р”Р»СЏ РѕР±С‰РµРЅРёСЏ Р·Р°РєР°С‡РµРє СЃ РѕСЃС‚Р°Р»СЊРЅРѕР№ РїСЂРѕРіСЂР°РјРјРѕР№
+Private vtData As Variant       'Р РµРєРѕРјРµРЅРґРѕРІР°РЅРѕ Microsoft, РґР»СЏ РёРЅС„РѕСЂРјР°С†РёРё РѕС‚ РєР°С‡Р°Р»РєРё
+Private bDone As Boolean        'Р¤Р»Р°РіРё СЂР°Р±РѕС‚С‹ РєР°С‡Р°Р»РѕРє
+Private bCancel As Boolean      'TRUE, РµСЃР»Рё Р±С‹Р»Р° РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° Cancel
+Private GettingURLs As Boolean  'РЈРєР°Р·Р°С‚РµР»СЊ РґР»СЏ С‚Р°Р№РјРµСЂР°, С‡С‚Рѕ Р·Р°РєР°С‡РёРІР°РµС‚СЃСЏ РіР»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°
+Private Loading As Boolean      'РџСЂРё Р·Р°РіСЂСѓР·РєРµ РЅСѓР¶РЅРѕ РѕР±РѕР№С‚Рё РЅРµРєРѕС‚РѕСЂС‹Рµ С„СѓРЅРєС†РёРё
+Private lRetry As Long           'РџРѕРІС‚РѕСЂРЅС‹Рµ Р·Р°РїСЂРѕСЃС‹
 Private HTMLDoc As HTMLDocument
 
-'Переменные для работы Feeder - цвета фона и т.д.
-Private COLOR As String         'Цвет фона для HTML-страницы
-Private bColor As Boolean       'Выбирает один из цветов фона
-Private TopicChanged As Boolean 'Отслеживает изменение номера нити обсуждения
-Private LastTopicNum As Long    'Номер темы последнего сообщения (начинать новую таблицу или нет в HTML)
+'РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ СЂР°Р±РѕС‚С‹ Feeder - С†РІРµС‚Р° С„РѕРЅР° Рё С‚.Рґ.
+Private COLOR As String         'Р¦РІРµС‚ С„РѕРЅР° РґР»СЏ HTML-СЃС‚СЂР°РЅРёС†С‹
+Private bColor As Boolean       'Р’С‹Р±РёСЂР°РµС‚ РѕРґРёРЅ РёР· С†РІРµС‚РѕРІ С„РѕРЅР°
+Private TopicChanged As Boolean 'РћС‚СЃР»РµР¶РёРІР°РµС‚ РёР·РјРµРЅРµРЅРёРµ РЅРѕРјРµСЂР° РЅРёС‚Рё РѕР±СЃСѓР¶РґРµРЅРёСЏ
+Private LastTopicNum As Long    'РќРѕРјРµСЂ С‚РµРјС‹ РїРѕСЃР»РµРґРЅРµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ (РЅР°С‡РёРЅР°С‚СЊ РЅРѕРІСѓСЋ С‚Р°Р±Р»РёС†Сѓ РёР»Рё РЅРµС‚ РІ HTML)
 
 Private Sub Test()
-Dim HistoryLen As Long       'Количество записей в журнале
-Dim hHFile As Long  'Указатель на файл журнала
-Dim hFile As Long   'Указатель на БД авторов
+Dim HistoryLen As Long       'РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р¶СѓСЂРЅР°Р»Рµ
+Dim hHFile As Long  'РЈРєР°Р·Р°С‚РµР»СЊ РЅР° С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р°
+Dim hFile As Long   'РЈРєР°Р·Р°С‚РµР»СЊ РЅР° Р‘Р” Р°РІС‚РѕСЂРѕРІ
 Dim hAuthor As tAuthor
 Dim hHistory As tHistory
 Dim i As Long
@@ -363,13 +363,13 @@ Dim i As Long
     Open (App.Path & DataPath & HistoryFile) For Random As hHFile Len = Len(hHistory)
     hFile = FreeFile
     Open (App.Path & DataPath & AuthorsFile) For Random As hFile Len = Len(hAuthor)
-    'Определяем количество записей в журнале
+    'РћРїСЂРµРґРµР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р¶СѓСЂРЅР°Р»Рµ
     HistoryLen = LOF(hHFile) \ Len(hHistory)
     Label10.Caption = Str(HistoryLen)
 ''    Text1.Text = strEmpty
-''    If HistoryLen > 0 Then   'Журнал существует
+''    If HistoryLen > 0 Then   'Р–СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚
 ''        For i = 1 To HistoryLen
-''            'Читаем очередную запись в журнале
+''            'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»Рµ
 ''            Get hHFile, i, hHistory
 ''            Text1.Text = Text1.Text & hHistory.AuthorID & "-" & hHistory.MsgSize & " " & hHistory.URLvalue & " "
 ''            If hHistory.AuthorID > 0 Then
@@ -390,98 +390,98 @@ End Sub
 
 
 '*****************************************************
-'*      Режем и кромсаем загруженную страницу        *
-'* на отдельные нитки и передаем их дальше           *
+'*      Р РµР¶РµРј Рё РєСЂРѕРјСЃР°РµРј Р·Р°РіСЂСѓР¶РµРЅРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ        *
+'* РЅР° РѕС‚РґРµР»СЊРЅС‹Рµ РЅРёС‚РєРё Рё РїРµСЂРµРґР°РµРј РёС… РґР°Р»СЊС€Рµ           *
 '*****************************************************
 Private Function Splitter(ByRef lpString As String) As Boolean
 Dim tmpstr As String
     Splitter = False
-    'Отрубаем таймер, дабы не мешал!
+    'РћС‚СЂСѓР±Р°РµРј С‚Р°Р№РјРµСЂ, РґР°Р±С‹ РЅРµ РјРµС€Р°Р»!
     Timer1.Enabled = False
-    Label14.Caption = "Идет анализ страницы-оглавления"
+    Label14.Caption = "РРґРµС‚ Р°РЅР°Р»РёР· СЃС‚СЂР°РЅРёС†С‹-РѕРіР»Р°РІР»РµРЅРёСЏ"
     Label14.Refresh
-    'Убедимся, что нам подсунули то, что надо и в тексте есть <dl>
+    'РЈР±РµРґРёРјСЃСЏ, С‡С‚Рѕ РЅР°Рј РїРѕРґСЃСѓРЅСѓР»Рё С‚Рѕ, С‡С‚Рѕ РЅР°РґРѕ Рё РІ С‚РµРєСЃС‚Рµ РµСЃС‚СЊ <dl>
     StartPos = InStr(1, lpString, "<DL>", vbTextCompare)
     If StartPos = 0 Then
-        'Нас обманули!!!
+        'РќР°СЃ РѕР±РјР°РЅСѓР»Рё!!!
         'TO DO smth
-        Label4.Caption = "Ошибка закачки оглавления"
+        Label4.Caption = "РћС€РёР±РєР° Р·Р°РєР°С‡РєРё РѕРіР»Р°РІР»РµРЅРёСЏ"
         Label4.Refresh
-        Label14.Caption = "Ошибка закачки оглавления"
+        Label14.Caption = "РћС€РёР±РєР° Р·Р°РєР°С‡РєРё РѕРіР»Р°РІР»РµРЅРёСЏ"
         Label14.Refresh
         If InStr(1, lpString, "The requested URL could not be retrieved", vbTextCompare) > 0 Then
-            Label14.Caption = "Запрашиваемая страница не может быть получена"
+            Label14.Caption = "Р—Р°РїСЂР°С€РёРІР°РµРјР°СЏ СЃС‚СЂР°РЅРёС†Р° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїРѕР»СѓС‡РµРЅР°"
             Label14.Refresh
         End If
         Exit Function
     End If
-    'Автоопределение базового адреса! Иначе после каждого изменения на сервере нужно будет перебирать всю программу.
-    'Начало зоны поиска (ищем слово "Добавить")
-    lResult = InStr(1, lpString, "Добавить", vbTextCompare)
-    'Конец зоны поиска (ищем слово "Читать")
-    EndPos = InStr(lResult, lpString, "Читать", vbTextCompare)
-    'Копируем регион
+    'РђРІС‚РѕРѕРїСЂРµРґРµР»РµРЅРёРµ Р±Р°Р·РѕРІРѕРіРѕ Р°РґСЂРµСЃР°! РРЅР°С‡Рµ РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ РёР·РјРµРЅРµРЅРёСЏ РЅР° СЃРµСЂРІРµСЂРµ РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ РїРµСЂРµР±РёСЂР°С‚СЊ РІСЃСЋ РїСЂРѕРіСЂР°РјРјСѓ.
+    'РќР°С‡Р°Р»Рѕ Р·РѕРЅС‹ РїРѕРёСЃРєР° (РёС‰РµРј СЃР»РѕРІРѕ "Р”РѕР±Р°РІРёС‚СЊ")
+    lResult = InStr(1, lpString, "Р”РѕР±Р°РІРёС‚СЊ", vbTextCompare)
+    'РљРѕРЅРµС† Р·РѕРЅС‹ РїРѕРёСЃРєР° (РёС‰РµРј СЃР»РѕРІРѕ "Р§РёС‚Р°С‚СЊ")
+    EndPos = InStr(lResult, lpString, "Р§РёС‚Р°С‚СЊ", vbTextCompare)
+    'РљРѕРїРёСЂСѓРµРј СЂРµРіРёРѕРЅ
     BaseHREF = Mid(lpString, lResult, EndPos - lResult)
-    'Ближе к телу :) Начало ссылки:
+    'Р‘Р»РёР¶Рµ Рє С‚РµР»Сѓ :) РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё:
     ''lResult = InStr(1, BaseHREF, "href=`", vbTextCompare)book.cgi?book=
     lResult = InStr(1, BaseHREF, "book.cgi?book=", vbTextCompare)
-    'Ищем знак равенства в ссылке (book=Elitegames...) и
-    'запоминаем СЛЕДУЮЩУЮ позицию (знак равенства должен остаться в ссылке)
+    'РС‰РµРј Р·РЅР°Рє СЂР°РІРµРЅСЃС‚РІР° РІ СЃСЃС‹Р»РєРµ (book=Elitegames...) Рё
+    'Р·Р°РїРѕРјРёРЅР°РµРј РЎР›Р•Р”РЈР®Р©РЈР® РїРѕР·РёС†РёСЋ (Р·РЅР°Рє СЂР°РІРµРЅСЃС‚РІР° РґРѕР»Р¶РµРЅ РѕСЃС‚Р°С‚СЊСЃСЏ РІ СЃСЃС‹Р»РєРµ)
     EndPos = InStr(lResult, BaseHREF, "=", vbTextCompare) + 1
-    'Обрезаем и получаем наш базовый адрес
-'TO DO добавить анализ ссылки: нельзя же просто book.cgi отсылать без указания сервера!!!
+    'РћР±СЂРµР·Р°РµРј Рё РїРѕР»СѓС‡Р°РµРј РЅР°С€ Р±Р°Р·РѕРІС‹Р№ Р°РґСЂРµСЃ
+'TO DO РґРѕР±Р°РІРёС‚СЊ Р°РЅР°Р»РёР· СЃСЃС‹Р»РєРё: РЅРµР»СЊР·СЏ Р¶Рµ РїСЂРѕСЃС‚Рѕ book.cgi РѕС‚СЃС‹Р»Р°С‚СЊ Р±РµР· СѓРєР°Р·Р°РЅРёСЏ СЃРµСЂРІРµСЂР°!!!
     BaseHREF = Replace(Mid(BaseHREF, lResult, EndPos - lResult), "`", strEmpty, 1, -1, vbBinaryCompare)
     
-    'Продолжаем обработку страницы: отсекаем все лишнее
+    'РџСЂРѕРґРѕР»Р¶Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ СЃС‚СЂР°РЅРёС†С‹: РѕС‚СЃРµРєР°РµРј РІСЃРµ Р»РёС€РЅРµРµ
     lpString = Right(lpString, Len(lpString) - StartPos)
     Label2.Caption = Str(CurrPage)
-    'Очистка от мусора уже была в NavigateComplete2
+    'РћС‡РёСЃС‚РєР° РѕС‚ РјСѓСЃРѕСЂР° СѓР¶Рµ Р±С‹Р»Р° РІ NavigateComplete2
     
-    'Ищем номер нитки
-    StartPos = InStr(1, lpString, "<p>", vbTextCompare) + Len("<p>") 'Сразу проскакиваем тег
+    'РС‰РµРј РЅРѕРјРµСЂ РЅРёС‚РєРё
+    StartPos = InStr(1, lpString, "<p>", vbTextCompare) + Len("<p>") 'РЎСЂР°Р·Сѓ РїСЂРѕСЃРєР°РєРёРІР°РµРј С‚РµРі
     EndPos = InStr(StartPos, lpString, ".", vbTextCompare)
-    'Не будем рисковать: две строки вне цикла погоды не сделают, а проверка
-    'в его начале гораздо надежнее, чем в конце
+    'РќРµ Р±СѓРґРµРј СЂРёСЃРєРѕРІР°С‚СЊ: РґРІРµ СЃС‚СЂРѕРєРё РІРЅРµ С†РёРєР»Р° РїРѕРіРѕРґС‹ РЅРµ СЃРґРµР»Р°СЋС‚, Р° РїСЂРѕРІРµСЂРєР°
+    'РІ РµРіРѕ РЅР°С‡Р°Р»Рµ РіРѕСЂР°Р·РґРѕ РЅР°РґРµР¶РЅРµРµ, С‡РµРј РІ РєРѕРЅС†Рµ
     Do While EndPos - StartPos < 8
-        'Пока не закончатся нитки (интересно, хватит 5-значного номера для номеров?)
+        'РџРѕРєР° РЅРµ Р·Р°РєРѕРЅС‡Р°С‚СЃСЏ РЅРёС‚РєРё (РёРЅС‚РµСЂРµСЃРЅРѕ, С…РІР°С‚РёС‚ 5-Р·РЅР°С‡РЅРѕРіРѕ РЅРѕРјРµСЂР° РґР»СЏ РЅРѕРјРµСЂРѕРІ?)
         '8 = <p> + XXXXX
         If EndPos = 0 Then
-            '<p> был, но это не номер нитки... Может такое быть?
+            '<p> Р±С‹Р», РЅРѕ СЌС‚Рѕ РЅРµ РЅРѕРјРµСЂ РЅРёС‚РєРё... РњРѕР¶РµС‚ С‚Р°РєРѕРµ Р±С‹С‚СЊ?
             'TO DO smth
             Exit Do
         End If
         TopicNum = CLng(Val(Mid(lpString, StartPos, EndPos - StartPos)))
-        'Находим конец нитки
+        'РќР°С…РѕРґРёРј РєРѕРЅРµС† РЅРёС‚РєРё
         EndPos = InStr(EndPos, lpString, "<p>", vbTextCompare)
         If EndPos = 0 Then
-            'Очередной <p> не найден. Маловероятно, этот тег всегда есть в конце страницы этой конференции
+            'РћС‡РµСЂРµРґРЅРѕР№ <p> РЅРµ РЅР°Р№РґРµРЅ. РњР°Р»РѕРІРµСЂРѕСЏС‚РЅРѕ, СЌС‚РѕС‚ С‚РµРі РІСЃРµРіРґР° РµСЃС‚СЊ РІ РєРѕРЅС†Рµ СЃС‚СЂР°РЅРёС†С‹ СЌС‚РѕР№ РєРѕРЅС„РµСЂРµРЅС†РёРё
             'TO DO smth
             Exit Do
         End If
-        'Отрезаем нитку с лидирующим тегом <p>...
+        'РћС‚СЂРµР·Р°РµРј РЅРёС‚РєСѓ СЃ Р»РёРґРёСЂСѓСЋС‰РёРј С‚РµРіРѕРј <p>...
         tmpstr = Mid(lpString, StartPos - 3, EndPos)
-        '... и удаляем ее из основной строки: нефиг таскать такие объемы туда-сюда по функциям
-        'Дополнительный символ нужен для гарантии безошибочной работы в дальнейшем
+        '... Рё СѓРґР°Р»СЏРµРј РµРµ РёР· РѕСЃРЅРѕРІРЅРѕР№ СЃС‚СЂРѕРєРё: РЅРµС„РёРі С‚Р°СЃРєР°С‚СЊ С‚Р°РєРёРµ РѕР±СЉРµРјС‹ С‚СѓРґР°-СЃСЋРґР° РїРѕ С„СѓРЅРєС†РёСЏРј
+        'Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ СЃРёРјРІРѕР» РЅСѓР¶РµРЅ РґР»СЏ РіР°СЂР°РЅС‚РёРё Р±РµР·РѕС€РёР±РѕС‡РЅРѕР№ СЂР°Р±РѕС‚С‹ РІ РґР°Р»СЊРЅРµР№С€РµРј
         lpString = Right(lpString, Len(lpString) - EndPos + 1)
-        'Передаем нитку дальше на растерзание
+        'РџРµСЂРµРґР°РµРј РЅРёС‚РєСѓ РґР°Р»СЊС€Рµ РЅР° СЂР°СЃС‚РµСЂР·Р°РЅРёРµ
         If ParserLevel1(TopicNum, tmpstr) Then
             'TO DO
         End If
-        'Ищем номер следующей нитки
-        StartPos = InStr(1, lpString, "<p>", vbTextCompare) + Len("<p>") 'Сразу проскакиваем тег
+        'РС‰РµРј РЅРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ РЅРёС‚РєРё
+        StartPos = InStr(1, lpString, "<p>", vbTextCompare) + Len("<p>") 'РЎСЂР°Р·Сѓ РїСЂРѕСЃРєР°РєРёРІР°РµРј С‚РµРі
         EndPos = InStr(StartPos, lpString, ".", vbTextCompare)
     Loop
-    'Включаем таймер уже в InitFeeder!
-    Label14.Caption = "Страница-оглавление проанализирована"
+    'Р’РєР»СЋС‡Р°РµРј С‚Р°Р№РјРµСЂ СѓР¶Рµ РІ InitFeeder!
+    Label14.Caption = "РЎС‚СЂР°РЅРёС†Р°-РѕРіР»Р°РІР»РµРЅРёРµ РїСЂРѕР°РЅР°Р»РёР·РёСЂРѕРІР°РЅР°"
     Label14.Refresh
     Splitter = True
 End Function
 
 '******************************************************
-'*      Разматываем нитку на отдельные топики         *
-'* На выходе имеем ссылки на каждое сообщение нитки   *
-'* и записываем их в MsgMap (там сами разберутся)     *
-'*      TopicNum - номер темы (для записи в БД ссылок)*
+'*      Р Р°Р·РјР°С‚С‹РІР°РµРј РЅРёС‚РєСѓ РЅР° РѕС‚РґРµР»СЊРЅС‹Рµ С‚РѕРїРёРєРё         *
+'* РќР° РІС‹С…РѕРґРµ РёРјРµРµРј СЃСЃС‹Р»РєРё РЅР° РєР°Р¶РґРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РЅРёС‚РєРё   *
+'* Рё Р·Р°РїРёСЃС‹РІР°РµРј РёС… РІ MsgMap (С‚Р°Рј СЃР°РјРё СЂР°Р·Р±РµСЂСѓС‚СЃСЏ)     *
+'*      TopicNum - РЅРѕРјРµСЂ С‚РµРјС‹ (РґР»СЏ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє)*
 '******************************************************
 Private Function ParserLevel1(ByVal TopicNum As Long, ByVal lpString As String) As Boolean
 Dim StartPos As Long
@@ -490,98 +490,98 @@ Dim EndPos As Long
     ''EndPos = InStr(1, lpString, "a href=`book.cgi?book=", vbTextCompare)
     'EndPos = InStr(1, lpString, "book.cgi?book=", vbTextCompare)
     EndPos = InStr(1, lpString, BaseHREF, vbTextCompare)
-    Debug.Print "ВХод в ParserLevel1"
-''    Indent = 0 'Первое сообщение ветки, отступ = 0
-    'Дело в том, что при Indent = 0 первый тег <DL> пишется только начиная с
-    'первого ответа на вопрос, что препятствует появлению отступа для самого
-    'первого ответа. Для устранения этого недостатка начнем отступ с 1.
-    Indent = 1 'Первое сообщение ветки, отступ = 1
+    Debug.Print "Р’РҐРѕРґ РІ ParserLevel1"
+''    Indent = 0 'РџРµСЂРІРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РІРµС‚РєРё, РѕС‚СЃС‚СѓРї = 0
+    'Р”РµР»Рѕ РІ С‚РѕРј, С‡С‚Рѕ РїСЂРё Indent = 0 РїРµСЂРІС‹Р№ С‚РµРі <DL> РїРёС€РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР°С‡РёРЅР°СЏ СЃ
+    'РїРµСЂРІРѕРіРѕ РѕС‚РІРµС‚Р° РЅР° РІРѕРїСЂРѕСЃ, С‡С‚Рѕ РїСЂРµРїСЏС‚СЃС‚РІСѓРµС‚ РїРѕСЏРІР»РµРЅРёСЋ РѕС‚СЃС‚СѓРїР° РґР»СЏ СЃР°РјРѕРіРѕ
+    'РїРµСЂРІРѕРіРѕ РѕС‚РІРµС‚Р°. Р”Р»СЏ СѓСЃС‚СЂР°РЅРµРЅРёСЏ СЌС‚РѕРіРѕ РЅРµРґРѕСЃС‚Р°С‚РєР° РЅР°С‡РЅРµРј РѕС‚СЃС‚СѓРї СЃ 1.
+    Indent = 1 'РџРµСЂРІРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РІРµС‚РєРё, РѕС‚СЃС‚СѓРї = 1
     Do While EndPos <> 0
-        'Определяем e-mail автора
+        'РћРїСЂРµРґРµР»СЏРµРј e-mail Р°РІС‚РѕСЂР°
         email = strEmpty
-        'Ищем ближайшую ссылку на e-mail
+        'РС‰РµРј Р±Р»РёР¶Р°Р№С€СѓСЋ СЃСЃС‹Р»РєСѓ РЅР° e-mail
         StartPos = InStr(1, lpString, "<a href=`mailto:", vbTextCompare)
-        'Запомним - потом пригодится, т.к. до адреса еще будем e-mail и ником заниматься
+        'Р—Р°РїРѕРјРЅРёРј - РїРѕС‚РѕРј РїСЂРёРіРѕРґРёС‚СЃСЏ, С‚.Рє. РґРѕ Р°РґСЂРµСЃР° РµС‰Рµ Р±СѓРґРµРј e-mail Рё РЅРёРєРѕРј Р·Р°РЅРёРјР°С‚СЊСЃСЏ
         '''lResult = EndPos + Len("A href=`http://book.by.ru/cgi-bin/book.cgi?book=")
         ''lResult = EndPos + Len("a href=`book.cgi?book=")
         'lResult = EndPos + Len("book.cgi?book=")
         lResult = EndPos + Len(BaseHREF)
         If EndPos > StartPos Then
-            'Очередность появления ссылок обычная (сначала e-mail, затем соообщение)
+            'РћС‡РµСЂРµРґРЅРѕСЃС‚СЊ РїРѕСЏРІР»РµРЅРёСЏ СЃСЃС‹Р»РѕРє РѕР±С‹С‡РЅР°СЏ (СЃРЅР°С‡Р°Р»Р° e-mail, Р·Р°С‚РµРј СЃРѕРѕРѕР±С‰РµРЅРёРµ)
             If Not (StartPos = 0) Then
-                'Есть e-mail автора
+                'Р•СЃС‚СЊ e-mail Р°РІС‚РѕСЂР°
                 StartPos = StartPos + Len("<A href=`mailto:")
                 EndPos = InStr(StartPos, lpString, "`>", vbTextCompare)
                 email = Mid(lpString, StartPos, EndPos - StartPos)
-            End If  'в противном случае e-mail автора не указан
-        End If  'в противном случае e-mail найден, но он относится уже к следующему
-                'сообщению -> игнорируем его
-        'Определяем имя автора
+            End If  'РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ e-mail Р°РІС‚РѕСЂР° РЅРµ СѓРєР°Р·Р°РЅ
+        End If  'РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ e-mail РЅР°Р№РґРµРЅ, РЅРѕ РѕРЅ РѕС‚РЅРѕСЃРёС‚СЃСЏ СѓР¶Рµ Рє СЃР»РµРґСѓСЋС‰РµРјСѓ
+                'СЃРѕРѕР±С‰РµРЅРёСЋ -> РёРіРЅРѕСЂРёСЂСѓРµРј РµРіРѕ
+        'РћРїСЂРµРґРµР»СЏРµРј РёРјСЏ Р°РІС‚РѕСЂР°
         Nickname = strEmpty
         StartPos = InStr(1, lpString, "<B><I>", vbTextCompare) + Len("<B><I>")
         EndPos = InStr(StartPos, lpString, "</I></B>", vbTextCompare)
         If Not (StartPos >= EndPos) Then
-            'Имя автора указано (мало ли, человек забыл/не захотел указать имя 8-) )
+            'РРјСЏ Р°РІС‚РѕСЂР° СѓРєР°Р·Р°РЅРѕ (РјР°Р»Рѕ Р»Рё, С‡РµР»РѕРІРµРє Р·Р°Р±С‹Р»/РЅРµ Р·Р°С…РѕС‚РµР» СѓРєР°Р·Р°С‚СЊ РёРјСЏ 8-) )
             Nickname = Mid(lpString, StartPos, EndPos - StartPos)
             Nickname = RemoveSpaces(Nickname)
         End If
-        'Определяем URL сообщения
+        'РћРїСЂРµРґРµР»СЏРµРј URL СЃРѕРѕР±С‰РµРЅРёСЏ
         msgHREF = strEmpty
         EndPos = InStr(lResult, lpString, "`>", vbTextCompare)
-        'Режем адрес, очищая его от &amp; , оставляя только &
+        'Р РµР¶РµРј Р°РґСЂРµСЃ, РѕС‡РёС‰Р°СЏ РµРіРѕ РѕС‚ &amp; , РѕСЃС‚Р°РІР»СЏСЏ С‚РѕР»СЊРєРѕ &
         msgHREF = Replace(Mid(lpString, lResult, EndPos - lResult), "amp;", strEmpty, 1, -1, vbBinaryCompare)
-        'Ответственное место! Вырезаем тему для последующего сравнения.
-        'Только так можно отловить глюки индексации сервера Book.ru
-        StartPos = EndPos + 2   'Проезжаем "`>"
+        'РћС‚РІРµС‚СЃС‚РІРµРЅРЅРѕРµ РјРµСЃС‚Рѕ! Р’С‹СЂРµР·Р°РµРј С‚РµРјСѓ РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµРіРѕ СЃСЂР°РІРЅРµРЅРёСЏ.
+        'РўРѕР»СЊРєРѕ С‚Р°Рє РјРѕР¶РЅРѕ РѕС‚Р»РѕРІРёС‚СЊ РіР»СЋРєРё РёРЅРґРµРєСЃР°С†РёРё СЃРµСЂРІРµСЂР° Book.ru
+        StartPos = EndPos + 2   'РџСЂРѕРµР·Р¶Р°РµРј "`>"
         EndPos = InStr(StartPos, lpString, "</A>", vbTextCompare)
         msgHead = Mid(lpString, StartPos, EndPos - StartPos)
-'Внимание! Теперь надо вырезать (если есть) комбинацию "(-)",
-'которую сервер автоматом шлепает к заголовкам, ссылающимся на пустую тему.
-'Также вырежем "(+)"
-'Используем переменные lResult и StartPos как временно не используемые
+'Р’РЅРёРјР°РЅРёРµ! РўРµРїРµСЂСЊ РЅР°РґРѕ РІС‹СЂРµР·Р°С‚СЊ (РµСЃР»Рё РµСЃС‚СЊ) РєРѕРјР±РёРЅР°С†РёСЋ "(-)",
+'РєРѕС‚РѕСЂСѓСЋ СЃРµСЂРІРµСЂ Р°РІС‚РѕРјР°С‚РѕРј С€Р»РµРїР°РµС‚ Рє Р·Р°РіРѕР»РѕРІРєР°Рј, СЃСЃС‹Р»Р°СЋС‰РёРјСЃСЏ РЅР° РїСѓСЃС‚СѓСЋ С‚РµРјСѓ.
+'РўР°РєР¶Рµ РІС‹СЂРµР¶РµРј "(+)"
+'РСЃРїРѕР»СЊР·СѓРµРј РїРµСЂРµРјРµРЅРЅС‹Рµ lResult Рё StartPos РєР°Рє РІСЂРµРјРµРЅРЅРѕ РЅРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ
         msgHead = RemoveSpaces(msgHead)
         StartPos = InStr(1, msgHead, "(-)", vbTextCompare)
         Do While StartPos > 0
         ''If StartPos > 0 Then
-            '(-) найден. Проверим (грубо), находится ли он в хвосте...
+            '(-) РЅР°Р№РґРµРЅ. РџСЂРѕРІРµСЂРёРј (РіСЂСѓР±Рѕ), РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РѕРЅ РІ С…РІРѕСЃС‚Рµ...
             If StartPos > Len(msgHead) - 5 Then
-                '(-) в конце строки - просто отрежем хвост
+                '(-) РІ РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё - РїСЂРѕСЃС‚Рѕ РѕС‚СЂРµР¶РµРј С…РІРѕСЃС‚
                 msgHead = Left(msgHead, Len(msgHead) - 3)
             Else
-                '(-) в середине. Вырежем только эти 3 символа
+                '(-) РІ СЃРµСЂРµРґРёРЅРµ. Р’С‹СЂРµР¶РµРј С‚РѕР»СЊРєРѕ СЌС‚Рё 3 СЃРёРјРІРѕР»Р°
                 msgHead = Left(msgHead, StartPos - 1) + Right(msgHead, Len(msgHead) - StartPos - 2)
             End If
         ''End If
-            'Убираем пробелы в начале и конце строки
+            'РЈР±РёСЂР°РµРј РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ Рё РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё
             msgHead = RemoveSpaces(msgHead)
             StartPos = InStr(1, msgHead, "(-)", vbTextCompare)
         Loop
         StartPos = InStr(1, msgHead, "(+)", vbTextCompare)
         Do While StartPos > 0
         ''If StartPos > 0 Then
-            '(+) найден. Проверим (грубо), находится ли он в хвосте...
+            '(+) РЅР°Р№РґРµРЅ. РџСЂРѕРІРµСЂРёРј (РіСЂСѓР±Рѕ), РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РѕРЅ РІ С…РІРѕСЃС‚Рµ...
             If StartPos > Len(msgHead) - 5 Then
-                '(+) в конце строки - просто отрежем хвост
+                '(+) РІ РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё - РїСЂРѕСЃС‚Рѕ РѕС‚СЂРµР¶РµРј С…РІРѕСЃС‚
                 msgHead = Left(msgHead, Len(msgHead) - 3)
             Else
-                '(+) в середине. Вырежем только эти 3 символа
+                '(+) РІ СЃРµСЂРµРґРёРЅРµ. Р’С‹СЂРµР¶РµРј С‚РѕР»СЊРєРѕ СЌС‚Рё 3 СЃРёРјРІРѕР»Р°
                 msgHead = Left(msgHead, StartPos - 1) + Right(msgHead, Len(msgHead) - StartPos - 2)
             End If
         ''End If
-            'Убираем пробелы в начале и конце строки
+            'РЈР±РёСЂР°РµРј РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ Рё РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё
             msgHead = RemoveSpaces(msgHead)
             StartPos = InStr(1, msgHead, "(+)", vbTextCompare)
         Loop
-'Запись в лог программы
-LogEvent ("[Parser Level 1] Заголовок темы: " + msgHead)
-'{Fixed} TO DO Что за дерьмо? msgHead = RemoveSpaces(msgHead)
-'Функция теперь возвращает результат, все должно быть ОК
-        'Дату и текст сообщения будем получать уже в PareserLevel2
-        'отрезаем обработанную часть
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 1] Р—Р°РіРѕР»РѕРІРѕРє С‚РµРјС‹: " + msgHead)
+'{Fixed} TO DO Р§С‚Рѕ Р·Р° РґРµСЂСЊРјРѕ? msgHead = RemoveSpaces(msgHead)
+'Р¤СѓРЅРєС†РёСЏ С‚РµРїРµСЂСЊ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚, РІСЃРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РћРљ
+        'Р”Р°С‚Сѓ Рё С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ Р±СѓРґРµРј РїРѕР»СѓС‡Р°С‚СЊ СѓР¶Рµ РІ PareserLevel2
+        'РѕС‚СЂРµР·Р°РµРј РѕР±СЂР°Р±РѕС‚Р°РЅРЅСѓСЋ С‡Р°СЃС‚СЊ
         lpString = Right(lpString, Len(lpString) - EndPos)
-        'Заполняем запись
-'Запись в лог программы
-LogEvent ("[Parser Level 1] Начало сбора информации для автора " + Nickname)
+        'Р—Р°РїРѕР»РЅСЏРµРј Р·Р°РїРёСЃСЊ
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 1] РќР°С‡Р°Р»Рѕ СЃР±РѕСЂР° РёРЅС„РѕСЂРјР°С†РёРё РґР»СЏ Р°РІС‚РѕСЂР° " + Nickname)
         With MsgMap
             .TopicNum = TopicNum
             .Author = Nickname
@@ -598,44 +598,44 @@ LogEvent ("[Parser Level 1] Начало сбора информации для автора " + Nickname)
             .Indent = Indent
         End With
         Debug.Print Str(MsgMap.TopicNum) & " - " & MsgMap.Author & " - " & MsgMap.msgURL
-        'Сохраняем в БД и получаем номер записи
+        'РЎРѕС…СЂР°РЅСЏРµРј РІ Р‘Р” Рё РїРѕР»СѓС‡Р°РµРј РЅРѕРјРµСЂ Р·Р°РїРёСЃРё
         Label4.Caption = Str(MsgMap.Save)
         Label4.Refresh
-'Запись в лог программы
-LogEvent ("[Parser Level 1] Тема сохранена в файле ссылок под номером " + Label4.Caption)
-        'Ищем ближайшую ссылку на сообщение (инициализация цикла)+поиск <dl> и </dl>
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 1] РўРµРјР° СЃРѕС…СЂР°РЅРµРЅР° РІ С„Р°Р№Р»Рµ СЃСЃС‹Р»РѕРє РїРѕРґ РЅРѕРјРµСЂРѕРј " + Label4.Caption)
+        'РС‰РµРј Р±Р»РёР¶Р°Р№С€СѓСЋ СЃСЃС‹Р»РєСѓ РЅР° СЃРѕРѕР±С‰РµРЅРёРµ (РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С†РёРєР»Р°)+РїРѕРёСЃРє <dl> Рё </dl>
         '''EndPos = InStr(1, lpString, "A href=`http://book.by.ru/cgi-bin/book.cgi?book=", vbTextCompare)
         ''EndPos = InStr(1, lpString, "a href=`book.cgi?book=", vbTextCompare)
         'EndPos = InStr(1, lpString, "book.cgi?book=", vbTextCompare)
         EndPos = InStr(1, lpString, BaseHREF, vbTextCompare)
-        'Определим отступ следующего сообщения. ВНИМАНИЕ! EndPos НУЖНО СОХРАНИТЬ!!!
-        'Режем кусок от начала и до EndPos, если он не ноль.
-        'В куске шарим <dl> или </dl>
+        'РћРїСЂРµРґРµР»РёРј РѕС‚СЃС‚СѓРї СЃР»РµРґСѓСЋС‰РµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ. Р’РќРРњРђРќРР•! EndPos РќРЈР–РќРћ РЎРћРҐР РђРќРРўР¬!!!
+        'Р РµР¶РµРј РєСѓСЃРѕРє РѕС‚ РЅР°С‡Р°Р»Р° Рё РґРѕ EndPos, РµСЃР»Рё РѕРЅ РЅРµ РЅРѕР»СЊ.
+        'Р’ РєСѓСЃРєРµ С€Р°СЂРёРј <dl> РёР»Рё </dl>
         If Not (EndPos = 0) Then
-            'Будем использовать переменную email в качестве временной
-            'Сейчас адрес автора уже не нужен, а ее значение обнулится в начале цикла
+            'Р‘СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРµСЂРµРјРµРЅРЅСѓСЋ email РІ РєР°С‡РµСЃС‚РІРµ РІСЂРµРјРµРЅРЅРѕР№
+            'РЎРµР№С‡Р°СЃ Р°РґСЂРµСЃ Р°РІС‚РѕСЂР° СѓР¶Рµ РЅРµ РЅСѓР¶РµРЅ, Р° РµРµ Р·РЅР°С‡РµРЅРёРµ РѕР±РЅСѓР»РёС‚СЃСЏ РІ РЅР°С‡Р°Р»Рµ С†РёРєР»Р°
             email = Left(lpString, EndPos)
-            'Рассмотрим этот кусок текста внимательнее
-            'Одновременно <dl> и </dl> встречаться не могут, поэтому идем "в лоб"
+            'Р Р°СЃСЃРјРѕС‚СЂРёРј СЌС‚РѕС‚ РєСѓСЃРѕРє С‚РµРєСЃС‚Р° РІРЅРёРјР°С‚РµР»СЊРЅРµРµ
+            'РћРґРЅРѕРІСЂРµРјРµРЅРЅРѕ <dl> Рё </dl> РІСЃС‚СЂРµС‡Р°С‚СЊСЃСЏ РЅРµ РјРѕРіСѓС‚, РїРѕСЌС‚РѕРјСѓ РёРґРµРј "РІ Р»РѕР±"
             lResult = InStr(1, email, "</dl>", vbTextCompare)
             Do While lResult > 0
-                'Пока есть </dl>, вырезаем их по одному и уменьшаем счетчик
+                'РџРѕРєР° РµСЃС‚СЊ </dl>, РІС‹СЂРµР·Р°РµРј РёС… РїРѕ РѕРґРЅРѕРјСѓ Рё СѓРјРµРЅСЊС€Р°РµРј СЃС‡РµС‚С‡РёРє
                 email = Right(email, Len(email) - lResult - Len("</dl>"))
                 Indent = Indent - 1
                 lResult = InStr(1, email, "</dl>", vbTextCompare)
             Loop
             lResult = InStr(1, email, "<dl>", vbTextCompare)
             Do While lResult > 0
-                'Пока есть <dl>, вырезаем их по одному и накручиваем счетчик
+                'РџРѕРєР° РµСЃС‚СЊ <dl>, РІС‹СЂРµР·Р°РµРј РёС… РїРѕ РѕРґРЅРѕРјСѓ Рё РЅР°РєСЂСѓС‡РёРІР°РµРј СЃС‡РµС‚С‡РёРє
                 email = Right(email, Len(email) - lResult - Len("<dl>"))
                 Indent = Indent + 1
                 lResult = InStr(1, email, "<dl>", vbTextCompare)
             Loop
-            'Проверку вынесли за цикл чтобы постоянно не проверять
+            'РџСЂРѕРІРµСЂРєСѓ РІС‹РЅРµСЃР»Рё Р·Р° С†РёРєР» С‡С‚РѕР±С‹ РїРѕСЃС‚РѕСЏРЅРЅРѕ РЅРµ РїСЂРѕРІРµСЂСЏС‚СЊ
 ''            If Indent < 0 Then
 ''                Indent = 0
 ''            End If
-            'Изменение начального отступа. Вместо 0 теперь будет 1.
+            'РР·РјРµРЅРµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РѕС‚СЃС‚СѓРїР°. Р’РјРµСЃС‚Рѕ 0 С‚РµРїРµСЂСЊ Р±СѓРґРµС‚ 1.
             If Indent < 1 Then
                 Indent = 1
             End If
@@ -644,34 +644,34 @@ LogEvent ("[Parser Level 1] Тема сохранена в файле ссылок под номером " + Label4
 End Function
 
 '******************************************************
-'*      Подготавливает переменные для Feeder и        *
-'*              стартует HTML-страницу                *
-'* Также загружает качалку стартовым адресом          *
+'*      РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµС‚ РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ Feeder Рё        *
+'*              СЃС‚Р°СЂС‚СѓРµС‚ HTML-СЃС‚СЂР°РЅРёС†Сѓ                *
+'* РўР°РєР¶Рµ Р·Р°РіСЂСѓР¶Р°РµС‚ РєР°С‡Р°Р»РєСѓ СЃС‚Р°СЂС‚РѕРІС‹Рј Р°РґСЂРµСЃРѕРј          *
 '******************************************************
 Private Function InitFeeder() As Boolean
-    Label14.Caption = "Подготовка к закачке ссылок"
+    Label14.Caption = "РџРѕРґРіРѕС‚РѕРІРєР° Рє Р·Р°РєР°С‡РєРµ СЃСЃС‹Р»РѕРє"
     Label14.Refresh
-    lRetry = 0 'Сколько попыток закачки произведено
-    'Начало работы - формально соответствует новому номеру нити обсуждения
+    lRetry = 0 'РЎРєРѕР»СЊРєРѕ РїРѕРїС‹С‚РѕРє Р·Р°РєР°С‡РєРё РїСЂРѕРёР·РІРµРґРµРЅРѕ
+    'РќР°С‡Р°Р»Рѕ СЂР°Р±РѕС‚С‹ - С„РѕСЂРјР°Р»СЊРЅРѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РЅРѕРІРѕРјСѓ РЅРѕРјРµСЂСѓ РЅРёС‚Рё РѕР±СЃСѓР¶РґРµРЅРёСЏ
     TopicChanged = True
     bDone = False
     strMess = strEmpty
-    'Начало страницы будет на белом фоне
+    'РќР°С‡Р°Р»Рѕ СЃС‚СЂР°РЅРёС†С‹ Р±СѓРґРµС‚ РЅР° Р±РµР»РѕРј С„РѕРЅРµ
     bColor = True
     COLOR = ColorLight
-    'Создаем HTML-файл, предварительно стерев (если есть) существующий
+    'РЎРѕР·РґР°РµРј HTML-С„Р°Р№Р», РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕ СЃС‚РµСЂРµРІ (РµСЃР»Рё РµСЃС‚СЊ) СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№
     EraseHTML (CurrPage)
-    bResult = Module1.WriteHTML(0, CurrPage, COLOR, strEmpty, RecNum)  'Шапка
-    'Следующая строка нужна для нейтрализации закрытия темы в Feeder
-    bResult = Module1.WriteHTML(5, CurrPage, COLOR, strEmpty, RecNum)  'Старт таблицы
-    bResult = Module1.WriteNavigator(0, CurrPage, RecNum, Indent, strEmpty) 'Старт навигатора и локального индекса
+    bResult = Module1.WriteHTML(0, CurrPage, COLOR, strEmpty, RecNum)  'РЁР°РїРєР°
+    'РЎР»РµРґСѓСЋС‰Р°СЏ СЃС‚СЂРѕРєР° РЅСѓР¶РЅР° РґР»СЏ РЅРµР№С‚СЂР°Р»РёР·Р°С†РёРё Р·Р°РєСЂС‹С‚РёСЏ С‚РµРјС‹ РІ Feeder
+    bResult = Module1.WriteHTML(5, CurrPage, COLOR, strEmpty, RecNum)  'РЎС‚Р°СЂС‚ С‚Р°Р±Р»РёС†С‹
+    bResult = Module1.WriteNavigator(0, CurrPage, RecNum, Indent, strEmpty) 'РЎС‚Р°СЂС‚ РЅР°РІРёРіР°С‚РѕСЂР° Рё Р»РѕРєР°Р»СЊРЅРѕРіРѕ РёРЅРґРµРєСЃР°
     If MsgMap.LastRecNum > 0 Then
-        'Запомним номер записи в БД ссылок. Позже (в ParserLevel2) эту запись
-        'нужно будет обновить, тогда это значение и пригодится
+        'Р—Р°РїРѕРјРЅРёРј РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє. РџРѕР·Р¶Рµ (РІ ParserLevel2) СЌС‚Сѓ Р·Р°РїРёСЃСЊ
+        'РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ РѕР±РЅРѕРІРёС‚СЊ, С‚РѕРіРґР° СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ Рё РїСЂРёРіРѕРґРёС‚СЃСЏ
         RecNum = MsgMap.GetNext
         If Not (RecNum = 0) Then
-            'ОК, запись прочитана, запускаем качалку
-            'Запоминаем все известные параметры из MsgMap пока их не перезаписали...
+            'РћРљ, Р·Р°РїРёСЃСЊ РїСЂРѕС‡РёС‚Р°РЅР°, Р·Р°РїСѓСЃРєР°РµРј РєР°С‡Р°Р»РєСѓ
+            'Р—Р°РїРѕРјРёРЅР°РµРј РІСЃРµ РёР·РІРµСЃС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РёР· MsgMap РїРѕРєР° РёС… РЅРµ РїРµСЂРµР·Р°РїРёСЃР°Р»Рё...
             With hMsg
                 .Author = MsgMap.Author
                 .AuthorLen = MsgMap.AuthorLen
@@ -690,49 +690,49 @@ Private Function InitFeeder() As Boolean
                 .TopicNum = MsgMap.TopicNum
                 .Indent = MsgMap.Indent
             End With
-            'Запомним номер темы самого первого сообщения
+            'Р—Р°РїРѕРјРЅРёРј РЅРѕРјРµСЂ С‚РµРјС‹ СЃР°РјРѕРіРѕ РїРµСЂРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
             LastTopicNum = hMsg.TopicNum
-            'Загружаем качалки работой без ожидания ее выполнения (это будет далее)
+            'Р—Р°РіСЂСѓР¶Р°РµРј РєР°С‡Р°Р»РєРё СЂР°Р±РѕС‚РѕР№ Р±РµР· РѕР¶РёРґР°РЅРёСЏ РµРµ РІС‹РїРѕР»РЅРµРЅРёСЏ (СЌС‚Рѕ Р±СѓРґРµС‚ РґР°Р»РµРµ)
             InitFeeder = True
             Call StartInet(Left(hMsg.msgURL, hMsg.msgURLLen))
         End If
     Else
         InitFeeder = False
     End If
-    Label14.Caption = "Идет закачка сообщений по ссылкам"
+    Label14.Caption = "РРґРµС‚ Р·Р°РєР°С‡РєР° СЃРѕРѕР±С‰РµРЅРёР№ РїРѕ СЃСЃС‹Р»РєР°Рј"
     Label14.Refresh
-    'Включаем таймер
+    'Р’РєР»СЋС‡Р°РµРј С‚Р°Р№РјРµСЂ
     Timer1.Enabled = True
 End Function
 
 '*****************************************************
-'* Скармливает массив ссылок качалке                 *
-'* Окончание работы означает завершение              *
-'* обработки очередной страницы                      *
-'*      Feeder = 0 успешное завершение               *
-'*      Feeder <>0 номер записи, вызвавшей ошибку    *
+'* РЎРєР°СЂРјР»РёРІР°РµС‚ РјР°СЃСЃРёРІ СЃСЃС‹Р»РѕРє РєР°С‡Р°Р»РєРµ                 *
+'* РћРєРѕРЅС‡Р°РЅРёРµ СЂР°Р±РѕС‚С‹ РѕР·РЅР°С‡Р°РµС‚ Р·Р°РІРµСЂС€РµРЅРёРµ              *
+'* РѕР±СЂР°Р±РѕС‚РєРё РѕС‡РµСЂРµРґРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹                      *
+'*      Feeder = 0 СѓСЃРїРµС€РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ               *
+'*      Feeder <>0 РЅРѕРјРµСЂ Р·Р°РїРёСЃРё, РІС‹Р·РІР°РІС€РµР№ РѕС€РёР±РєСѓ    *
 '*****************************************************
 Private Function Feeder() As Long
 Dim tmpString As String
-    'Отключаем таймер на время работы
+    'РћС‚РєР»СЋС‡Р°РµРј С‚Р°Р№РјРµСЂ РЅР° РІСЂРµРјСЏ СЂР°Р±РѕС‚С‹
     Timer1.Enabled = False
-    'Берем строку от качалки и скармливаем ее ParserLev2, получаем текст сообщения
+    'Р‘РµСЂРµРј СЃС‚СЂРѕРєСѓ РѕС‚ РєР°С‡Р°Р»РєРё Рё СЃРєР°СЂРјР»РёРІР°РµРј РµРµ ParserLev2, РїРѕР»СѓС‡Р°РµРј С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ
     tmpString = ParserLevel2(strMess)
     If lRetry > 0 Then
         If lRetry > MaxRetryAttempts Then
-            'Страницу закачать не удалось после MaxRetryAttempts попыток
+            'РЎС‚СЂР°РЅРёС†Сѓ Р·Р°РєР°С‡Р°С‚СЊ РЅРµ СѓРґР°Р»РѕСЃСЊ РїРѕСЃР»Рµ MaxRetryAttempts РїРѕРїС‹С‚РѕРє
             Label16.Caption = Str(Val(Label16.Caption) + 1)
-            Label14.Caption = "Ошибка закачки. Пропуск текущей ссылки"
+            Label14.Caption = "РћС€РёР±РєР° Р·Р°РєР°С‡РєРё. РџСЂРѕРїСѓСЃРє С‚РµРєСѓС‰РµР№ СЃСЃС‹Р»РєРё"
             Label14.Refresh
-            tmpString = "<i>Информация <b>EliteGames conference extractor</b></i>. Невозможно загрузить страницу. Количество попыток загрузки: " & Format(MaxRetryAttempts)
-            'Сброс счетчика повторов
+            tmpString = "<i>РРЅС„РѕСЂРјР°С†РёСЏ <b>EliteGames conference extractor</b></i>. РќРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РіСЂСѓР·РёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ. РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРїС‹С‚РѕРє Р·Р°РіСЂСѓР·РєРё: " & Format(MaxRetryAttempts)
+            'РЎР±СЂРѕСЃ СЃС‡РµС‚С‡РёРєР° РїРѕРІС‚РѕСЂРѕРІ
             lRetry = 0
         Else
-            'Инициализация переменных
+            'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРјРµРЅРЅС‹С…
             bDone = False
             strMess = strEmpty
-            'Повторный запрос страницы
-            Label14.Caption = "Повторный запрос страницы по текущей ссылке"
+            'РџРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ СЃС‚СЂР°РЅРёС†С‹
+            Label14.Caption = "РџРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ СЃС‚СЂР°РЅРёС†С‹ РїРѕ С‚РµРєСѓС‰РµР№ СЃСЃС‹Р»РєРµ"
             Label14.Refresh
             Call StartInet(Left(hMsg.msgURL, hMsg.msgURLLen))
             Timer1.Enabled = True
@@ -740,34 +740,34 @@ Dim tmpString As String
         End If
     End If
     If LastTopicNum <> hMsg.TopicNum Then
-        'Текущее сообщение относится уже к следующей теме
+        'РўРµРєСѓС‰РµРµ СЃРѕРѕР±С‰РµРЅРёРµ РѕС‚РЅРѕСЃРёС‚СЃСЏ СѓР¶Рµ Рє СЃР»РµРґСѓСЋС‰РµР№ С‚РµРјРµ
         TopicChanged = True
     End If
-    'Запомним номер текущей темы
+    'Р—Р°РїРѕРјРЅРёРј РЅРѕРјРµСЂ С‚РµРєСѓС‰РµР№ С‚РµРјС‹
     LastTopicNum = hMsg.TopicNum
-    'Если тема изменилась, то...
+    'Р•СЃР»Рё С‚РµРјР° РёР·РјРµРЅРёР»Р°СЃСЊ, С‚Рѕ...
     If TopicChanged Then
-        'Начало темы принудительно на светлом фоне
+        'РќР°С‡Р°Р»Рѕ С‚РµРјС‹ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РЅР° СЃРІРµС‚Р»РѕРј С„РѕРЅРµ
         COLOR = ColorLight
-        'Нужно отразить факт смены цвета, подняв флаг
+        'РќСѓР¶РЅРѕ РѕС‚СЂР°Р·РёС‚СЊ С„Р°РєС‚ СЃРјРµРЅС‹ С†РІРµС‚Р°, РїРѕРґРЅСЏРІ С„Р»Р°Рі
         bColor = True
-        'закрываем тему в HTML и открываем новую
-        bResult = WriteHTML(6, CurrPage, COLOR, strEmpty, RecNum)  'Закрываем таблицу
-        bResult = WriteHTML(5, CurrPage, COLOR, strEmpty, RecNum)  'Старт таблицы и темы
+        'Р·Р°РєСЂС‹РІР°РµРј С‚РµРјСѓ РІ HTML Рё РѕС‚РєСЂС‹РІР°РµРј РЅРѕРІСѓСЋ
+        bResult = WriteHTML(6, CurrPage, COLOR, strEmpty, RecNum)  'Р—Р°РєСЂС‹РІР°РµРј С‚Р°Р±Р»РёС†Сѓ
+        bResult = WriteHTML(5, CurrPage, COLOR, strEmpty, RecNum)  'РЎС‚Р°СЂС‚ С‚Р°Р±Р»РёС†С‹ Рё С‚РµРјС‹
         bResult = WriteHTML(1, CurrPage, COLOR, Left(hMsg.msgHead, hMsg.msgHeadLen), RecNum)
-        'Отменяем отступ в навигаторе: новая тема
+        'РћС‚РјРµРЅСЏРµРј РѕС‚СЃС‚СѓРї РІ РЅР°РІРёРіР°С‚РѕСЂРµ: РЅРѕРІР°СЏ С‚РµРјР°
         bResult = WriteNavigator(3, CurrPage, RecNum, 0, strEmpty)
-        'Опускаем флаг новой темы, иначе каждая запись будет трактоваться как новая
+        'РћРїСѓСЃРєР°РµРј С„Р»Р°Рі РЅРѕРІРѕР№ С‚РµРјС‹, РёРЅР°С‡Рµ РєР°Р¶РґР°СЏ Р·Р°РїРёСЃСЊ Р±СѓРґРµС‚ С‚СЂР°РєС‚РѕРІР°С‚СЊСЃСЏ РєР°Рє РЅРѕРІР°СЏ
         TopicChanged = False
     End If
-    'Продолжение нити обсуждения
-    'Цвет в любом случае правильный
+    'РџСЂРѕРґРѕР»Р¶РµРЅРёРµ РЅРёС‚Рё РѕР±СЃСѓР¶РґРµРЅРёСЏ
+    'Р¦РІРµС‚ РІ Р»СЋР±РѕРј СЃР»СѓС‡Р°Рµ РїСЂР°РІРёР»СЊРЅС‹Р№
     If Not (hMsg.emailLen = 0) And (FullLogging Or bFullLogging) Then
-        'Пишем всю известную информацию
+        'РџРёС€РµРј РІСЃСЋ РёР·РІРµСЃС‚РЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ
         bResult = WriteHTML(9, CurrPage, COLOR, Left(hMsg.email, hMsg.emailLen), RecNum)
         bResult = WriteHTML(10, CurrPage, COLOR, Left(hMsg.Author, hMsg.AuthorLen), RecNum)
     Else
-        'Запись без указания e-mail
+        'Р—Р°РїРёСЃСЊ Р±РµР· СѓРєР°Р·Р°РЅРёСЏ e-mail
         bResult = WriteHTML(2, CurrPage, COLOR, Left(hMsg.Author, hMsg.AuthorLen), RecNum)
     End If
 '{Fixed} TO DO WHAT ARE HELL&&& DateLen = -1!!!!! RecNum=12, 72
@@ -778,10 +778,10 @@ Dim tmpString As String
     End If
     bResult = WriteHTML(8, CurrPage, COLOR, Left(hMsg.msgHead, hMsg.msgHeadLen), RecNum)
     bResult = WriteHTML(4, CurrPage, COLOR, tmpString, RecNum)
-    'Пишем навигатор
+    'РџРёС€РµРј РЅР°РІРёРіР°С‚РѕСЂ
     bResult = WriteNavigator(1, CurrPage, RecNum, hMsg.Indent, Left(hMsg.Author, hMsg.AuthorLen))
     bResult = WriteNavigator(2, CurrPage, RecNum, 0, Left(hMsg.msgHead, hMsg.msgHeadLen))
-    'Меняем цвет фона для следующего сообщения
+    'РњРµРЅСЏРµРј С†РІРµС‚ С„РѕРЅР° РґР»СЏ СЃР»РµРґСѓСЋС‰РµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
     bColor = Not bColor
     COLOR = IIf(bColor, ColorLight, ColorDark)
     ''Select Case bColor
@@ -790,15 +790,15 @@ Dim tmpString As String
     ''    Case False:
     ''        Color = ColorDark
     ''End Select
-    'Пытаемся прочитать следующую запись
+    'РџС‹С‚Р°РµРјСЃСЏ РїСЂРѕС‡РёС‚Р°С‚СЊ СЃР»РµРґСѓСЋС‰СѓСЋ Р·Р°РїРёСЃСЊ
     RecNum = MsgMap.GetNext
     If RecNum = 0 Then
         Call StopFeeder(ucDLcomplete)
-        'Выходим без запуска таймера: работа окончена
+        'Р’С‹С…РѕРґРёРј Р±РµР· Р·Р°РїСѓСЃРєР° С‚Р°Р№РјРµСЂР°: СЂР°Р±РѕС‚Р° РѕРєРѕРЅС‡РµРЅР°
         Exit Function
     Else
-        'Прочитали запись, запускаем качалку!
-        'Запоминаем все известные параметры из MsgMap пока их не перезаписали...
+        'РџСЂРѕС‡РёС‚Р°Р»Рё Р·Р°РїРёСЃСЊ, Р·Р°РїСѓСЃРєР°РµРј РєР°С‡Р°Р»РєСѓ!
+        'Р—Р°РїРѕРјРёРЅР°РµРј РІСЃРµ РёР·РІРµСЃС‚РЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РёР· MsgMap РїРѕРєР° РёС… РЅРµ РїРµСЂРµР·Р°РїРёСЃР°Р»Рё...
         With hMsg
             .Author = MsgMap.Author
             .AuthorLen = MsgMap.AuthorLen
@@ -814,62 +814,62 @@ Dim tmpString As String
             .TopicNum = MsgMap.TopicNum
             .Indent = MsgMap.Indent
         End With
-        'Инициализация переменных
+        'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРјРµРЅРЅС‹С…
         bDone = False
         strMess = strEmpty
-        'Загружаем качалку работой без ожидания ее выполнения
+        'Р—Р°РіСЂСѓР¶Р°РµРј РєР°С‡Р°Р»РєСѓ СЂР°Р±РѕС‚РѕР№ Р±РµР· РѕР¶РёРґР°РЅРёСЏ РµРµ РІС‹РїРѕР»РЅРµРЅРёСЏ
         Call StartInet(Left(hMsg.msgURL, hMsg.msgURLLen))
     End If
-    'Продолжаем работу, если не нажата кнопка СТОП
+    'РџСЂРѕРґРѕР»Р¶Р°РµРј СЂР°Р±РѕС‚Сѓ, РµСЃР»Рё РЅРµ РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° РЎРўРћРџ
     If Not bCancel Then
         Timer1.Enabled = True
-'Это ведь реализовано в mnuStop? Зачем еще?
+'Р­С‚Рѕ РІРµРґСЊ СЂРµР°Р»РёР·РѕРІР°РЅРѕ РІ mnuStop? Р—Р°С‡РµРј РµС‰Рµ?
 ''    Else
 ''        Call StopFeeder
     End If
 End Function
 
 '*****************************************************
-'* Производит необходимые действия после завершения  *
-'* (останова) закачки)                               *
-'*      Mode=ucDLcomplete - закачка завершена        *
-'*      Mode=ucDLstopped  - закачка остановлена      *
+'* РџСЂРѕРёР·РІРѕРґРёС‚ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґРµР№СЃС‚РІРёСЏ РїРѕСЃР»Рµ Р·Р°РІРµСЂС€РµРЅРёСЏ  *
+'* (РѕСЃС‚Р°РЅРѕРІР°) Р·Р°РєР°С‡РєРё)                               *
+'*      Mode=ucDLcomplete - Р·Р°РєР°С‡РєР° Р·Р°РІРµСЂС€РµРЅР°        *
+'*      Mode=ucDLstopped  - Р·Р°РєР°С‡РєР° РѕСЃС‚Р°РЅРѕРІР»РµРЅР°      *
 '*****************************************************
 Private Sub StopFeeder(ByVal Mode As enDLresult)
-    'Общие команды (для всех режимов)
-    'Закрываем страницу
+    'РћР±С‰РёРµ РєРѕРјР°РЅРґС‹ (РґР»СЏ РІСЃРµС… СЂРµР¶РёРјРѕРІ)
+    'Р—Р°РєСЂС‹РІР°РµРј СЃС‚СЂР°РЅРёС†Сѓ
     bResult = Module1.WriteHTML(6, CurrPage, COLOR, strEmpty, RecNum)
     bResult = Module1.WriteHTML(7, CurrPage, COLOR, strEmpty, RecNum)
-    'Закрываем навигатор
+    'Р—Р°РєСЂС‹РІР°РµРј РЅР°РІРёРіР°С‚РѕСЂ
     bResult = WriteNavigator(4, CurrPage, RecNum, 0, strEmpty)
     Select Case Mode
         Case ucDLcomplete:
-            'Обновить журнал: успешная закачка
-            Label14.Caption = "Идет обновление журнала закачки..."
+            'РћР±РЅРѕРІРёС‚СЊ Р¶СѓСЂРЅР°Р»: СѓСЃРїРµС€РЅР°СЏ Р·Р°РєР°С‡РєР°
+            Label14.Caption = "РРґРµС‚ РѕР±РЅРѕРІР»РµРЅРёРµ Р¶СѓСЂРЅР°Р»Р° Р·Р°РєР°С‡РєРё..."
             Label14.Refresh
             bResult = MsgMap.UpdateDB(ucHistoryMode)
-            'Обновить БД авторов
-            ''TO DO BUG А надо ли это делать КАЖДЫЙ раз? И так ведь справляемся...
-                    ''Label14.Caption = "Идет обновление статистической информации..."
+            'РћР±РЅРѕРІРёС‚СЊ Р‘Р” Р°РІС‚РѕСЂРѕРІ
+            ''TO DO BUG Рђ РЅР°РґРѕ Р»Рё СЌС‚Рѕ РґРµР»Р°С‚СЊ РљРђР–Р”Р«Р™ СЂР°Р·? Р С‚Р°Рє РІРµРґСЊ СЃРїСЂР°РІР»СЏРµРјСЃСЏ...
+                    ''Label14.Caption = "РРґРµС‚ РѕР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚РёСЃС‚РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРё..."
                     ''Label14.Refresh
                     ''bResult = Authors.UpdateDB(ucHistoryMode)
-            'Обновление индекса только при полной закачке текущей страницы
-            Label14.Caption = "Запись главного индекса..."
+            'РћР±РЅРѕРІР»РµРЅРёРµ РёРЅРґРµРєСЃР° С‚РѕР»СЊРєРѕ РїСЂРё РїРѕР»РЅРѕР№ Р·Р°РєР°С‡РєРµ С‚РµРєСѓС‰РµР№ СЃС‚СЂР°РЅРёС†С‹
+            Label14.Caption = "Р—Р°РїРёСЃСЊ РіР»Р°РІРЅРѕРіРѕ РёРЅРґРµРєСЃР°..."
             Label14.Refresh
             bResult = UpdateTOC(CurrPage)
         Case ucDLstopped:
-            'Обновить журнал: закачка остановлена пользователем
+            'РћР±РЅРѕРІРёС‚СЊ Р¶СѓСЂРЅР°Р»: Р·Р°РєР°С‡РєР° РѕСЃС‚Р°РЅРѕРІР»РµРЅР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
             bResult = MsgMap.UpdateDB(ucUseCurrRec)
     End Select
-    'Обновление статистики по авторам
-    Label14.Caption = "Запись статистики в HTML..."
+    'РћР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚РёСЃС‚РёРєРё РїРѕ Р°РІС‚РѕСЂР°Рј
+    Label14.Caption = "Р—Р°РїРёСЃСЊ СЃС‚Р°С‚РёСЃС‚РёРєРё РІ HTML..."
     Label14.Refresh
     bResult = Authors.WriteAHTMLs
-    'Стереть БД
+    'РЎС‚РµСЂРµС‚СЊ Р‘Р”
     MsgMap.Clear
-    Label14.Caption = "Ожидание команды."
+    Label14.Caption = "РћР¶РёРґР°РЅРёРµ РєРѕРјР°РЅРґС‹."
     Label14.Refresh
-    Label8.Caption = "Готово."
+    Label8.Caption = "Р“РѕС‚РѕРІРѕ."
     Label8.Refresh
     mnuExit.Enabled = True
     mnuStop.Enabled = False
@@ -878,169 +878,169 @@ Private Sub StopFeeder(ByVal Mode As enDLresult)
 End Sub
 
 '*****************************************************
-'* Принимаем текст страницы с сообщением от качалки  *
-'* и производим ее вскрытие                          *
-'*      msgNum - номер записи в БД ссылок            *
+'* РџСЂРёРЅРёРјР°РµРј С‚РµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј РѕС‚ РєР°С‡Р°Р»РєРё  *
+'* Рё РїСЂРѕРёР·РІРѕРґРёРј РµРµ РІСЃРєСЂС‹С‚РёРµ                          *
+'*      msgNum - РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє            *
 '*****************************************************
-'lpString передаем ByRef (ByVal не работает здесь)
+'lpString РїРµСЂРµРґР°РµРј ByRef (ByVal РЅРµ СЂР°Р±РѕС‚Р°РµС‚ Р·РґРµСЃСЊ)
 Private Function ParserLevel2(ByRef lpString As String) As String
 Dim StartPos As Long
 Dim EndPos As Long
 Dim tmpstr As String
 Dim i As Long
-Dim tmpLen As Long      'Для сравнения длин заголовков при проверке индексации
+Dim tmpLen As Long      'Р”Р»СЏ СЃСЂР°РІРЅРµРЅРёСЏ РґР»РёРЅ Р·Р°РіРѕР»РѕРІРєРѕРІ РїСЂРё РїСЂРѕРІРµСЂРєРµ РёРЅРґРµРєСЃР°С†РёРё
 
-''ОТЛИЧИЯ МЕССАГ ОТ ЗАГОЛОВКОВ ОГЛАВЛЕНИЙ
-''1)В мессагах ник закрывается двоеточием
-''2)Если мессага пустая (только заголовок), то в оглавлении автоматом пишется (-)
-''Оглавление - Химик Увы, там доставка от 2 дисков :( (-)
-''Мессага    - Химик: Увы, там доставка от 2 дисков :(
-    'Запись в лог программы
+''РћРўР›РР§РРЇ РњР•РЎРЎРђР“ РћРў Р—РђР“РћР›РћР’РљРћР’ РћР“Р›РђР’Р›Р•РќРР™
+''1)Р’ РјРµСЃСЃР°РіР°С… РЅРёРє Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ РґРІРѕРµС‚РѕС‡РёРµРј
+''2)Р•СЃР»Рё РјРµСЃСЃР°РіР° РїСѓСЃС‚Р°СЏ (С‚РѕР»СЊРєРѕ Р·Р°РіРѕР»РѕРІРѕРє), С‚Рѕ РІ РѕРіР»Р°РІР»РµРЅРёРё Р°РІС‚РѕРјР°С‚РѕРј РїРёС€РµС‚СЃСЏ (-)
+''РћРіР»Р°РІР»РµРЅРёРµ - РҐРёРјРёРє РЈРІС‹, С‚Р°Рј РґРѕСЃС‚Р°РІРєР° РѕС‚ 2 РґРёСЃРєРѕРІ :( (-)
+''РњРµСЃСЃР°РіР°    - РҐРёРјРёРє: РЈРІС‹, С‚Р°Рј РґРѕСЃС‚Р°РІРєР° РѕС‚ 2 РґРёСЃРєРѕРІ :(
+    'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
     LogEvent ("[Parser Level 2] enter routine")
-    'Для начала перепрыгнем ПРИБЛИЗИТЕЛЬНО в нужную нам область
-    Label14.Caption = "Анализ закачанной страницы"
+    'Р”Р»СЏ РЅР°С‡Р°Р»Р° РїРµСЂРµРїСЂС‹РіРЅРµРј РџР РР‘Р›РР—РРўР•Р›Р¬РќРћ РІ РЅСѓР¶РЅСѓСЋ РЅР°Рј РѕР±Р»Р°СЃС‚СЊ
+    Label14.Caption = "РђРЅР°Р»РёР· Р·Р°РєР°С‡Р°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹"
     Label14.Refresh
-    StartPos = InStr(1, lpString, "Добавить", vbTextCompare)
+    StartPos = InStr(1, lpString, "Р”РѕР±Р°РІРёС‚СЊ", vbTextCompare)
     If StartPos = 0 Then
-        'Неполная закачка - повторный запрос
+        'РќРµРїРѕР»РЅР°СЏ Р·Р°РєР°С‡РєР° - РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ
         lRetry = lRetry + 1
         Exit Function
     End If
-    'Отрезаем все лишнее, чтобы не возиться
-    '+1 чтобы буква "Д" осталась :) Это не нужно, но для эстетики :)
+    'РћС‚СЂРµР·Р°РµРј РІСЃРµ Р»РёС€РЅРµРµ, С‡С‚РѕР±С‹ РЅРµ РІРѕР·РёС‚СЊСЃСЏ
+    '+1 С‡С‚РѕР±С‹ Р±СѓРєРІР° "Р”" РѕСЃС‚Р°Р»Р°СЃСЊ :) Р­С‚Рѕ РЅРµ РЅСѓР¶РЅРѕ, РЅРѕ РґР»СЏ СЌСЃС‚РµС‚РёРєРё :)
     lpString = Right(lpString, Len(lpString) - StartPos + 1)
-    'Проезжаем почти до начала сообщения
+    'РџСЂРѕРµР·Р¶Р°РµРј РїРѕС‡С‚Рё РґРѕ РЅР°С‡Р°Р»Р° СЃРѕРѕР±С‰РµРЅРёСЏ
     ''{FIXED} BUG Invalid call, add 1 for continue
     StartPos = InStr(1, lpString, "</center>", vbTextCompare) + Len("</center>")
     If StartPos = 0 Then
-        'Неполная закачка - повторный запрос
+        'РќРµРїРѕР»РЅР°СЏ Р·Р°РєР°С‡РєР° - РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ
         lRetry = lRetry + 1
         Exit Function
     End If
-    'Теперь ищем хвост сообщения
-    EndPos = InStr(StartPos, lpString, ">Ответить</A>", vbTextCompare)
+    'РўРµРїРµСЂСЊ РёС‰РµРј С…РІРѕСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ
+    EndPos = InStr(StartPos, lpString, ">РћС‚РІРµС‚РёС‚СЊ</A>", vbTextCompare)
     If EndPos = 0 Then
-        'Неполная закачка - повторный запрос
+        'РќРµРїРѕР»РЅР°СЏ Р·Р°РєР°С‡РєР° - РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ
         lRetry = lRetry + 1
         Exit Function
     End If
-    'Отсекаем все лишнее (оставим закрывающую скобку (+1))
+    'РћС‚СЃРµРєР°РµРј РІСЃРµ Р»РёС€РЅРµРµ (РѕСЃС‚Р°РІРёРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋ СЃРєРѕР±РєСѓ (+1))
     lpString = Mid(lpString, StartPos, EndPos - StartPos + 1)
-    'OK, теперь в зависимости от наличия e-mail автора вырезаем заголовок
+    'OK, С‚РµРїРµСЂСЊ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РЅР°Р»РёС‡РёСЏ e-mail Р°РІС‚РѕСЂР° РІС‹СЂРµР·Р°РµРј Р·Р°РіРѕР»РѕРІРѕРє
     If hMsg.emailLen = 0 Then
         StartPos = InStr(1, lpString, "</I></B>:", vbTextCompare) + Len("</I></B>:")
     Else
         StartPos = InStr(1, lpString, "</I></B></A>:", vbTextCompare) + Len("</I></B></A>:")
     End If
     ''EndPos = InStr(StartPos, lpString, "<P>", vbTextCompare)
-    'Это изменилось после того как сайт очнулся от спячки
+    'Р­С‚Рѕ РёР·РјРµРЅРёР»РѕСЃСЊ РїРѕСЃР»Рµ С‚РѕРіРѕ РєР°Рє СЃР°Р№С‚ РѕС‡РЅСѓР»СЃСЏ РѕС‚ СЃРїСЏС‡РєРё
     EndPos = InStr(StartPos, lpString, "</FONT> <P>", vbTextCompare)
-    'Странно, но к этому моменту иногда доходит пустая строка. Еще одна проверка.
+    'РЎС‚СЂР°РЅРЅРѕ, РЅРѕ Рє СЌС‚РѕРјСѓ РјРѕРјРµРЅС‚Сѓ РёРЅРѕРіРґР° РґРѕС…РѕРґРёС‚ РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°. Р•С‰Рµ РѕРґРЅР° РїСЂРѕРІРµСЂРєР°.
     If EndPos = 0 Then
-        'Неполная закачка - повторный запрос
+        'РќРµРїРѕР»РЅР°СЏ Р·Р°РєР°С‡РєР° - РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ
         lRetry = lRetry + 1
         Exit Function
     End If
-    ''TO DO BUG lpString="" впосле окончания цикла чтения БД адресов, зациклился
+    ''TO DO BUG lpString="" РІРїРѕСЃР»Рµ РѕРєРѕРЅС‡Р°РЅРёСЏ С†РёРєР»Р° С‡С‚РµРЅРёСЏ Р‘Р” Р°РґСЂРµСЃРѕРІ, Р·Р°С†РёРєР»РёР»СЃСЏ
     msgHead = Mid(lpString, StartPos, EndPos - StartPos)
-    'Придется стереть (-), которые написаны авторами вручную. Иначе будет путаница
-    'Используем переменные lResult и StartPos как временно не имеющие значения
-    'Е-мое! Та же хрень и с (+)
+    'РџСЂРёРґРµС‚СЃСЏ СЃС‚РµСЂРµС‚СЊ (-), РєРѕС‚РѕСЂС‹Рµ РЅР°РїРёСЃР°РЅС‹ Р°РІС‚РѕСЂР°РјРё РІСЂСѓС‡РЅСѓСЋ. РРЅР°С‡Рµ Р±СѓРґРµС‚ РїСѓС‚Р°РЅРёС†Р°
+    'РСЃРїРѕР»СЊР·СѓРµРј РїРµСЂРµРјРµРЅРЅС‹Рµ lResult Рё StartPos РєР°Рє РІСЂРµРјРµРЅРЅРѕ РЅРµ РёРјРµСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ
+    'Р•-РјРѕРµ! РўР° Р¶Рµ С…СЂРµРЅСЊ Рё СЃ (+)
     msgHead = RemoveSpaces(msgHead)
     StartPos = InStr(1, msgHead, "(-)", vbTextCompare)
     Do While StartPos > 0
     ''If StartPos > 0 Then
-        '(-) найден. Проверим (грубо), находится ли он в хвосте...
+        '(-) РЅР°Р№РґРµРЅ. РџСЂРѕРІРµСЂРёРј (РіСЂСѓР±Рѕ), РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РѕРЅ РІ С…РІРѕСЃС‚Рµ...
         If StartPos > Len(msgHead) - 5 Then
-            '(-) в конце строки - просто отрежем хвост
+            '(-) РІ РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё - РїСЂРѕСЃС‚Рѕ РѕС‚СЂРµР¶РµРј С…РІРѕСЃС‚
             msgHead = Left(msgHead, Len(msgHead) - 3)
         Else
-            '(-) в середине. Вырежем только эти 3 символа
+            '(-) РІ СЃРµСЂРµРґРёРЅРµ. Р’С‹СЂРµР¶РµРј С‚РѕР»СЊРєРѕ СЌС‚Рё 3 СЃРёРјРІРѕР»Р°
             msgHead = Left(msgHead, StartPos - 1) + Right(msgHead, Len(msgHead) - StartPos - 2)
         End If
     ''End If
-        'Стираем пробелы
+        'РЎС‚РёСЂР°РµРј РїСЂРѕР±РµР»С‹
         msgHead = RemoveSpaces(msgHead)
         StartPos = InStr(1, msgHead, "(-)", vbTextCompare)
     Loop
     StartPos = InStr(1, msgHead, "(+)", vbTextCompare)
     Do While StartPos > 0
     ''If StartPos > 0 Then
-        '(+) найден. Проверим (грубо), находится ли он в хвосте...
+        '(+) РЅР°Р№РґРµРЅ. РџСЂРѕРІРµСЂРёРј (РіСЂСѓР±Рѕ), РЅР°С…РѕРґРёС‚СЃСЏ Р»Рё РѕРЅ РІ С…РІРѕСЃС‚Рµ...
         If StartPos > Len(msgHead) - 5 Then
-            '(+) в конце строки - просто отрежем хвост
+            '(+) РІ РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё - РїСЂРѕСЃС‚Рѕ РѕС‚СЂРµР¶РµРј С…РІРѕСЃС‚
             msgHead = Left(msgHead, Len(msgHead) - 3)
         Else
-            '(+) в середине. Вырежем только эти 3 символа
+            '(+) РІ СЃРµСЂРµРґРёРЅРµ. Р’С‹СЂРµР¶РµРј С‚РѕР»СЊРєРѕ СЌС‚Рё 3 СЃРёРјРІРѕР»Р°
             msgHead = Left(msgHead, StartPos - 1) + Right(msgHead, Len(msgHead) - StartPos - 2)
         End If
     ''End If
-        'Стираем пробелы
+        'РЎС‚РёСЂР°РµРј РїСЂРѕР±РµР»С‹
         msgHead = RemoveSpaces(msgHead)
         StartPos = InStr(1, msgHead, "(+)", vbTextCompare)
     Loop
-    'Запись в лог программы
-    LogEvent ("[Parser Level 2] заголовок темы: " + msgHead)
-    'Передвигаемся в начало сообщения
+    'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+    LogEvent ("[Parser Level 2] Р·Р°РіРѕР»РѕРІРѕРє С‚РµРјС‹: " + msgHead)
+    'РџРµСЂРµРґРІРёРіР°РµРјСЃСЏ РІ РЅР°С‡Р°Р»Рѕ СЃРѕРѕР±С‰РµРЅРёСЏ
     StartPos = EndPos + Len("</FONT> <P>")
-    'Проблема: в сообщении может быть множество тегов <P>, но мы должны
-    'искать дату в конце сообщения.
-    'Вероятность ложного срабатывания чрезвычайно мала, но, к сожалению, не равна 0:
-    'мало ли кому придет в голову скопировать дату в сообщение...
-    'Нужно искать образец: <P><I>27 Января 2001, 01:04:49</I> <FONT size=2><B>
-    'Найти тег, закрывающий дату и то, что за ним
+    'РџСЂРѕР±Р»РµРјР°: РІ СЃРѕРѕР±С‰РµРЅРёРё РјРѕР¶РµС‚ Р±С‹С‚СЊ РјРЅРѕР¶РµСЃС‚РІРѕ С‚РµРіРѕРІ <P>, РЅРѕ РјС‹ РґРѕР»Р¶РЅС‹
+    'РёСЃРєР°С‚СЊ РґР°С‚Сѓ РІ РєРѕРЅС†Рµ СЃРѕРѕР±С‰РµРЅРёСЏ.
+    'Р’РµСЂРѕСЏС‚РЅРѕСЃС‚СЊ Р»РѕР¶РЅРѕРіРѕ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ С‡СЂРµР·РІС‹С‡Р°Р№РЅРѕ РјР°Р»Р°, РЅРѕ, Рє СЃРѕР¶Р°Р»РµРЅРёСЋ, РЅРµ СЂР°РІРЅР° 0:
+    'РјР°Р»Рѕ Р»Рё РєРѕРјСѓ РїСЂРёРґРµС‚ РІ РіРѕР»РѕРІСѓ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ РґР°С‚Сѓ РІ СЃРѕРѕР±С‰РµРЅРёРµ...
+    'РќСѓР¶РЅРѕ РёСЃРєР°С‚СЊ РѕР±СЂР°Р·РµС†: <P><I>27 РЇРЅРІР°СЂСЏ 2001, 01:04:49</I> <FONT size=2><B>
+    'РќР°Р№С‚Рё С‚РµРі, Р·Р°РєСЂС‹РІР°СЋС‰РёР№ РґР°С‚Сѓ Рё С‚Рѕ, С‡С‚Рѕ Р·Р° РЅРёРј
     lResult = InStr(StartPos, lpString, "</I> <FONT size=2><B>", vbTextCompare)
-    'Это эмпирическая величина, 30 символов назад открывающий дату тег <I> еще
-    'не должен был начаться, поэтому сейчас мы ЖЕЛЕЗНО отрежем именно то, что надо
+    'Р­С‚Рѕ СЌРјРїРёСЂРёС‡РµСЃРєР°СЏ РІРµР»РёС‡РёРЅР°, 30 СЃРёРјРІРѕР»РѕРІ РЅР°Р·Р°Рґ РѕС‚РєСЂС‹РІР°СЋС‰РёР№ РґР°С‚Сѓ С‚РµРі <I> РµС‰Рµ
+    'РЅРµ РґРѕР»Р¶РµРЅ Р±С‹Р» РЅР°С‡Р°С‚СЊСЃСЏ, РїРѕСЌС‚РѕРјСѓ СЃРµР№С‡Р°СЃ РјС‹ Р–Р•Р›Р•Р—РќРћ РѕС‚СЂРµР¶РµРј РёРјРµРЅРЅРѕ С‚Рѕ, С‡С‚Рѕ РЅР°РґРѕ
     lResult = lResult - 30
-    'Получаем точное расположение конца сообщения
+    'РџРѕР»СѓС‡Р°РµРј С‚РѕС‡РЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РєРѕРЅС†Р° СЃРѕРѕР±С‰РµРЅРёСЏ
     EndPos = InStr(lResult, lpString, "<I>", vbTextCompare)
-    'Текст самого сообщения получим если подтвердится идентичность заголовков
-    'иначе незачем время терять
-    'Самое главное - проверить совпадение заголовков: все ли ОК с индексами book.ru?
-    ''TO DO Временно отключим проверку If Left(hMsg.msgHead, hMsg.msgHeadLen) = msgHead Then
-    ''Проверка перенесена чуть ниже
+    'РўРµРєСЃС‚ СЃР°РјРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ РїРѕР»СѓС‡РёРј РµСЃР»Рё РїРѕРґС‚РІРµСЂРґРёС‚СЃСЏ РёРґРµРЅС‚РёС‡РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєРѕРІ
+    'РёРЅР°С‡Рµ РЅРµР·Р°С‡РµРј РІСЂРµРјСЏ С‚РµСЂСЏС‚СЊ
+    'РЎР°РјРѕРµ РіР»Р°РІРЅРѕРµ - РїСЂРѕРІРµСЂРёС‚СЊ СЃРѕРІРїР°РґРµРЅРёРµ Р·Р°РіРѕР»РѕРІРєРѕРІ: РІСЃРµ Р»Рё РћРљ СЃ РёРЅРґРµРєСЃР°РјРё book.ru?
+    ''TO DO Р’СЂРµРјРµРЅРЅРѕ РѕС‚РєР»СЋС‡РёРј РїСЂРѕРІРµСЂРєСѓ If Left(hMsg.msgHead, hMsg.msgHeadLen) = msgHead Then
+    ''РџСЂРѕРІРµСЂРєР° РїРµСЂРµРЅРµСЃРµРЅР° С‡СѓС‚СЊ РЅРёР¶Рµ
     tmpLen = Len(msgHead)
     If Not (hMsg.msgHeadLen = tmpLen) Then
-        'Запись в лог программы
-        LogEvent ("[Parser Level 2] Длина заголовка темы отлична от полученной в Parser Level 1")
+        'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+        LogEvent ("[Parser Level 2] Р”Р»РёРЅР° Р·Р°РіРѕР»РѕРІРєР° С‚РµРјС‹ РѕС‚Р»РёС‡РЅР° РѕС‚ РїРѕР»СѓС‡РµРЅРЅРѕР№ РІ Parser Level 1")
         If hMsg.msgHeadLen > tmpLen Then
-            'Заголовок короче, чем полученный в ParserLevel1
-            'Дополним пробелами в конце
+            'Р—Р°РіРѕР»РѕРІРѕРє РєРѕСЂРѕС‡Рµ, С‡РµРј РїРѕР»СѓС‡РµРЅРЅС‹Р№ РІ ParserLevel1
+            'Р”РѕРїРѕР»РЅРёРј РїСЂРѕР±РµР»Р°РјРё РІ РєРѕРЅС†Рµ
             msgHead = msgHead & String(hMsg.msgHeadLen - tmpLen, Chr(32))
-            'Запись в лог программы
-            LogEvent ("[Parser Level 2] Заголовок темы короче, чем полученный в Parser Level 1")
+            'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+            LogEvent ("[Parser Level 2] Р—Р°РіРѕР»РѕРІРѕРє С‚РµРјС‹ РєРѕСЂРѕС‡Рµ, С‡РµРј РїРѕР»СѓС‡РµРЅРЅС‹Р№ РІ Parser Level 1")
         'Else
-            'Заголовок длиннее, чем полученный в ParserLevel1
-            'Уменьшим величину tmpLen, присвоив ей значение из hMsg
-            '(после End If, т.к. это нужно сделать в обоих случаях)
+            'Р—Р°РіРѕР»РѕРІРѕРє РґР»РёРЅРЅРµРµ, С‡РµРј РїРѕР»СѓС‡РµРЅРЅС‹Р№ РІ ParserLevel1
+            'РЈРјРµРЅСЊС€РёРј РІРµР»РёС‡РёРЅСѓ tmpLen, РїСЂРёСЃРІРѕРёРІ РµР№ Р·РЅР°С‡РµРЅРёРµ РёР· hMsg
+            '(РїРѕСЃР»Рµ End If, С‚.Рє. СЌС‚Рѕ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РІ РѕР±РѕРёС… СЃР»СѓС‡Р°СЏС…)
         End If
         tmpLen = hMsg.msgHeadLen
     End If
     If Left(hMsg.msgHead, hMsg.msgHeadLen) = Left(msgHead, tmpLen) Then
-    'Да, это одно и то же сообщение
-        'Получаем текст самого сообщения
+    'Р”Р°, СЌС‚Рѕ РѕРґРЅРѕ Рё С‚Рѕ Р¶Рµ СЃРѕРѕР±С‰РµРЅРёРµ
+        'РџРѕР»СѓС‡Р°РµРј С‚РµРєСЃС‚ СЃР°РјРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
         tmpstr = Mid(lpString, StartPos, EndPos - StartPos)
-        'Часто сообщение завершается тегом параграфа <P>. Уберем, чтобы не плодить
-        'пустых строк на итоговой странице
+        'Р§Р°СЃС‚Рѕ СЃРѕРѕР±С‰РµРЅРёРµ Р·Р°РІРµСЂС€Р°РµС‚СЃСЏ С‚РµРіРѕРј РїР°СЂР°РіСЂР°С„Р° <P>. РЈР±РµСЂРµРј, С‡С‚РѕР±С‹ РЅРµ РїР»РѕРґРёС‚СЊ
+        'РїСѓСЃС‚С‹С… СЃС‚СЂРѕРє РЅР° РёС‚РѕРіРѕРІРѕР№ СЃС‚СЂР°РЅРёС†Рµ
         Do While UCase(Right(tmpstr, 3)) = "<P>"
             tmpstr = Left(tmpstr, Len(tmpstr) - 3)
         Loop
         ParserLevel2 = tmpstr
         hMsg.MsgSize = Len(tmpstr)
-        'Еще дата осталась...
+        'Р•С‰Рµ РґР°С‚Р° РѕСЃС‚Р°Р»Р°СЃСЊ...
         StartPos = EndPos + Len("<I>")
         EndPos = InStr(StartPos, lpString, "</i>", vbTextCompare)
         tmpstr = Mid(lpString, StartPos, EndPos - StartPos)
         hMsg.msgDate = tmpstr
         hMsg.msgDateLen = Len(tmpstr)
-        'Сохранить собранные сведения в журнале
-        Label14.Caption = "Сохранение полученной информации"
+        'РЎРѕС…СЂР°РЅРёС‚СЊ СЃРѕР±СЂР°РЅРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ РІ Р¶СѓСЂРЅР°Р»Рµ
+        Label14.Caption = "РЎРѕС…СЂР°РЅРµРЅРёРµ РїРѕР»СѓС‡РµРЅРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё"
         Label14.Refresh
-                'Забыл! Перекачать инфу в класс! Исправляюсь...
-                'Да! Заодно же надо сохранить новые сведения (длина сообщения, дата, ее длина)
-'Запись в лог программы
-LogEvent ("[Parser Level 2] Сбор полученной информации для автора " + Left(hMsg.Author, hMsg.AuthorLen))
+                'Р—Р°Р±С‹Р»! РџРµСЂРµРєР°С‡Р°С‚СЊ РёРЅС„Сѓ РІ РєР»Р°СЃСЃ! РСЃРїСЂР°РІР»СЏСЋСЃСЊ...
+                'Р”Р°! Р—Р°РѕРґРЅРѕ Р¶Рµ РЅР°РґРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РЅРѕРІС‹Рµ СЃРІРµРґРµРЅРёСЏ (РґР»РёРЅР° СЃРѕРѕР±С‰РµРЅРёСЏ, РґР°С‚Р°, РµРµ РґР»РёРЅР°)
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 2] РЎР±РѕСЂ РїРѕР»СѓС‡РµРЅРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РґР»СЏ Р°РІС‚РѕСЂР° " + Left(hMsg.Author, hMsg.AuthorLen))
         With hMsg
             MsgMap.AuthorLen = .AuthorLen
             If .AuthorLen > 0 Then
@@ -1076,22 +1076,22 @@ LogEvent ("[Parser Level 2] Сбор полученной информации для автора " + Left(hMsg.
             MsgMap.TopicNum = .TopicNum
             MsgMap.Indent = .Indent
         End With
-'Запись в лог программы
-LogEvent ("[Parser Level 2] Сохранение полученной информации - вызов MsgMap.UpdateDB(ucMsgURLsMode, " + Str(RecNum) + ")")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 2] РЎРѕС…СЂР°РЅРµРЅРёРµ РїРѕР»СѓС‡РµРЅРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё - РІС‹Р·РѕРІ MsgMap.UpdateDB(ucMsgURLsMode, " + Str(RecNum) + ")")
         bResult = MsgMap.UpdateDB(ucMsgURLsMode, RecNum)
     Else
-        'Запись в лог программы
-        LogEvent ("[Parser Level 2] Заголовок темы не соответствует заголовку, полученному в Parser Level 1. Запись номер " + Str(RecNum))
-        'Заголовки различаются! Ошибка...
+        'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+        LogEvent ("[Parser Level 2] Р—Р°РіРѕР»РѕРІРѕРє С‚РµРјС‹ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ Р·Р°РіРѕР»РѕРІРєСѓ, РїРѕР»СѓС‡РµРЅРЅРѕРјСѓ РІ Parser Level 1. Р—Р°РїРёСЃСЊ РЅРѕРјРµСЂ " + Str(RecNum))
+        'Р—Р°РіРѕР»РѕРІРєРё СЂР°Р·Р»РёС‡Р°СЋС‚СЃСЏ! РћС€РёР±РєР°...
         hMsg.MsgSize = 0
         hMsg.msgDate = strEmpty
         hMsg.msgDateLen = -1
-        ParserLevel2 = "<i>Информация <b>EliteGames conference extractor</b></i>. Ошибка индексации на сервере www.book.by.ru Сообщение перезаписано другим и не может быть прочитано"
+        ParserLevel2 = "<i>РРЅС„РѕСЂРјР°С†РёСЏ <b>EliteGames conference extractor</b></i>. РћС€РёР±РєР° РёРЅРґРµРєСЃР°С†РёРё РЅР° СЃРµСЂРІРµСЂРµ www.book.by.ru РЎРѕРѕР±С‰РµРЅРёРµ РїРµСЂРµР·Р°РїРёСЃР°РЅРѕ РґСЂСѓРіРёРј Рё РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСЂРѕС‡РёС‚Р°РЅРѕ"
         Label17.Caption = Str(Val(Label17.Caption) + 1)
     End If
     With Authors
-        'Запись в лог программы
-        LogEvent ("[Parser Level 2] Начало передачи информации об авторах в cAuthors")
+        'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+        LogEvent ("[Parser Level 2] РќР°С‡Р°Р»Рѕ РїРµСЂРµРґР°С‡Рё РёРЅС„РѕСЂРјР°С†РёРё РѕР± Р°РІС‚РѕСЂР°С… РІ cAuthors")
         If hMsg.emailLen > 0 Then
             .email = Left(hMsg.email, hMsg.emailLen)
         Else
@@ -1104,14 +1104,14 @@ LogEvent ("[Parser Level 2] Сохранение полученной информации - вызов MsgMap.Upda
             .Nickname = strEmpty
         End If
         .NicknameLen = hMsg.AuthorLen
-        'Остальные поля не несут полезной информации, обнуляем (? ЧЕГО???)
+        'РћСЃС‚Р°Р»СЊРЅС‹Рµ РїРѕР»СЏ РЅРµ РЅРµСЃСѓС‚ РїРѕР»РµР·РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё, РѕР±РЅСѓР»СЏРµРј (? Р§Р•Р“Рћ???)
         .TotalNums = 1
         .TotalSize = hMsg.MsgSize
         If Not (hMsg.msgDateLen <= 0) Then
-            'перевести дату в цифровой формат
-            'Формат времени YYYY.MM.DD (HH:MM:SS)
+            'РїРµСЂРµРІРµСЃС‚Рё РґР°С‚Сѓ РІ С†РёС„СЂРѕРІРѕР№ С„РѕСЂРјР°С‚
+            'Р¤РѕСЂРјР°С‚ РІСЂРµРјРµРЅРё YYYY.MM.DD (HH:MM:SS)
             
-            'Отсекаем месяц
+            'РћС‚СЃРµРєР°РµРј РјРµСЃСЏС†
             tmpstr = strEmpty
             tmpLen = hMsg.msgDateLen
             For i = 3 To tmpLen
@@ -1123,62 +1123,62 @@ LogEvent ("[Parser Level 2] Сохранение полученной информации - вызов MsgMap.Upda
             Next i
             tmpstr = RemoveSpaces(tmpstr)
             Select Case tmpstr
-                Case "Января":      tmpstr = "01"
-                Case "Февраля":     tmpstr = "02"
-                Case "Марта":       tmpstr = "03"
-                Case "Апреля":      tmpstr = "04"
-                Case "Мая":         tmpstr = "05"
-                Case "Июня":        tmpstr = "06"
-                Case "Июля":        tmpstr = "07"
-                Case "Августа":     tmpstr = "08"
-                Case "Сентября":    tmpstr = "09"
-                Case "Октября":     tmpstr = "10"
-                Case "Ноября":      tmpstr = "11"
-                Case "Декабря":     tmpstr = "12"
-                'На случай опечатки или еще чего
+                Case "РЇРЅРІР°СЂСЏ":      tmpstr = "01"
+                Case "Р¤РµРІСЂР°Р»СЏ":     tmpstr = "02"
+                Case "РњР°СЂС‚Р°":       tmpstr = "03"
+                Case "РђРїСЂРµР»СЏ":      tmpstr = "04"
+                Case "РњР°СЏ":         tmpstr = "05"
+                Case "РСЋРЅСЏ":        tmpstr = "06"
+                Case "РСЋР»СЏ":        tmpstr = "07"
+                Case "РђРІРіСѓСЃС‚Р°":     tmpstr = "08"
+                Case "РЎРµРЅС‚СЏР±СЂСЏ":    tmpstr = "09"
+                Case "РћРєС‚СЏР±СЂСЏ":     tmpstr = "10"
+                Case "РќРѕСЏР±СЂСЏ":      tmpstr = "11"
+                Case "Р”РµРєР°Р±СЂСЏ":     tmpstr = "12"
+                'РќР° СЃР»СѓС‡Р°Р№ РѕРїРµС‡Р°С‚РєРё РёР»Рё РµС‰Рµ С‡РµРіРѕ
                 Case Else:          tmpstr = "13"
             End Select
-            'Отрезаем число, получаем конструкцию .MM.DD
+            'РћС‚СЂРµР·Р°РµРј С‡РёСЃР»Рѕ, РїРѕР»СѓС‡Р°РµРј РєРѕРЅСЃС‚СЂСѓРєС†РёСЋ .MM.DD
             .FirstDate = "." & tmpstr & "." & Left(hMsg.msgDate, 2)
-            'Вырезаем год
+            'Р’С‹СЂРµР·Р°РµРј РіРѕРґ
             For i = 3 To tmpLen
                 If Mid(hMsg.msgDate, i, 1) Like "[0-9]" Then
                     tmpstr = Mid(hMsg.msgDate, i, 4)
                     i = tmpLen
                 End If
             Next i
-            'Получаем YYYY.MM.DD_
+            'РџРѕР»СѓС‡Р°РµРј YYYY.MM.DD_
             .FirstDate = tmpstr & .FirstDate & Chr(32)
-            'Вырезаем время
+            'Р’С‹СЂРµР·Р°РµРј РІСЂРµРјСЏ
             tmpLen = InStr(1, hMsg.msgDate, "(", vbTextCompare)
             tmpstr = Mid(hMsg.msgDate, tmpLen, 10)
             .FirstDate = .FirstDate & tmpstr
             .FirstDateLen = 21
         Else
-'Запись в лог программы
-LogEvent ("[Parser Level 2] У текущего автора дата <=0")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 2] РЈ С‚РµРєСѓС‰РµРіРѕ Р°РІС‚РѕСЂР° РґР°С‚Р° <=0")
             .FirstDate = strEmpty
             .FirstDateLen = 0
         End If
     End With
-'Запись в лог программы
-LogEvent ("[Parser Level 2] Сохранение информации об авторе - вызов Authors.UpdateDB(ucPrimaryMode)")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 2] РЎРѕС…СЂР°РЅРµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё РѕР± Р°РІС‚РѕСЂРµ - РІС‹Р·РѕРІ Authors.UpdateDB(ucPrimaryMode)")
     If Authors.UpdateDB(ucPrimaryMode) Then
-        'Увеличим значение счетчика обработанных записей
+        'РЈРІРµР»РёС‡РёРј Р·РЅР°С‡РµРЅРёРµ СЃС‡РµС‚С‡РёРєР° РѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹С… Р·Р°РїРёСЃРµР№
         Label6.Caption = Str(Val(Label6.Caption) + 1)
-        'Учтем и старые eMail-адреса автора, если они были обнаружены в UpdateDB:
+        'РЈС‡С‚РµРј Рё СЃС‚Р°СЂС‹Рµ eMail-Р°РґСЂРµСЃР° Р°РІС‚РѕСЂР°, РµСЃР»Рё РѕРЅРё Р±С‹Р»Рё РѕР±РЅР°СЂСѓР¶РµРЅС‹ РІ UpdateDB:
         hMsg.emailLen = Authors.emailLen
         hMsg.email = Left(Authors.email, Authors.emailLen)
     Else
-'Запись в лог программы
-LogEvent ("[Parser Level 2] Ошибка вызова Authors.UpdateDB(ucPrimaryMode)")
-        'TO DO Обновить Label(Thread) +1 обработано + ОШИБКА!!!
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Parser Level 2] РћС€РёР±РєР° РІС‹Р·РѕРІР° Authors.UpdateDB(ucPrimaryMode)")
+        'TO DO РћР±РЅРѕРІРёС‚СЊ Label(Thread) +1 РѕР±СЂР°Р±РѕС‚Р°РЅРѕ + РћРЁРР‘РљРђ!!!
         Label6.Caption = Str(Val(Label6.Caption) + 1)
         Label6.Caption = Str(Val(Label16.Caption) + 1)
     End If
-    'Ссылка успешно обработана: повторная закачка не требуется (lRetry = 0)
+    'РЎСЃС‹Р»РєР° СѓСЃРїРµС€РЅРѕ РѕР±СЂР°Р±РѕС‚Р°РЅР°: РїРѕРІС‚РѕСЂРЅР°СЏ Р·Р°РєР°С‡РєР° РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ (lRetry = 0)
     lRetry = 0
-    'ВСЕ!!!
+    'Р’РЎР•!!!
 End Function
 
 Private Sub Command1_Click()
@@ -1186,32 +1186,32 @@ Private Sub Command1_Click()
 End Sub
 
 '*****************************************************
-'* Нажата кнопка СТОП - останавливаем закачки        *
+'* РќР°Р¶Р°С‚Р° РєРЅРѕРїРєР° РЎРўРћРџ - РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј Р·Р°РєР°С‡РєРё        *
 '*****************************************************
 Private Sub Command2_Click()
     Call mnuStop_Click
 End Sub
 
 Private Sub Command3_Click()
-    'Поднимаем флаг "Закачка страницы произведена", пусть дальше
-    'разбираются, корректно или нет
+    'РџРѕРґРЅРёРјР°РµРј С„Р»Р°Рі "Р—Р°РєР°С‡РєР° СЃС‚СЂР°РЅРёС†С‹ РїСЂРѕРёР·РІРµРґРµРЅР°", РїСѓСЃС‚СЊ РґР°Р»СЊС€Рµ
+    'СЂР°Р·Р±РёСЂР°СЋС‚СЃСЏ, РєРѕСЂСЂРµРєС‚РЅРѕ РёР»Рё РЅРµС‚
     bDone = True
 ''{NET ERROR}    Call Inet1_DocumentComplete(Nothing, "dfg")
 End Sub
 
 Private Sub Form_Load()
-    Loading = True  'Загрузка - не обрабатывать информацию
+    Loading = True  'Р—Р°РіСЂСѓР·РєР° - РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ
     strMess = strEmpty
     Inet1.Offline = WorkOffline
     WebBrowser1.Offline = WorkOffline
-    'Опрос качалок будем производить раз в 2 секунды
-    'TO DO в будущем - из настроек
+    'РћРїСЂРѕСЃ РєР°С‡Р°Р»РѕРє Р±СѓРґРµРј РїСЂРѕРёР·РІРѕРґРёС‚СЊ СЂР°Р· РІ 2 СЃРµРєСѓРЅРґС‹
+    'TO DO РІ Р±СѓРґСѓС‰РµРј - РёР· РЅР°СЃС‚СЂРѕРµРє
     Timer1.Interval = 1500
     Timer1.Enabled = False
     Command2.Enabled = False
     mnuStop.Enabled = False
     mnuStart.Enabled = False
-    'Нельзя давать повторный запрос в данный момент
+    'РќРµР»СЊР·СЏ РґР°РІР°С‚СЊ РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚
     Command3.Enabled = False
 End Sub
 
@@ -1233,7 +1233,7 @@ Private Sub Form_Resize()
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
-    'TO DO Перенести следующую строку в главный цикл
+    'TO DO РџРµСЂРµРЅРµСЃС‚Рё СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ РІ РіР»Р°РІРЅС‹Р№ С†РёРєР»
     Set MsgMap = Nothing
     Set Authors = Nothing
     Set HTMLDoc = Nothing
@@ -1243,63 +1243,63 @@ End Sub
 
 Private Sub Inet1_DocumentComplete(ByVal pDisp As Object, URL As Variant)
     If Not Loading Then
-        'Ловим завершающее событие DocumentComplete
-        If (pDisp Is Inet1.Object) Then  'Is проверяет идентичность объектов
-''{NET ERROR}        If (pDisp Is Inet1.Object) Or (pDisp Is Nothing) Then  'Is проверяет идентичность объектов
-            'Читаем HTML-источник документа
+        'Р›РѕРІРёРј Р·Р°РІРµСЂС€Р°СЋС‰РµРµ СЃРѕР±С‹С‚РёРµ DocumentComplete
+        If (pDisp Is Inet1.Object) Then  'Is РїСЂРѕРІРµСЂСЏРµС‚ РёРґРµРЅС‚РёС‡РЅРѕСЃС‚СЊ РѕР±СЉРµРєС‚РѕРІ
+''{NET ERROR}        If (pDisp Is Inet1.Object) Or (pDisp Is Nothing) Then  'Is РїСЂРѕРІРµСЂСЏРµС‚ РёРґРµРЅС‚РёС‡РЅРѕСЃС‚СЊ РѕР±СЉРµРєС‚РѕРІ
+            'Р§РёС‚Р°РµРј HTML-РёСЃС‚РѕС‡РЅРёРє РґРѕРєСѓРјРµРЅС‚Р°
             Set HTMLDoc = Inet1.Document
             If HTMLDoc Is Nothing Then
-            ''TO DO переделать позже (вывод сообщения)
+            ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ (РІС‹РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ)
             ' Not an HTLM document
                 Exit Sub
             End If
             vtData = HTMLDoc.body.innerHTML
-            'Убираем все кавычки, а то замучаемся с ними
-                ''TO DO переделать позже
-                Label8.Caption = "Чистим информацию от мусора"
+            'РЈР±РёСЂР°РµРј РІСЃРµ РєР°РІС‹С‡РєРё, Р° С‚Рѕ Р·Р°РјСѓС‡Р°РµРјСЃСЏ СЃ РЅРёРјРё
+                ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ
+                Label8.Caption = "Р§РёСЃС‚РёРј РёРЅС„РѕСЂРјР°С†РёСЋ РѕС‚ РјСѓСЃРѕСЂР°"
                 Label8.Refresh
             strMess = Replace(CStr(vtData), """", "`", 1, -1, vbBinaryCompare)
-                ''TO DO переделать позже
-                Label8.Caption = "Чистим последствия чистки"
+                ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ
+                Label8.Caption = "Р§РёСЃС‚РёРј РїРѕСЃР»РµРґСЃС‚РІРёСЏ С‡РёСЃС‚РєРё"
                 Label8.Refresh
             strMess = ClearGarbage(strMess)
-            'Нельзя давать повторный запрос в данный момент
+            'РќРµР»СЊР·СЏ РґР°РІР°С‚СЊ РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚
             Command3.Enabled = False
             Command3.Refresh
-            bDone = True    'Страница получена
+            bDone = True    'РЎС‚СЂР°РЅРёС†Р° РїРѕР»СѓС‡РµРЅР°
         End If
     End If
 End Sub
 
 Private Sub Inet1_DownloadBegin()
-    ''TO DO переделать позже
-    Label8.Caption = "Получен ответ..."
+    ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ
+    Label8.Caption = "РџРѕР»СѓС‡РµРЅ РѕС‚РІРµС‚..."
     Label8.Refresh
 End Sub
 
 Private Sub Inet1_DownloadComplete()
-'TO DO заглушка!!! Если DocumentComplete будет работать, то эту процедуру надо будет стереть
+'TO DO Р·Р°РіР»СѓС€РєР°!!! Р•СЃР»Рё DocumentComplete Р±СѓРґРµС‚ СЂР°Р±РѕС‚Р°С‚СЊ, С‚Рѕ СЌС‚Сѓ РїСЂРѕС†РµРґСѓСЂСѓ РЅР°РґРѕ Р±СѓРґРµС‚ СЃС‚РµСЂРµС‚СЊ
 Exit Sub
-    'Читаем HTML-источник документа
+    'Р§РёС‚Р°РµРј HTML-РёСЃС‚РѕС‡РЅРёРє РґРѕРєСѓРјРµРЅС‚Р°
     Set HTMLDoc = Inet1.Document
     If HTMLDoc Is Nothing Then
-    ''TO DO переделать позже (вывод сообщения)
+    ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ (РІС‹РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ)
     ' Not an HTLM document
         Exit Sub
     End If
     strMess = Replace(HTMLDoc.body.innerHTML, """", "`", 1, -1, vbBinaryCompare)
 ''''''    vtData = HTMLDoc.body.innerHTML
-    'Убираем все кавычки, а то замучаемся с ними
-        ''TO DO переделать позже
-        Label8.Caption = "Чистим информацию от мусора"
+    'РЈР±РёСЂР°РµРј РІСЃРµ РєР°РІС‹С‡РєРё, Р° С‚Рѕ Р·Р°РјСѓС‡Р°РµРјСЃСЏ СЃ РЅРёРјРё
+        ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ
+        Label8.Caption = "Р§РёСЃС‚РёРј РёРЅС„РѕСЂРјР°С†РёСЋ РѕС‚ РјСѓСЃРѕСЂР°"
 ''''''    strMess = Replace(CStr(vtData), """", "`", 1, -1, vbBinaryCompare)
-        ''TO DO переделать позже
-        Label8.Caption = "Чистим последствия чистки"
+        ''TO DO РїРµСЂРµРґРµР»Р°С‚СЊ РїРѕР·Р¶Рµ
+        Label8.Caption = "Р§РёСЃС‚РёРј РїРѕСЃР»РµРґСЃС‚РІРёСЏ С‡РёСЃС‚РєРё"
     strMess = ClearGarbage(strMess)
-    'Нельзя давать повторный запрос в данный момент
+    'РќРµР»СЊР·СЏ РґР°РІР°С‚СЊ РїРѕРІС‚РѕСЂРЅС‹Р№ Р·Р°РїСЂРѕСЃ РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚
     Command3.Enabled = False
     Command3.Refresh
-    bDone = True    'Страница получена
+    bDone = True    'РЎС‚СЂР°РЅРёС†Р° РїРѕР»СѓС‡РµРЅР°
 End Sub
 
 Private Sub mnuAbout_Click()
@@ -1308,34 +1308,34 @@ Private Sub mnuAbout_Click()
 End Sub
 
 Private Sub mnuConnect_Click()
-'Выбрана команда Подключиться
+'Р’С‹Р±СЂР°РЅР° РєРѕРјР°РЅРґР° РџРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ
 
 Dim LastRecNum As Long
 Dim i As Long
-Dim blValue As Long 'Было Boolean, но файл никак не хотел читаться, пришлось заменить :(
+Dim blValue As Long 'Р‘С‹Р»Рѕ Boolean, РЅРѕ С„Р°Р№Р» РЅРёРєР°Рє РЅРµ С…РѕС‚РµР» С‡РёС‚Р°С‚СЊСЃСЏ, РїСЂРёС€Р»РѕСЃСЊ Р·Р°РјРµРЅРёС‚СЊ :(
 Dim hFile As Long
-Dim NextPage As Long    'Номер следующей закачиваемой страницы
+Dim NextPage As Long    'РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ Р·Р°РєР°С‡РёРІР°РµРјРѕР№ СЃС‚СЂР°РЅРёС†С‹
     
-    'Открываем индекс страниц
+    'РћС‚РєСЂС‹РІР°РµРј РёРЅРґРµРєСЃ СЃС‚СЂР°РЅРёС†
     hFile = FreeFile
     Open (App.Path & DataPath & PagesFile) For Random As hFile Len = Len(blValue)
     LastRecNum = LOF(hFile) \ Len(blValue)
     NextPage = 0
     If LastRecNum > 0 Then
-        'Уже что-то закачано, проверим, все ли там подряд закачивалось?
+        'РЈР¶Рµ С‡С‚Рѕ-С‚Рѕ Р·Р°РєР°С‡Р°РЅРѕ, РїСЂРѕРІРµСЂРёРј, РІСЃРµ Р»Рё С‚Р°Рј РїРѕРґСЂСЏРґ Р·Р°РєР°С‡РёРІР°Р»РѕСЃСЊ?
         For i = 1 To LastRecNum
             Get hFile, i, blValue
             If blValue = 0 Then
-                'Нет, есть дырки, закачивать будем одну из дырок (первую попавшуюся)
+                'РќРµС‚, РµСЃС‚СЊ РґС‹СЂРєРё, Р·Р°РєР°С‡РёРІР°С‚СЊ Р±СѓРґРµРј РѕРґРЅСѓ РёР· РґС‹СЂРѕРє (РїРµСЂРІСѓСЋ РїРѕРїР°РІС€СѓСЋСЃСЏ)
                 NextPage = i
                 i = LastRecNum
             End If
         Next i
         If NextPage = 0 Then
-            'В диапазоне (1, LastRecNum) все страницы закачаны
+            'Р’ РґРёР°РїР°Р·РѕРЅРµ (1, LastRecNum) РІСЃРµ СЃС‚СЂР°РЅРёС†С‹ Р·Р°РєР°С‡Р°РЅС‹
             If Not (LastRecNum >= 80) Then
-                'Если не все 80 страниц еще закачаны, то продолжаем качать страницы
-                'подряд с того места, где закончили в прошлый раз (LastRecNum)
+                'Р•СЃР»Рё РЅРµ РІСЃРµ 80 СЃС‚СЂР°РЅРёС† РµС‰Рµ Р·Р°РєР°С‡Р°РЅС‹, С‚Рѕ РїСЂРѕРґРѕР»Р¶Р°РµРј РєР°С‡Р°С‚СЊ СЃС‚СЂР°РЅРёС†С‹
+                'РїРѕРґСЂСЏРґ СЃ С‚РѕРіРѕ РјРµСЃС‚Р°, РіРґРµ Р·Р°РєРѕРЅС‡РёР»Рё РІ РїСЂРѕС€Р»С‹Р№ СЂР°Р· (LastRecNum)
                 NextPage = LastRecNum + 1
             End If
         End If
@@ -1343,7 +1343,7 @@ Dim NextPage As Long    'Номер следующей закачиваемой страницы
     Close hFile
     Text2.Text = Format(NextPage)
     
-    'Попытаемся загрузить страницу форума (Win автоматически выполнит запрос на соединение)
+    'РџРѕРїС‹С‚Р°РµРјСЃСЏ Р·Р°РіСЂСѓР·РёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ С„РѕСЂСѓРјР° (Win Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІС‹РїРѕР»РЅРёС‚ Р·Р°РїСЂРѕСЃ РЅР° СЃРѕРµРґРёРЅРµРЅРёРµ)
 ''DEBUG mnuStart.Enabled = True
     WorkOffline = False
     WebBrowser1.Offline = WorkOffline
@@ -1351,7 +1351,7 @@ Dim NextPage As Long    'Номер следующей закачиваемой страницы
 End Sub
 
 Private Sub mnuExit_Click()
-    'Остановка записи лога программы
+    'РћСЃС‚Р°РЅРѕРІРєР° Р·Р°РїРёСЃРё Р»РѕРіР° РїСЂРѕРіСЂР°РјРјС‹
     Call StopLogging
     Unload Me
     End
@@ -1366,10 +1366,10 @@ Private Sub mnuHelpContents_Click()
 End Sub
 
 '*****************************************************
-'* Определяет номер запрашиваемой страницы           *
+'* РћРїСЂРµРґРµР»СЏРµС‚ РЅРѕРјРµСЂ Р·Р°РїСЂР°С€РёРІР°РµРјРѕР№ СЃС‚СЂР°РЅРёС†С‹           *
 '*****************************************************
 Private Function GetPageNum() As Long
-    'TO DO написать норамальное определение номера страницы (с начала списка!!!)
+    'TO DO РЅР°РїРёСЃР°С‚СЊ РЅРѕСЂР°РјР°Р»СЊРЅРѕРµ РѕРїСЂРµРґРµР»РµРЅРёРµ РЅРѕРјРµСЂР° СЃС‚СЂР°РЅРёС†С‹ (СЃ РЅР°С‡Р°Р»Р° СЃРїРёСЃРєР°!!!)
     GetPageNum = CLng(Val(Text2.Text))
     If GetPageNum > LastPageAvailable Then
         'TO DO Warning message
@@ -1380,56 +1380,56 @@ Private Function GetPageNum() As Long
 End Function
 
 '*****************************************************
-'* Выбран пункт меню СТАРТ                           *
-'* Инициирует загрузку и разделение страницы         *
+'* Р’С‹Р±СЂР°РЅ РїСѓРЅРєС‚ РјРµРЅСЋ РЎРўРђР Рў                           *
+'* РРЅРёС†РёРёСЂСѓРµС‚ Р·Р°РіСЂСѓР·РєСѓ Рё СЂР°Р·РґРµР»РµРЅРёРµ СЃС‚СЂР°РЅРёС†С‹         *
 '*****************************************************
 Private Sub mnuStart_Click()
 Dim strURL As String
-    Loading = False 'Начать отслеживание загрузки страниц
+    Loading = False 'РќР°С‡Р°С‚СЊ РѕС‚СЃР»РµР¶РёРІР°РЅРёРµ Р·Р°РіСЂСѓР·РєРё СЃС‚СЂР°РЅРёС†
     Inet1.Offline = WorkOffline
-    'Получаем номер страницы для закачки
+    'РџРѕР»СѓС‡Р°РµРј РЅРѕРјРµСЂ СЃС‚СЂР°РЅРёС†С‹ РґР»СЏ Р·Р°РєР°С‡РєРё
     CurrPage = GetPageNum
-    ''TO DO Если номер задан неправильно, то выйти!!!
-    'Запрещаем команды СТАРТ в меню и на кнопке
+    ''TO DO Р•СЃР»Рё РЅРѕРјРµСЂ Р·Р°РґР°РЅ РЅРµРїСЂР°РІРёР»СЊРЅРѕ, С‚Рѕ РІС‹Р№С‚Рё!!!
+    'Р—Р°РїСЂРµС‰Р°РµРј РєРѕРјР°РЅРґС‹ РЎРўРђР Рў РІ РјРµРЅСЋ Рё РЅР° РєРЅРѕРїРєРµ
     Command1.Enabled = False
     mnuStart.Enabled = False
-    'Начинаем отслеживать нажатие кнопки Cancel
+    'РќР°С‡РёРЅР°РµРј РѕС‚СЃР»РµР¶РёРІР°С‚СЊ РЅР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё Cancel
     bCancel = False
     Command2.Enabled = True
     mnuStop.Enabled = True
-    'Нельзя выходить при работающей закачке
+    'РќРµР»СЊР·СЏ РІС‹С…РѕРґРёС‚СЊ РїСЂРё СЂР°Р±РѕС‚Р°СЋС‰РµР№ Р·Р°РєР°С‡РєРµ
     mnuExit.Enabled = False
-    'Сброс информации об ошибках
+    'РЎР±СЂРѕСЃ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РѕС€РёР±РєР°С…
     Label16.Caption = "0"
     Label17.Caption = "0"
     Label2.Caption = "0"
     Label4.Caption = "0"
     Label6.Caption = "0"
-    'Прочитать страницу ссылок
-    ''TO DO здесь задается адрес (учитывать автоочередь)
+    'РџСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ СЃСЃС‹Р»РѕРє
+    ''TO DO Р·РґРµСЃСЊ Р·Р°РґР°РµС‚СЃСЏ Р°РґСЂРµСЃ (СѓС‡РёС‚С‹РІР°С‚СЊ Р°РІС‚РѕРѕС‡РµСЂРµРґСЊ)
     strURL = "/book.cgi?book=Elitegames&p=" & Format(CurrPage) & "&ac=1"
     ''strURL = "C:\tmp\test8.htm"
-    'Кнопка повтора пока не нужна.
+    'РљРЅРѕРїРєР° РїРѕРІС‚РѕСЂР° РїРѕРєР° РЅРµ РЅСѓР¶РЅР°.
     ''Command3.Enabled = False
     ''Command3.Refresh
     bDone = False
     GettingURLs = True
     StartInet (strURL)
-    'Перебиваем сообщение от StartInet
-    Label8.Caption = "Запрос оглавления ушел"
+    'РџРµСЂРµР±РёРІР°РµРј СЃРѕРѕР±С‰РµРЅРёРµ РѕС‚ StartInet
+    Label8.Caption = "Р—Р°РїСЂРѕСЃ РѕРіР»Р°РІР»РµРЅРёСЏ СѓС€РµР»"
     Label8.Refresh
-    'Пуск таймера!
+    'РџСѓСЃРє С‚Р°Р№РјРµСЂР°!
     Timer1.Enabled = True
-    Debug.Print "Запрос оглавления ушел!"
+    Debug.Print "Р—Р°РїСЂРѕСЃ РѕРіР»Р°РІР»РµРЅРёСЏ СѓС€РµР»!"
 End Sub
 
 '*****************************************************
-'* Запускает качалку и посылает запрос на  msgURL    *
-'* Ожидание результата и его обработка - в           *
-'* Inet_DocumentComplete и Feeder соответственно     *
+'* Р—Р°РїСѓСЃРєР°РµС‚ РєР°С‡Р°Р»РєСѓ Рё РїРѕСЃС‹Р»Р°РµС‚ Р·Р°РїСЂРѕСЃ РЅР°  msgURL    *
+'* РћР¶РёРґР°РЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° Рё РµРіРѕ РѕР±СЂР°Р±РѕС‚РєР° - РІ           *
+'* Inet_DocumentComplete Рё Feeder СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ     *
 '*****************************************************
 Private Sub StartInet(ByVal msgURL As String)
-    'Даем возможность повторного запроса
+    'Р”Р°РµРј РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РїРѕРІС‚РѕСЂРЅРѕРіРѕ Р·Р°РїСЂРѕСЃР°
     Command3.Enabled = True
     Command3.Refresh
     bDone = False
@@ -1441,57 +1441,57 @@ Private Sub StartInet(ByVal msgURL As String)
     
     'Inet1.Navigate ("http://book.by.ru/cgi-bin/book.cgi?book=" & msgURL)
     Inet1.Navigate (BaseHREFprefix & BaseHREF & msgURL)
-    Debug.Print "Запрос ушел, " & BaseHREFprefix & BaseHREF & msgURL
-    Label8.Caption = "Запрос ушел"
+    Debug.Print "Р—Р°РїСЂРѕСЃ СѓС€РµР», " & BaseHREFprefix & BaseHREF & msgURL
+    Label8.Caption = "Р—Р°РїСЂРѕСЃ СѓС€РµР»"
     Label8.Refresh
 End Sub
 
 '*****************************************************
-'* Выбран пункт меню СТОП - останавливаем закачки    *
+'* Р’С‹Р±СЂР°РЅ РїСѓРЅРєС‚ РјРµРЅСЋ РЎРўРћРџ - РѕСЃС‚Р°РЅР°РІР»РёРІР°РµРј Р·Р°РєР°С‡РєРё    *
 '*****************************************************
 Private Sub mnuStop_Click()
-    'Флаг нажатия кнопки СТОП - на всякий случай
+    'Р¤Р»Р°Рі РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё РЎРўРћРџ - РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№
     bCancel = True
-    'Разрешаем кнопку ПУСК
+    'Р Р°Р·СЂРµС€Р°РµРј РєРЅРѕРїРєСѓ РџРЈРЎРљ
     Command1.Enabled = True
-    'Разрешаем пункты меню НАЧАТЬ и ВЫХОД
+    'Р Р°Р·СЂРµС€Р°РµРј РїСѓРЅРєС‚С‹ РјРµРЅСЋ РќРђР§РђРўР¬ Рё Р’Р«РҐРћР”
     mnuStart.Enabled = True
     mnuExit.Enabled = True
-    'Остановить качалки при нажатии Cancel (Stop)
+    'РћСЃС‚Р°РЅРѕРІРёС‚СЊ РєР°С‡Р°Р»РєРё РїСЂРё РЅР°Р¶Р°С‚РёРё Cancel (Stop)
     Inet1.Stop
-    Label8.Caption = "Закачка остановлена"
+    Label8.Caption = "Р—Р°РєР°С‡РєР° РѕСЃС‚Р°РЅРѕРІР»РµРЅР°"
     Label8.Refresh
     Call StopFeeder(ucDLstopped)
-    'TO DO разобраться тут с контекстом помощи
-    Result = MsgBox("Закачка текущей страницы отменена. Тем не менее," + vbCrLf + "Вы можете просмотреть всю информацию, которую" + vbCrLf + "удалось закачать до момента остановки." + vbCrLf + "Воспользуйтесь разделом ""Остановка закачки"" справочной" + vbCrLf + "системы для детальных инструкций.", vbOKOnly + vbExclamation, "Закачка страницы " & Format(CurrPage) & " остановлена")
+    'TO DO СЂР°Р·РѕР±СЂР°С‚СЊСЃСЏ С‚СѓС‚ СЃ РєРѕРЅС‚РµРєСЃС‚РѕРј РїРѕРјРѕС‰Рё
+    Result = MsgBox("Р—Р°РєР°С‡РєР° С‚РµРєСѓС‰РµР№ СЃС‚СЂР°РЅРёС†С‹ РѕС‚РјРµРЅРµРЅР°. РўРµРј РЅРµ РјРµРЅРµРµ," + vbCrLf + "Р’С‹ РјРѕР¶РµС‚Рµ РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃСЋ РёРЅС„РѕСЂРјР°С†РёСЋ, РєРѕС‚РѕСЂСѓСЋ" + vbCrLf + "СѓРґР°Р»РѕСЃСЊ Р·Р°РєР°С‡Р°С‚СЊ РґРѕ РјРѕРјРµРЅС‚Р° РѕСЃС‚Р°РЅРѕРІРєРё." + vbCrLf + "Р’РѕСЃРїРѕР»СЊР·СѓР№С‚РµСЃСЊ СЂР°Р·РґРµР»РѕРј ""РћСЃС‚Р°РЅРѕРІРєР° Р·Р°РєР°С‡РєРё"" СЃРїСЂР°РІРѕС‡РЅРѕР№" + vbCrLf + "СЃРёСЃС‚РµРјС‹ РґР»СЏ РґРµС‚Р°Р»СЊРЅС‹С… РёРЅСЃС‚СЂСѓРєС†РёР№.", vbOKOnly + vbExclamation, "Р—Р°РєР°С‡РєР° СЃС‚СЂР°РЅРёС†С‹ " & Format(CurrPage) & " РѕСЃС‚Р°РЅРѕРІР»РµРЅР°")
 End Sub
 
 '*****************************************************
-'* Загружает HTML файл с результатами закачки        *
+'* Р—Р°РіСЂСѓР¶Р°РµС‚ HTML С„Р°Р№Р» СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё Р·Р°РєР°С‡РєРё        *
 '*****************************************************
 Private Sub mnuView_Click()
     Call ShowHTML
 End Sub
 
 '*****************************************************
-'*   Обновляет HTML-файлы со сведениями об авторах   *
+'*   РћР±РЅРѕРІР»СЏРµС‚ HTML-С„Р°Р№Р»С‹ СЃРѕ СЃРІРµРґРµРЅРёСЏРјРё РѕР± Р°РІС‚РѕСЂР°С…   *
 '*****************************************************
 Private Sub mnuWriteAuthors_Click()
-    'Обновление статистики по авторам
-    Label14.Caption = "Запись статистики в HTML..."
+    'РћР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚РёСЃС‚РёРєРё РїРѕ Р°РІС‚РѕСЂР°Рј
+    Label14.Caption = "Р—Р°РїРёСЃСЊ СЃС‚Р°С‚РёСЃС‚РёРєРё РІ HTML..."
     Label14.Refresh
     bResult = Authors.WriteAHTMLs
-    Label14.Caption = "Ожидание команды."
+    Label14.Caption = "РћР¶РёРґР°РЅРёРµ РєРѕРјР°РЅРґС‹."
     Label14.Refresh
-    Label8.Caption = "Готово."
+    Label8.Caption = "Р“РѕС‚РѕРІРѕ."
     Label8.Refresh
 End Sub
 
 Private Sub Timer1_Timer()
     If GettingURLs Then
-    'Таймер: сейчас идет получение оглавления
+    'РўР°Р№РјРµСЂ: СЃРµР№С‡Р°СЃ РёРґРµС‚ РїРѕР»СѓС‡РµРЅРёРµ РѕРіР»Р°РІР»РµРЅРёСЏ
         If bDone Then
-            'На всякий случай попробуем стереть БД (мало ли что осталось от предыдущего раза)
+            'РќР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№ РїРѕРїСЂРѕР±СѓРµРј СЃС‚РµСЂРµС‚СЊ Р‘Р” (РјР°Р»Рѕ Р»Рё С‡С‚Рѕ РѕСЃС‚Р°Р»РѕСЃСЊ РѕС‚ РїСЂРµРґС‹РґСѓС‰РµРіРѕ СЂР°Р·Р°)
             MsgMap.Clear
             ''Call Inet1_DocumentComplete(Nothing, "dfg")
             If Splitter(strMess) Then
@@ -1500,7 +1500,7 @@ Private Sub Timer1_Timer()
             End If
         End If
     Else
-    'Сейчас качается текст сообщений
+    'РЎРµР№С‡Р°СЃ РєР°С‡Р°РµС‚СЃСЏ С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёР№
         If bDone Then
             lResult = Feeder
         End If
@@ -1508,7 +1508,7 @@ Private Sub Timer1_Timer()
 End Sub
 
 Private Sub WebBrowser1_DownloadBegin()
-    'Если браузер начал получать данные, то мы в сети - можно разрешить закачку
+    'Р•СЃР»Рё Р±СЂР°СѓР·РµСЂ РЅР°С‡Р°Р» РїРѕР»СѓС‡Р°С‚СЊ РґР°РЅРЅС‹Рµ, С‚Рѕ РјС‹ РІ СЃРµС‚Рё - РјРѕР¶РЅРѕ СЂР°Р·СЂРµС€РёС‚СЊ Р·Р°РєР°С‡РєСѓ
     Command1.Enabled = True
     mnuStart.Enabled = True
 End Sub
