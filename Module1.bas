@@ -1,7 +1,7 @@
 Attribute VB_Name = "Module1"
 Option Explicit
 
-'Установите значение FullLogging = 1 для включения записи e-mail авторов в HTML-файл
+'РЈСЃС‚Р°РЅРѕРІРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ FullLogging = 1 РґР»СЏ РІРєР»СЋС‡РµРЅРёСЏ Р·Р°РїРёСЃРё e-mail Р°РІС‚РѕСЂРѕРІ РІ HTML-С„Р°Р№Р»
 Public Const FullLogging = 1
 
 Public Type tAuthor
@@ -40,78 +40,78 @@ Public Type tHistory
     Reserve As Long
 End Type
 
-Public Const AuthorsFile = "authors.db"     'Имя базы данных по авторам
-Public Const MsgFile = "msg.db"             'Имя базы данных ссылок на сообщения
-Public Const HistoryFile = "history.db"     'Имя журнала
-Public Const PagesFile = "pages.db"         'Имя базы данных по страницам
-Public Const IndexFile = "index.html"       'Главный индекс
-Public Const TOCFile = "pagesTOC.html"      'Основное оглавление
-Public Const StartupFile = "Startup.html"   'Стартовая страница
-Public Const FAQFile = "FAQ.html"           'ЧаВо
-Public Const PagesPrefix = "page"           'Префикс имени страницы сообщений
-Public Const NavPrefix = "pTOC"             'Префикс имени страницы-навигатора
-Public Const IndexPrefix = "pIndex"         'Префикс имени индекса страницы сообщений
-Public Const HTMLext = ".html"              'Расширение имен страниц
-Public Const ANamesPage = "authors1.html"   'Авторы по алфавиту
-Public Const ANumsPage = "authors2.html"    'Авторы по кол-ву сообщений
-Public Const ASizePage = "authors3.html"    'Авторы по размеру сообщений
-Public Const ATimePage = "authors4.html"    'Авторы по времени появления в конфе
-Public Const HelpFile = "\EGCEhelp.chm"     'Имя файла справки
-Public Const CSSFile = "EGCE.css"           'Таблица стилей HTML
-Public Const PaneFile = "pane.js"           'Таблица стилей HTML
-Public Const DataPath = "\EGCEdata\"        'Путь к файлам данных
+Public Const AuthorsFile = "authors.db"     'РРјСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С… РїРѕ Р°РІС‚РѕСЂР°Рј
+Public Const MsgFile = "msg.db"             'РРјСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С… СЃСЃС‹Р»РѕРє РЅР° СЃРѕРѕР±С‰РµРЅРёСЏ
+Public Const HistoryFile = "history.db"     'РРјСЏ Р¶СѓСЂРЅР°Р»Р°
+Public Const PagesFile = "pages.db"         'РРјСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С… РїРѕ СЃС‚СЂР°РЅРёС†Р°Рј
+Public Const IndexFile = "index.html"       'Р“Р»Р°РІРЅС‹Р№ РёРЅРґРµРєСЃ
+Public Const TOCFile = "pagesTOC.html"      'РћСЃРЅРѕРІРЅРѕРµ РѕРіР»Р°РІР»РµРЅРёРµ
+Public Const StartupFile = "Startup.html"   'РЎС‚Р°СЂС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р°
+Public Const FAQFile = "FAQ.html"           'Р§Р°Р’Рѕ
+Public Const PagesPrefix = "page"           'РџСЂРµС„РёРєСЃ РёРјРµРЅРё СЃС‚СЂР°РЅРёС†С‹ СЃРѕРѕР±С‰РµРЅРёР№
+Public Const NavPrefix = "pTOC"             'РџСЂРµС„РёРєСЃ РёРјРµРЅРё СЃС‚СЂР°РЅРёС†С‹-РЅР°РІРёРіР°С‚РѕСЂР°
+Public Const IndexPrefix = "pIndex"         'РџСЂРµС„РёРєСЃ РёРјРµРЅРё РёРЅРґРµРєСЃР° СЃС‚СЂР°РЅРёС†С‹ СЃРѕРѕР±С‰РµРЅРёР№
+Public Const HTMLext = ".html"              'Р Р°СЃС€РёСЂРµРЅРёРµ РёРјРµРЅ СЃС‚СЂР°РЅРёС†
+Public Const ANamesPage = "authors1.html"   'РђРІС‚РѕСЂС‹ РїРѕ Р°Р»С„Р°РІРёС‚Сѓ
+Public Const ANumsPage = "authors2.html"    'РђРІС‚РѕСЂС‹ РїРѕ РєРѕР»-РІСѓ СЃРѕРѕР±С‰РµРЅРёР№
+Public Const ASizePage = "authors3.html"    'РђРІС‚РѕСЂС‹ РїРѕ СЂР°Р·РјРµСЂСѓ СЃРѕРѕР±С‰РµРЅРёР№
+Public Const ATimePage = "authors4.html"    'РђРІС‚РѕСЂС‹ РїРѕ РІСЂРµРјРµРЅРё РїРѕСЏРІР»РµРЅРёСЏ РІ РєРѕРЅС„Рµ
+Public Const HelpFile = "\EGCEhelp.chm"     'РРјСЏ С„Р°Р№Р»Р° СЃРїСЂР°РІРєРё
+Public Const CSSFile = "EGCE.css"           'РўР°Р±Р»РёС†Р° СЃС‚РёР»РµР№ HTML
+Public Const PaneFile = "pane.js"           'РўР°Р±Р»РёС†Р° СЃС‚РёР»РµР№ HTML
+Public Const DataPath = "\EGCEdata\"        'РџСѓС‚СЊ Рє С„Р°Р№Р»Р°Рј РґР°РЅРЅС‹С…
 Public Const strEmpty = ""
-Public Const ColorLight = "ffffff"          'Константы цвета для HTML-страницы
+Public Const ColorLight = "ffffff"          'РљРѕРЅСЃС‚Р°РЅС‚С‹ С†РІРµС‚Р° РґР»СЏ HTML-СЃС‚СЂР°РЅРёС†С‹
 Public Const ColorDark = "ddddff"
-Public Const LastPageAvailable% = 80        'Номер последней страницы старой конфы
-Public Const iMaxSize% = 255                'Максимальный размер буфера
-Public Const strSepURLDir = "/"             'Разделитель URL-адресов
-Public Const strSepDir = "\"                'Разделитель директорий
-Public Const strHHelpEXEname = "hh.exe"     'Имя программы просмотра справки *.CHM
+Public Const LastPageAvailable% = 80        'РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂР°РЅРёС†С‹ СЃС‚Р°СЂРѕР№ РєРѕРЅС„С‹
+Public Const iMaxSize% = 255                'РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ Р±СѓС„РµСЂР°
+Public Const strSepURLDir = "/"             'Р Р°Р·РґРµР»РёС‚РµР»СЊ URL-Р°РґСЂРµСЃРѕРІ
+Public Const strSepDir = "\"                'Р Р°Р·РґРµР»РёС‚РµР»СЊ РґРёСЂРµРєС‚РѕСЂРёР№
+Public Const strHHelpEXEname = "hh.exe"     'РРјСЏ РїСЂРѕРіСЂР°РјРјС‹ РїСЂРѕСЃРјРѕС‚СЂР° СЃРїСЂР°РІРєРё *.CHM
 Public Const strExplorer = "explorer.exe"
 Public Const strFullLogging = "full"
 
 ''HKEY_LOCAL_MACHINE\Software\CLASSES\chm.file\shell\open\command
 
-Public PauseTime As Variant, Start As Variant    'Для вычисления таймаутов
-Public fBrw As frmBrowser           'Собственно окно программы
-Public Result As VbMsgBoxResult     'Для окошек сообщений
-Public bResult As Boolean           'Для результатов функций
-Public WorkOffline As Boolean       'Работаем в офф-лайн по-умолчанию
-Public hMsg As tMessage             'Записи для качалок
-Public MsgMap As cMsgMap            'Класс для работы с базой данных сообщений
-Public Authors As cAuthors          'Класс для работы с базой данных авторов
-Public hFile As Long                'Указатель для работы с файлами
-Public CurrPage As Long             'Номер закачиваемой страницы
-Public RecNum As Long               'Номер записи в БД ссылок (для обратной связи)
-Public BaseHREF As String           'Базовый адрес конференции
-Public BaseHREFprefix As String     'Префикс базового адреса конференции
-Public TRindex As Long              'Индекс текущего тега TR (для корректной навигации)
+Public PauseTime As Variant, Start As Variant    'Р”Р»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ С‚Р°Р№РјР°СѓС‚РѕРІ
+Public fBrw As frmBrowser           'РЎРѕР±СЃС‚РІРµРЅРЅРѕ РѕРєРЅРѕ РїСЂРѕРіСЂР°РјРјС‹
+Public Result As VbMsgBoxResult     'Р”Р»СЏ РѕРєРѕС€РµРє СЃРѕРѕР±С‰РµРЅРёР№
+Public bResult As Boolean           'Р”Р»СЏ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ С„СѓРЅРєС†РёР№
+Public WorkOffline As Boolean       'Р Р°Р±РѕС‚Р°РµРј РІ РѕС„С„-Р»Р°Р№РЅ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
+Public hMsg As tMessage             'Р—Р°РїРёСЃРё РґР»СЏ РєР°С‡Р°Р»РѕРє
+Public MsgMap As cMsgMap            'РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… СЃРѕРѕР±С‰РµРЅРёР№
+Public Authors As cAuthors          'РљР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С… Р°РІС‚РѕСЂРѕРІ
+Public hFile As Long                'РЈРєР°Р·Р°С‚РµР»СЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»Р°РјРё
+Public CurrPage As Long             'РќРѕРјРµСЂ Р·Р°РєР°С‡РёРІР°РµРјРѕР№ СЃС‚СЂР°РЅРёС†С‹
+Public RecNum As Long               'РќРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє (РґР»СЏ РѕР±СЂР°С‚РЅРѕР№ СЃРІСЏР·Рё)
+Public BaseHREF As String           'Р‘Р°Р·РѕРІС‹Р№ Р°РґСЂРµСЃ РєРѕРЅС„РµСЂРµРЅС†РёРё
+Public BaseHREFprefix As String     'РџСЂРµС„РёРєСЃ Р±Р°Р·РѕРІРѕРіРѕ Р°РґСЂРµСЃР° РєРѕРЅС„РµСЂРµРЅС†РёРё
+Public TRindex As Long              'РРЅРґРµРєСЃ С‚РµРєСѓС‰РµРіРѕ С‚РµРіР° TR (РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ РЅР°РІРёРіР°С†РёРё)
 Public bFullLogging As Boolean
 
-'Внешние DLL-функции
+'Р’РЅРµС€РЅРёРµ DLL-С„СѓРЅРєС†РёРё
 Declare Function GetWindowsDirectory Lib "Kernel32" Alias "GetWindowsDirectoryA" (ByVal lpBuffer As String, ByVal nSize As Long) As Long
 
 '********************************************
-'* Получение пути установки Windows через   *
+'* РџРѕР»СѓС‡РµРЅРёРµ РїСѓС‚Рё СѓСЃС‚Р°РЅРѕРІРєРё Windows С‡РµСЂРµР·   *
 '* Win API                                  *
-'* Полученный путь содержит закрывающий     *
-'* разделитель директорий \                 *
+'* РџРѕР»СѓС‡РµРЅРЅС‹Р№ РїСѓС‚СЊ СЃРѕРґРµСЂР¶РёС‚ Р·Р°РєСЂС‹РІР°СЋС‰РёР№     *
+'* СЂР°Р·РґРµР»РёС‚РµР»СЊ РґРёСЂРµРєС‚РѕСЂРёР№ \                 *
 '********************************************
 Function GetWindowsDir() As String
 Dim strBuf As String
 Dim iZeroPos As Integer
 
-    'Заполняем буфер пробелами
+    'Р—Р°РїРѕР»РЅСЏРµРј Р±СѓС„РµСЂ РїСЂРѕР±РµР»Р°РјРё
     strBuf = Space(iMaxSize)
     If GetWindowsDirectory(strBuf, iMaxSize) > 0 Then
-        'Ищем терминатор строки
+        'РС‰РµРј С‚РµСЂРјРёРЅР°С‚РѕСЂ СЃС‚СЂРѕРєРё
         iZeroPos = InStr(strBuf, Chr$(0))
-        'Если терминатор есть, то удаляем его
+        'Р•СЃР»Рё С‚РµСЂРјРёРЅР°С‚РѕСЂ РµСЃС‚СЊ, С‚Рѕ СѓРґР°Р»СЏРµРј РµРіРѕ
         If iZeroPos > 0 Then
             strBuf = Left$(strBuf, iZeroPos - 1)
         End If
-        'Если на конце строки нет разделителя директорий, добавляем его
+        'Р•СЃР»Рё РЅР° РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё РЅРµС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ РґРёСЂРµРєС‚РѕСЂРёР№, РґРѕР±Р°РІР»СЏРµРј РµРіРѕ
         If Right(Trim(strBuf), Len(strSepURLDir)) <> strSepURLDir And _
            Right(Trim(strBuf), Len(strSepDir)) <> strSepDir Then
             strBuf = RTrim$(strBuf) & strSepDir
@@ -123,26 +123,26 @@ Dim iZeroPos As Integer
 End Function
 
 '************************************************************
-'* Запуск справочной системы Windows (формат справки *.CHM) *
-'* Поиск файла hh.exe через реестр производиться НЕ будет,  *
-'* положимся на то, что этот файл в большинстве случаев     *
-'* лежит в папке Windows                                    *
+'* Р—Р°РїСѓСЃРє СЃРїСЂР°РІРѕС‡РЅРѕР№ СЃРёСЃС‚РµРјС‹ Windows (С„РѕСЂРјР°С‚ СЃРїСЂР°РІРєРё *.CHM) *
+'* РџРѕРёСЃРє С„Р°Р№Р»Р° hh.exe С‡РµСЂРµР· СЂРµРµСЃС‚СЂ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ РќР• Р±СѓРґРµС‚,  *
+'* РїРѕР»РѕР¶РёРјСЃСЏ РЅР° С‚Рѕ, С‡С‚Рѕ СЌС‚РѕС‚ С„Р°Р№Р» РІ Р±РѕР»СЊС€РёРЅСЃС‚РІРµ СЃР»СѓС‡Р°РµРІ     *
+'* Р»РµР¶РёС‚ РІ РїР°РїРєРµ Windows                                    *
 '************************************************************
 Public Sub ShowCHMHelp()
 Dim RetValue As Double
-    'Получить путь к папке Windows через DLL call
+    'РџРѕР»СѓС‡РёС‚СЊ РїСѓС‚СЊ Рє РїР°РїРєРµ Windows С‡РµСЂРµР· DLL call
     RetValue = Shell(GetWindowsDir & strHHelpEXEname & Chr(32) & App.Path & HelpFile, vbMaximizedFocus)
 End Sub
 
 '************************************************************
-'* Показывает HTML страницу с оглавлением всех закачанных   *
-'* адресов.                                                 *
-'* Загрузка страницы осуществляется путем передачи ее имени *
-'* Проводнику в качестве параметра                          *
+'* РџРѕРєР°Р·С‹РІР°РµС‚ HTML СЃС‚СЂР°РЅРёС†Сѓ СЃ РѕРіР»Р°РІР»РµРЅРёРµРј РІСЃРµС… Р·Р°РєР°С‡Р°РЅРЅС‹С…   *
+'* Р°РґСЂРµСЃРѕРІ.                                                 *
+'* Р—Р°РіСЂСѓР·РєР° СЃС‚СЂР°РЅРёС†С‹ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РїСѓС‚РµРј РїРµСЂРµРґР°С‡Рё РµРµ РёРјРµРЅРё *
+'* РџСЂРѕРІРѕРґРЅРёРєСѓ РІ РєР°С‡РµСЃС‚РІРµ РїР°СЂР°РјРµС‚СЂР°                          *
 '************************************************************
 Public Sub ShowHTML()
 Dim RetValue As Double
-    'Показать страницу
+    'РџРѕРєР°Р·Р°С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ
     RetValue = Shell(GetWindowsDir & strExplorer & Chr(32) & App.Path & DataPath & IndexFile, vbMaximizedFocus)
 End Sub
 
@@ -170,39 +170,39 @@ Sub Main()
     Do While Timer < Start + PauseTime
         DoEvents   ' Yield to other processes.
     Loop
-    'Пусть хоть пару секунд на заставку посмотрят... :))
+    'РџСѓСЃС‚СЊ С…РѕС‚СЊ РїР°СЂСѓ СЃРµРєСѓРЅРґ РЅР° Р·Р°СЃС‚Р°РІРєСѓ РїРѕСЃРјРѕС‚СЂСЏС‚... :))
     
-    'Пока смотрят заставку, грузим главное окошко
+    'РџРѕРєР° СЃРјРѕС‚СЂСЏС‚ Р·Р°СЃС‚Р°РІРєСѓ, РіСЂСѓР·РёРј РіР»Р°РІРЅРѕРµ РѕРєРѕС€РєРѕ
     Set fBrw = New frmBrowser
-    'Инициализация классов (приехало из frmBrowser_Load)
+    'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєР»Р°СЃСЃРѕРІ (РїСЂРёРµС…Р°Р»Рѕ РёР· frmBrowser_Load)
     Set MsgMap = New cMsgMap
     Set Authors = New cAuthors
     
-    'Включение записи лога программы
+    'Р’РєР»СЋС‡РµРЅРёРµ Р·Р°РїРёСЃРё Р»РѕРіР° РїСЂРѕРіСЂР°РјРјС‹
     Call StartLogging
     
-    'Инициализация некоторых переменных
+    'РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РЅРµРєРѕС‚РѕСЂС‹С… РїРµСЂРµРјРµРЅРЅС‹С…
     RecNum = 0
     CurrPage = 1
     TRindex = 0
-    bFullLogging = GetCommandLine   'Посмотреть что там с параметрами командной строки
+    bFullLogging = GetCommandLine   'РџРѕСЃРјРѕС‚СЂРµС‚СЊ С‡С‚Рѕ С‚Р°Рј СЃ РїР°СЂР°РјРµС‚СЂР°РјРё РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё
     
     If Dir(App.Path & "\EGCEdata\", vbDirectory) = strEmpty Then
         MkDir App.Path & "\EGCEdata"
     End If
-    'Если таблицы стилей еще нет, создаем ее
+    'Р•СЃР»Рё С‚Р°Р±Р»РёС†С‹ СЃС‚РёР»РµР№ РµС‰Рµ РЅРµС‚, СЃРѕР·РґР°РµРј РµРµ
     If Dir(App.Path & DataPath & CSSFile) = strEmpty Then
         WriteCSS
     End If
-    'Если скрипта управления панелью еще нет, создим его
+    'Р•СЃР»Рё СЃРєСЂРёРїС‚Р° СѓРїСЂР°РІР»РµРЅРёСЏ РїР°РЅРµР»СЊСЋ РµС‰Рµ РЅРµС‚, СЃРѕР·РґРёРј РµРіРѕ
     If Dir(App.Path & DataPath & PaneFile) = strEmpty Then
         WritePane
     End If
-    'Указываем имя файла справки
+    'РЈРєР°Р·С‹РІР°РµРј РёРјСЏ С„Р°Р№Р»Р° СЃРїСЂР°РІРєРё
     App.HelpFile = App.Path & HelpFile
     
-    WorkOffline = True  'Без необходимости никуда не лезем
-    'TO DO пока так, потом посмотрим...
+    WorkOffline = True  'Р‘РµР· РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РЅРёРєСѓРґР° РЅРµ Р»РµР·РµРј
+    'TO DO РїРѕРєР° С‚Р°Рє, РїРѕС‚РѕРј РїРѕСЃРјРѕС‚СЂРёРј...
     BaseHREFprefix = "http://book.by.ru/cgi-bin//"
     
     Load fBrw
@@ -212,33 +212,33 @@ Sub Main()
 End Sub
 
 '*****************************************************
-'*      Записываем откопанные сведения в HTML        *
-'*  Mode = 0 записать начало страницы                *
-'*  Mode = 1 записать заголовок сообщения            *
-'*           (при старте новой ветки)                *
-'*  Mode = 2 записать автора сообщения               *
-'*  Mode = 3 записать дату сообщения                 *
-'*  Mode = 4 записать очередное сообщение            *
-'*           (вызывать только после Mode=8)          *
-'*  Mode = 5 новая тема                              *
-'*  Mode = 6 конец темы                              *
-'*  Mode = 7 конец страницы                          *
-'*  Mode = 8 записать заголовок в тексте ответа      *
-'*           (перед Mode=4)                          *
-'*  Mode = 9 запись ссылки на e-mail автора          *
-'*  Mode =10 запись автора (после вызова 9)          *
-'*      Page    - номер страницы                     *
-'*      Color   - цвет фона текста сообщения         *
-'*      sMsg    - записываемый параметр              *
-'*      RecNum  - номер записи в БД ссылок           *
+'*      Р—Р°РїРёСЃС‹РІР°РµРј РѕС‚РєРѕРїР°РЅРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ РІ HTML        *
+'*  Mode = 0 Р·Р°РїРёСЃР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃС‚СЂР°РЅРёС†С‹                *
+'*  Mode = 1 Р·Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРѕРѕР±С‰РµРЅРёСЏ            *
+'*           (РїСЂРё СЃС‚Р°СЂС‚Рµ РЅРѕРІРѕР№ РІРµС‚РєРё)                *
+'*  Mode = 2 Р·Р°РїРёСЃР°С‚СЊ Р°РІС‚РѕСЂР° СЃРѕРѕР±С‰РµРЅРёСЏ               *
+'*  Mode = 3 Р·Р°РїРёСЃР°С‚СЊ РґР°С‚Сѓ СЃРѕРѕР±С‰РµРЅРёСЏ                 *
+'*  Mode = 4 Р·Р°РїРёСЃР°С‚СЊ РѕС‡РµСЂРµРґРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ            *
+'*           (РІС‹Р·С‹РІР°С‚СЊ С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ Mode=8)          *
+'*  Mode = 5 РЅРѕРІР°СЏ С‚РµРјР°                              *
+'*  Mode = 6 РєРѕРЅРµС† С‚РµРјС‹                              *
+'*  Mode = 7 РєРѕРЅРµС† СЃС‚СЂР°РЅРёС†С‹                          *
+'*  Mode = 8 Р·Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РІ С‚РµРєСЃС‚Рµ РѕС‚РІРµС‚Р°      *
+'*           (РїРµСЂРµРґ Mode=4)                          *
+'*  Mode = 9 Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-mail Р°РІС‚РѕСЂР°          *
+'*  Mode =10 Р·Р°РїРёСЃСЊ Р°РІС‚РѕСЂР° (РїРѕСЃР»Рµ РІС‹Р·РѕРІР° 9)          *
+'*      Page    - РЅРѕРјРµСЂ СЃС‚СЂР°РЅРёС†С‹                     *
+'*      Color   - С†РІРµС‚ С„РѕРЅР° С‚РµРєСЃС‚Р° СЃРѕРѕР±С‰РµРЅРёСЏ         *
+'*      sMsg    - Р·Р°РїРёСЃС‹РІР°РµРјС‹Р№ РїР°СЂР°РјРµС‚СЂ              *
+'*      RecNum  - РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє           *
 '*****************************************************
 Public Function WriteHTML(ByVal Mode As Long, ByVal Page As Long, ByVal COLOR As String, ByVal sMsg As String, ByVal RecNum As Long) As Boolean
     WriteHTML = False
     hFile = FreeFile
     Open (App.Path & DataPath & PagesPrefix & Format(Page) & HTMLext) For Append As hFile
     Select Case Mode
-        Case 0: 'записать начало страницы
-            Print #hFile, "<HTML><HEAD><TITLE>EGCE - Страница " & Format(Page) & " - Конференция Elite Games на WWW.BOOK.BY.RU</TITLE>"
+        Case 0: 'Р·Р°РїРёСЃР°С‚СЊ РЅР°С‡Р°Р»Рѕ СЃС‚СЂР°РЅРёС†С‹
+            Print #hFile, "<HTML><HEAD><TITLE>EGCE - РЎС‚СЂР°РЅРёС†Р° " & Format(Page) & " - РљРѕРЅС„РµСЂРµРЅС†РёСЏ Elite Games РЅР° WWW.BOOK.BY.RU</TITLE>"
             Print #hFile, "<LINK HREF=""" & CSSFile & """ REL=stylesheet TYPE=""text/css"">"
             Print #hFile, "<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; CHARSET=Windows-1251"">"
             Print #hFile, "<META http-equiv=Pragma content=no-cache>"
@@ -263,46 +263,46 @@ Public Function WriteHTML(ByVal Mode As Long, ByVal Page As Long, ByVal COLOR As
             Print #hFile, "}"
             Print #hFile, "</SCRIPT>"
             Print #hFile, "</HEAD><BODY><CENTER>"
-        Case 1: 'записать заголовок сообщения (при старте новой ветки)
-            ''Print #hFile, "<TR><TD vAlign=center width=""20%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Автор, дата</B></FONT></TD>"
-            ''Print #hFile, "<TD vAlign=center bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Нитка " & Str(hMsg.TopicNum) & ": " & sMsg & "</B></FONT></TD></TR>"
-            Print #hFile, "<TR><TD vAlign=center width=""20%"" bgColor=#000090><span class=""Info"">Автор, дата</span></TD>"
-            Print #hFile, "<TD vAlign=center bgColor=#000090><span class=""Info"">Нитка " & Str(hMsg.TopicNum) & ": " & sMsg & "</span></TD></TR>"
+        Case 1: 'Р·Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРѕРѕР±С‰РµРЅРёСЏ (РїСЂРё СЃС‚Р°СЂС‚Рµ РЅРѕРІРѕР№ РІРµС‚РєРё)
+            ''Print #hFile, "<TR><TD vAlign=center width=""20%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>РђРІС‚РѕСЂ, РґР°С‚Р°</B></FONT></TD>"
+            ''Print #hFile, "<TD vAlign=center bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>РќРёС‚РєР° " & Str(hMsg.TopicNum) & ": " & sMsg & "</B></FONT></TD></TR>"
+            Print #hFile, "<TR><TD vAlign=center width=""20%"" bgColor=#000090><span class=""Info"">РђРІС‚РѕСЂ, РґР°С‚Р°</span></TD>"
+            Print #hFile, "<TD vAlign=center bgColor=#000090><span class=""Info"">РќРёС‚РєР° " & Str(hMsg.TopicNum) & ": " & sMsg & "</span></TD></TR>"
             TRindex = TRindex + 1
-        Case 2: 'записать автора сообщения
+        Case 2: 'Р·Р°РїРёСЃР°С‚СЊ Р°РІС‚РѕСЂР° СЃРѕРѕР±С‰РµРЅРёСЏ
             ''Print #hFile, "<TR ID=" & Format(RecNum) & " bgColor=#" & COLOR & " onmouseover=""NavigatorScroll(" & Format(RecNum) & ")""><TD vAlign=top width=""20%""><FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=2><center><B>" & sMsg & "</B></center></FONT><BR>"
             Print #hFile, "<TR ID=" & Format(RecNum) & " bgColor=#" & COLOR & " onmouseover=""NavigatorScroll(" & Format(RecNum) & ")"">"
             Print #hFile, "<TD vAlign=top><center><span class=""Nick""><B>" & sMsg & "</B></span><BR><BR>"
             TRindex = TRindex + 1
-        Case 3: 'записать дату сообщения
-            ''Print #hFile, "<FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=1><center><B>Дата: " & sMsg & "</B></center></FONT></TD>"
-            Print #hFile, "<span class=""Date""><B>Дата: " & sMsg & "</B></span></center></TD>"
-        Case 4: 'записать очередное сообщение (вызывать только после Mode=8)
+        Case 3: 'Р·Р°РїРёСЃР°С‚СЊ РґР°С‚Сѓ СЃРѕРѕР±С‰РµРЅРёСЏ
+            ''Print #hFile, "<FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=1><center><B>Р”Р°С‚Р°: " & sMsg & "</B></center></FONT></TD>"
+            Print #hFile, "<span class=""Date""><B>Р”Р°С‚Р°: " & sMsg & "</B></span></center></TD>"
+        Case 4: 'Р·Р°РїРёСЃР°С‚СЊ РѕС‡РµСЂРµРґРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ (РІС‹Р·С‹РІР°С‚СЊ С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ Mode=8)
             ''Print #hFile, sMsg & "</FONT></TD></TR>"
             Print #hFile, sMsg & "</span></TD></TR>"
-        Case 5: 'новая тема
+        Case 5: 'РЅРѕРІР°СЏ С‚РµРјР°
             Print #hFile, "<TABLE style='text-align:justify' border=0 cellPadding=10 cellSpacing=1 width=""95%""><TBODY>"
-        Case 6: 'конец темы + РАЗДЕЛИТЕЛЬ
+        Case 6: 'РєРѕРЅРµС† С‚РµРјС‹ + Р РђР—Р”Р•Р›РРўР•Р›Р¬
             Print #hFile, "</TBODY></TABLE>"
-        Case 7: 'конец страницы
+        Case 7: 'РєРѕРЅРµС† СЃС‚СЂР°РЅРёС†С‹
             Print #hFile, "<hr width=85%>"
             Print #hFile, "<font size=1>"
             Print #hFile, "This page was generated by:<br>"
             'Add version information
             Print #hFile, "Elite Games Conference Extractor (EGCE)<br>v. " & App.Major & "." & App.Minor & "." & App.Revision & " "
             Print #hFile, "EGCE &copy Copyright 2001 <b>Rade</b><br>"
-            Print #hFile, "Elite Games &copy 1999-2001 Сергей Петровичев a.k.a. Ranger"
+            Print #hFile, "Elite Games &copy 1999-2001 РЎРµСЂРіРµР№ РџРµС‚СЂРѕРІРёС‡РµРІ a.k.a. Ranger"
             Print #hFile, "</font>"
             Print #hFile, "</CENTER></BODY></HTML>"
-        Case 8: 'записать заголовок в тексте ответа (перед Mode=4)
+        Case 8: 'Р·Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РІ С‚РµРєСЃС‚Рµ РѕС‚РІРµС‚Р° (РїРµСЂРµРґ Mode=4)
             ''Print #hFile, "<TD vAlign=top><FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=2><B>" & sMsg & "</B><br>"
             Print #hFile, "<TD vAlign=top><span class=""Nick""><B>" & sMsg & "</B><br>"
-        Case 9: 'запись ссылки на e-mail автора
+        Case 9: 'Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-mail Р°РІС‚РѕСЂР°
             ''Print #hFile, "<TR ID=" & Format(RecNum) & " bgColor=#" & COLOR & " onmouseover=""NavigatorScroll(" & Format(RecNum) & ")""><TD vAlign=top width=""20%""><FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=2><center><B><A href=""mailto:" & sMsg & """>"
             Print #hFile, "<TR ID=" & Format(RecNum) & " bgColor=#" & COLOR & " onmouseover=""NavigatorScroll(" & Format(RecNum) & ")"">"
             Print #hFile, "<TD vAlign=top><center><span class=""Nick""><B><A href=""mailto:" & sMsg & "?Subject=Elite Games Old Conference"">"
             TRindex = TRindex + 1
-        Case 10: 'запись автора (после вызова 9)
+        Case 10: 'Р·Р°РїРёСЃСЊ Р°РІС‚РѕСЂР° (РїРѕСЃР»Рµ РІС‹Р·РѕРІР° 9)
             ''Print #hFile, sMsg & "</A></B></center></FONT><BR>"
             Print #hFile, sMsg & "</A></B></span><BR><BR>"
     End Select
@@ -311,34 +311,34 @@ Public Function WriteHTML(ByVal Mode As Long, ByVal Page As Long, ByVal COLOR As
 End Function
 
 '*****************************************************
-'*      Записывает навигатор и локальный индекс      *
-'*  Mode = 0 записать навигатор, индекс + сброс      *
-'*  Mode = 1 Записать автора с отступом              *
-'*  Mode = 2 Записать заголовок сообщения            *
-'*  Mode = 3 Вернуться к нулевому отступу при старте *
-'*           новой темы                              *
-'*  Mode = 4 Закрыть навигатор (запись окончена)     *
-'*      Page    - номер страницы                     *
-'*      Color   - цвет фона текста сообщения         *
-'*      RecNum  - номер записи в БД ссылок           *
-'*      Indent  - величина отступа заголовка         *
-'*      sMsg    - записываемый параметр              *
+'*      Р—Р°РїРёСЃС‹РІР°РµС‚ РЅР°РІРёРіР°С‚РѕСЂ Рё Р»РѕРєР°Р»СЊРЅС‹Р№ РёРЅРґРµРєСЃ      *
+'*  Mode = 0 Р·Р°РїРёСЃР°С‚СЊ РЅР°РІРёРіР°С‚РѕСЂ, РёРЅРґРµРєСЃ + СЃР±СЂРѕСЃ      *
+'*  Mode = 1 Р—Р°РїРёСЃР°С‚СЊ Р°РІС‚РѕСЂР° СЃ РѕС‚СЃС‚СѓРїРѕРј              *
+'*  Mode = 2 Р—Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРѕРѕР±С‰РµРЅРёСЏ            *
+'*  Mode = 3 Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЅСѓР»РµРІРѕРјСѓ РѕС‚СЃС‚СѓРїСѓ РїСЂРё СЃС‚Р°СЂС‚Рµ *
+'*           РЅРѕРІРѕР№ С‚РµРјС‹                              *
+'*  Mode = 4 Р—Р°РєСЂС‹С‚СЊ РЅР°РІРёРіР°С‚РѕСЂ (Р·Р°РїРёСЃСЊ РѕРєРѕРЅС‡РµРЅР°)     *
+'*      Page    - РЅРѕРјРµСЂ СЃС‚СЂР°РЅРёС†С‹                     *
+'*      Color   - С†РІРµС‚ С„РѕРЅР° С‚РµРєСЃС‚Р° СЃРѕРѕР±С‰РµРЅРёСЏ         *
+'*      RecNum  - РЅРѕРјРµСЂ Р·Р°РїРёСЃРё РІ Р‘Р” СЃСЃС‹Р»РѕРє           *
+'*      Indent  - РІРµР»РёС‡РёРЅР° РѕС‚СЃС‚СѓРїР° Р·Р°РіРѕР»РѕРІРєР°         *
+'*      sMsg    - Р·Р°РїРёСЃС‹РІР°РµРјС‹Р№ РїР°СЂР°РјРµС‚СЂ              *
 '*****************************************************
 Public Function WriteNavigator(ByVal Mode As Long, ByVal Page As Long, ByVal RecNum As Long, ByVal Indent As Long, ByVal sMsg As String) As Boolean
 Dim hFile As Long
-Static LastIndent As Long   'Отступ предыдущего сообщения. Static запрещает
-                            'системе уничтожать переменную после завершения
-                            'работы функции (блокировка памяти)
+Static LastIndent As Long   'РћС‚СЃС‚СѓРї РїСЂРµРґС‹РґСѓС‰РµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ. Static Р·Р°РїСЂРµС‰Р°РµС‚
+                            'СЃРёСЃС‚РµРјРµ СѓРЅРёС‡С‚РѕР¶Р°С‚СЊ РїРµСЂРµРјРµРЅРЅСѓСЋ РїРѕСЃР»Рµ Р·Р°РІРµСЂС€РµРЅРёСЏ
+                            'СЂР°Р±РѕС‚С‹ С„СѓРЅРєС†РёРё (Р±Р»РѕРєРёСЂРѕРІРєР° РїР°РјСЏС‚Рё)
     WriteNavigator = False
     hFile = FreeFile
     Open (App.Path & DataPath & NavPrefix & Format(Page) & HTMLext) For Append As hFile
     Select Case Mode
-        Case 0: 'Старт навигатора, локального индекса + сброс состояния (обнуление LastIndent)
+        Case 0: 'РЎС‚Р°СЂС‚ РЅР°РІРёРіР°С‚РѕСЂР°, Р»РѕРєР°Р»СЊРЅРѕРіРѕ РёРЅРґРµРєСЃР° + СЃР±СЂРѕСЃ СЃРѕСЃС‚РѕСЏРЅРёСЏ (РѕР±РЅСѓР»РµРЅРёРµ LastIndent)
 '            LastIndent = 0
-            'Начальный отступ теперь равен 1, а не 0.
+            'РќР°С‡Р°Р»СЊРЅС‹Р№ РѕС‚СЃС‚СѓРї С‚РµРїРµСЂСЊ СЂР°РІРµРЅ 1, Р° РЅРµ 0.
             LastIndent = 1
-            'Сначала навигатор
-            Print #hFile, "<HTML><HEAD><TITLE>Навигатор EGCE - страница " & Format(Page) & "</TITLE>"
+            'РЎРЅР°С‡Р°Р»Р° РЅР°РІРёРіР°С‚РѕСЂ
+            Print #hFile, "<HTML><HEAD><TITLE>РќР°РІРёРіР°С‚РѕСЂ EGCE - СЃС‚СЂР°РЅРёС†Р° " & Format(Page) & "</TITLE>"
             Print #hFile, "<LINK HREF=""" & CSSFile & """ REL=stylesheet TYPE=""text/css"">"
             Print #hFile, "<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; CHARSET=Windows-1251"">"
             Print #hFile, "<META http-equiv=Pragma content=no-cache>"
@@ -353,34 +353,34 @@ Static LastIndent As Long   'Отступ предыдущего сообщения. Static запрещает
             Print #hFile, "}"
             Print #hFile, "</SCRIPT>"
             Print #hFile, "</HEAD><BODY bgcolor=#F8F8F8 onclick=""DoIt()""><br>"
-            '<br> нужен был чтобы при старте только 1 заголовок был виден в окне навигатора
+            '<br> РЅСѓР¶РµРЅ Р±С‹Р» С‡С‚РѕР±С‹ РїСЂРё СЃС‚Р°СЂС‚Рµ С‚РѕР»СЊРєРѕ 1 Р·Р°РіРѕР»РѕРІРѕРє Р±С‹Р» РІРёРґРµРЅ РІ РѕРєРЅРµ РЅР°РІРёРіР°С‚РѕСЂР°
             Close hFile
-            'Теперь разберемся с локальным индексом
+            'РўРµРїРµСЂСЊ СЂР°Р·Р±РµСЂРµРјСЃСЏ СЃ Р»РѕРєР°Р»СЊРЅС‹Рј РёРЅРґРµРєСЃРѕРј
             hFile = FreeFile
             Open (App.Path & DataPath & IndexPrefix & Format(Page) & HTMLext) For Append As hFile
-            Print #hFile, "<HTML><HEAD><TITLE>Индекс EGCE - страница " & Format(Page) & "</TITLE>"
+            Print #hFile, "<HTML><HEAD><TITLE>РРЅРґРµРєСЃ EGCE - СЃС‚СЂР°РЅРёС†Р° " & Format(Page) & "</TITLE>"
             Print #hFile, "<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; CHARSET=Windows-1251"">"
             Print #hFile, "</HEAD>"
             ''Print #hFile, "<frameset bordercolor=green rows=""150,1*"">"
-            ''Так лучше? И эстетичнее...
+            ''РўР°Рє Р»СѓС‡С€Рµ? Р СЌСЃС‚РµС‚РёС‡РЅРµРµ...
             Print #hFile, "<frameset bordercolor=green rows=""60,1*"">"
             Print #hFile, " <frame name=UpperFrame src=""" & NavPrefix & Format(Page) & HTMLext & """ style='mso-linked-frame:auto'>"
             Print #hFile, " <frame name=LowerFrame src=""" & PagesPrefix & Format(Page) & HTMLext & """ style='mso-linked-frame:auto'>"
             Print #hFile, "<noframes>"
             Print #hFile, "<BODY>"
-            Print #hFile, "Ваш браузер не поддерживает фреймы. Навигатор недоступен. Щелкните"
-            Print #hFile, "<a href=""" & PagesPrefix & Format(Page) & HTMLext & """>здесь</a> чтобы увидеть только содержание " & Format(Page) & "  страницы"
+            Print #hFile, "Р’Р°С€ Р±СЂР°СѓР·РµСЂ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ С„СЂРµР№РјС‹. РќР°РІРёРіР°С‚РѕСЂ РЅРµРґРѕСЃС‚СѓРїРµРЅ. Р©РµР»РєРЅРёС‚Рµ"
+            Print #hFile, "<a href=""" & PagesPrefix & Format(Page) & HTMLext & """>Р·РґРµСЃСЊ</a> С‡С‚РѕР±С‹ СѓРІРёРґРµС‚СЊ С‚РѕР»СЊРєРѕ СЃРѕРґРµСЂР¶Р°РЅРёРµ " & Format(Page) & "  СЃС‚СЂР°РЅРёС†С‹"
             Print #hFile, "</BODY>"
             Print #hFile, "</HTML>"
-        Case 1: 'Записать автора с отступом
+        Case 1: 'Р—Р°РїРёСЃР°С‚СЊ Р°РІС‚РѕСЂР° СЃ РѕС‚СЃС‚СѓРїРѕРј
             If Indent > LastIndent Then
-                'Увеличиваем отступ
+                'РЈРІРµР»РёС‡РёРІР°РµРј РѕС‚СЃС‚СѓРї
                 Do While LastIndent < Indent
                     Print #hFile, "<DL>"
                     LastIndent = LastIndent + 1
                 Loop
             Else
-                'Уменьшаем отступ
+                'РЈРјРµРЅСЊС€Р°РµРј РѕС‚СЃС‚СѓРї
                 Do While LastIndent > Indent
                     Print #hFile, "</DL>"
                     LastIndent = LastIndent - 1
@@ -388,32 +388,32 @@ Static LastIndent As Long   'Отступ предыдущего сообщения. Static запрещает
             End If
             ''Print #hFile, "<P ID=" & Format(RecNum) & " onmouseover=""MainScroll(" & Format(RecNum) & ")""><FONT color=#000090 face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>" & sMsg & "</B>:"
             Print #hFile, "<P ID=" & Format(RecNum) & " onmouseover=""MainScroll(" & Format(TRindex) & ")""><span class=""Date""><B>" & sMsg & "</B>:"
-        Case 2: 'Записать заголовок сообщения
+        Case 2: 'Р—Р°РїРёСЃР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРѕРѕР±С‰РµРЅРёСЏ
             ''Print #hFile, sMsg & "</FONT><br>"
-            'Попробуем убрать лишний <br>
+            'РџРѕРїСЂРѕР±СѓРµРј СѓР±СЂР°С‚СЊ Р»РёС€РЅРёР№ <br>
             ''Print #hFile, sMsg & "</FONT>"
             Print #hFile, sMsg & "</span>"
-        Case 3: 'Вернуться к нулевому отступу (подчистить "хвосты" при старте новой темы)
+        Case 3: 'Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє РЅСѓР»РµРІРѕРјСѓ РѕС‚СЃС‚СѓРїСѓ (РїРѕРґС‡РёСЃС‚РёС‚СЊ "С…РІРѕСЃС‚С‹" РїСЂРё СЃС‚Р°СЂС‚Рµ РЅРѕРІРѕР№ С‚РµРјС‹)
 ''            If LastIndent > 0 Then
-''                'Отменяем отступы до нуля
+''                'РћС‚РјРµРЅСЏРµРј РѕС‚СЃС‚СѓРїС‹ РґРѕ РЅСѓР»СЏ
 ''                Do While LastIndent > 0
 ''                    Print #hFile, "</DL>"
 ''                    LastIndent = LastIndent - 1
 ''                Loop
 ''            End If
-            'Начальный отступ теперь не 0, а 1.
+            'РќР°С‡Р°Р»СЊРЅС‹Р№ РѕС‚СЃС‚СѓРї С‚РµРїРµСЂСЊ РЅРµ 0, Р° 1.
             If LastIndent > 1 Then
-                'Отменяем отступы до нуля
+                'РћС‚РјРµРЅСЏРµРј РѕС‚СЃС‚СѓРїС‹ РґРѕ РЅСѓР»СЏ
                 Do While LastIndent > 1
                     Print #hFile, "</DL>"
                     LastIndent = LastIndent - 1
                 Loop
             End If
-            'Закрываем тег <DL>, стоящий после <HR>
+            'Р—Р°РєСЂС‹РІР°РµРј С‚РµРі <DL>, СЃС‚РѕСЏС‰РёР№ РїРѕСЃР»Рµ <HR>
             Print #hFile, "</DL>"
-            'Отбивка нитки
+            'РћС‚Р±РёРІРєР° РЅРёС‚РєРё
             Print #hFile, "<HR><DL>"
-        Case 4: 'Закрыть навигатор (запись окончена)
+        Case 4: 'Р—Р°РєСЂС‹С‚СЊ РЅР°РІРёРіР°С‚РѕСЂ (Р·Р°РїРёСЃСЊ РѕРєРѕРЅС‡РµРЅР°)
             Print #hFile, "</BODY></HTML>"
     End Select
     Close hFile
@@ -421,22 +421,22 @@ Static LastIndent As Long   'Отступ предыдущего сообщения. Static запрещает
 End Function
 
 '******************************************************
-'* Стирает указанную страницу с диска, например,      *
-'* если закачка была остановлена.                     *
+'* РЎС‚РёСЂР°РµС‚ СѓРєР°Р·Р°РЅРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ СЃ РґРёСЃРєР°, РЅР°РїСЂРёРјРµСЂ,      *
+'* РµСЃР»Рё Р·Р°РєР°С‡РєР° Р±С‹Р»Р° РѕСЃС‚Р°РЅРѕРІР»РµРЅР°.                     *
 '******************************************************
 Public Function EraseHTML(ByVal Page As Long) As Boolean
     EraseHTML = False
-    'Стереть страницу с сообщениями
+    'РЎС‚РµСЂРµС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ СЃ СЃРѕРѕР±С‰РµРЅРёСЏРјРё
     If Dir(App.Path & DataPath & PagesPrefix & Format(Page) & HTMLext) <> strEmpty Then
         Kill (App.Path & DataPath & PagesPrefix & Format(Page) & HTMLext)
         EraseHTML = True
     End If
-    'Стереть страницу-навигатор
+    'РЎС‚РµСЂРµС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ-РЅР°РІРёРіР°С‚РѕСЂ
     If Dir(App.Path & DataPath & NavPrefix & Format(Page) & HTMLext) <> strEmpty Then
         Kill (App.Path & DataPath & NavPrefix & Format(Page) & HTMLext)
         EraseHTML = True
     End If
-    'Стереть локальный индекс
+    'РЎС‚РµСЂРµС‚СЊ Р»РѕРєР°Р»СЊРЅС‹Р№ РёРЅРґРµРєСЃ
     If Dir(App.Path & DataPath & IndexPrefix & Format(Page) & HTMLext) <> strEmpty Then
         Kill (App.Path & DataPath & IndexPrefix & Format(Page) & HTMLext)
         EraseHTML = True
@@ -444,53 +444,53 @@ Public Function EraseHTML(ByVal Page As Long) As Boolean
 End Function
 
 '******************************************************
-'* Обновляем базу данных страниц при успешной закачке *
-'* и записываем оглавление в HTML-файл                *
-'*      Записываемый параметр                         *
-'*          blValue = 0 страница НЕ закачана          *
-'*          blValue = 1 стараница закачана успешно    *
-'*      PageLoaded - номер закачанной страницы        *
-'* opt. UpdateFile - нужно ли обновлять БД страниц    *
+'* РћР±РЅРѕРІР»СЏРµРј Р±Р°Р·Сѓ РґР°РЅРЅС‹С… СЃС‚СЂР°РЅРёС† РїСЂРё СѓСЃРїРµС€РЅРѕР№ Р·Р°РєР°С‡РєРµ *
+'* Рё Р·Р°РїРёСЃС‹РІР°РµРј РѕРіР»Р°РІР»РµРЅРёРµ РІ HTML-С„Р°Р№Р»                *
+'*      Р—Р°РїРёСЃС‹РІР°РµРјС‹Р№ РїР°СЂР°РјРµС‚СЂ                         *
+'*          blValue = 0 СЃС‚СЂР°РЅРёС†Р° РќР• Р·Р°РєР°С‡Р°РЅР°          *
+'*          blValue = 1 СЃС‚Р°СЂР°РЅРёС†Р° Р·Р°РєР°С‡Р°РЅР° СѓСЃРїРµС€РЅРѕ    *
+'*      PageLoaded - РЅРѕРјРµСЂ Р·Р°РєР°С‡Р°РЅРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹        *
+'* opt. UpdateFile - РЅСѓР¶РЅРѕ Р»Рё РѕР±РЅРѕРІР»СЏС‚СЊ Р‘Р” СЃС‚СЂР°РЅРёС†    *
 '******************************************************
 Public Function UpdateTOC(ByVal PageLoaded As Long, Optional ByVal UpdateFile As Boolean = True) As Boolean
 Dim LastRecNum As Long
 Dim i As Long
-Dim blValue As Long 'Было Boolean, но файл никак не хотел читаться, пришлось заменить :(
+Dim blValue As Long 'Р‘С‹Р»Рѕ Boolean, РЅРѕ С„Р°Р№Р» РЅРёРєР°Рє РЅРµ С…РѕС‚РµР» С‡РёС‚Р°С‚СЊСЃСЏ, РїСЂРёС€Р»РѕСЃСЊ Р·Р°РјРµРЅРёС‚СЊ :(
 Dim RetValue As Double
 Dim hFile As Long
 Dim hFile2 As Long
     If UpdateFile Then
-        'Особенность компилятора VB: два If быстрее чем AND
+        'РћСЃРѕР±РµРЅРЅРѕСЃС‚СЊ РєРѕРјРїРёР»СЏС‚РѕСЂР° VB: РґРІР° If Р±С‹СЃС‚СЂРµРµ С‡РµРј AND
         If PageLoaded > 0 Then
-            'Получаем свободный указатель
+            'РџРѕР»СѓС‡Р°РµРј СЃРІРѕР±РѕРґРЅС‹Р№ СѓРєР°Р·Р°С‚РµР»СЊ
             hFile = FreeFile
-            'Открываем файл
+            'РћС‚РєСЂС‹РІР°РµРј С„Р°Р№Р»
             Open (App.Path & DataPath & PagesFile) For Random As hFile Len = Len(blValue)
             LastRecNum = LOF(hFile) \ Len(PageLoaded)
             If PageLoaded > LastRecNum + 1 Then
-                'Подготовить записи, предшествующие необходимой
+                'РџРѕРґРіРѕС‚РѕРІРёС‚СЊ Р·Р°РїРёСЃРё, РїСЂРµРґС€РµСЃС‚РІСѓСЋС‰РёРµ РЅРµРѕР±С…РѕРґРёРјРѕР№
                 For i = LastRecNum + 1 To PageLoaded - 1
                     blValue = 0
                     Put hFile, i, blValue
                 Next i
             End If
-            'Записать информацию
+            'Р—Р°РїРёСЃР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ
             blValue = 1
             Put hFile, PageLoaded, blValue
             Debug.Print "UpdateTOC -> LOG: Adding record number " & PageLoaded
             Close hFile
         End If
     End If
-    'Начинаем запись HTML
-    'Открываем HTML
+    'РќР°С‡РёРЅР°РµРј Р·Р°РїРёСЃСЊ HTML
+    'РћС‚РєСЂС‹РІР°РµРј HTML
     hFile = FreeFile
     Open (App.Path & DataPath & TOCFile) For Output As hFile
-    'Открываем индекс страниц
+    'РћС‚РєСЂС‹РІР°РµРј РёРЅРґРµРєСЃ СЃС‚СЂР°РЅРёС†
     hFile2 = FreeFile
     Open (App.Path & DataPath & PagesFile) For Random As hFile2 Len = Len(blValue)
     LastRecNum = LOF(hFile2) \ Len(blValue)
     
-    Print #hFile, "<HTML><HEAD><TITLE>Оглавление</TITLE>"
+    Print #hFile, "<HTML><HEAD><TITLE>РћРіР»Р°РІР»РµРЅРёРµ</TITLE>"
     Print #hFile, "<SCRIPT language=JavaScript>"
     Print #hFile, "var match = 1;"
     Print #hFile, "var pChange = true;"
@@ -535,7 +535,7 @@ Dim hFile2 As Long
     Print #hFile, "        match++;"
     Print #hFile, "    }"
     Print #hFile, "    else{"
-    Print #hFile, "        alert(""Поиск завершен. Всего было обнаружено совпадений: "" + eval(match-1));"
+    Print #hFile, "        alert(""РџРѕРёСЃРє Р·Р°РІРµСЂС€РµРЅ. Р’СЃРµРіРѕ Р±С‹Р»Рѕ РѕР±РЅР°СЂСѓР¶РµРЅРѕ СЃРѕРІРїР°РґРµРЅРёР№: "" + eval(match-1));"
     Print #hFile, "    }"
     Print #hFile, "}"
     Print #hFile, "function PatternChanged() {"
@@ -557,64 +557,64 @@ Dim hFile2 As Long
     
     Print #hFile, "</SCRIPT></HEAD>"
     Print #hFile, "<BODY alink=#000088 vlink=#008800 link=#008800 bgcolor=#F8F8F8>"
-    Print #hFile, "<center><h2><u>EGCE</u></h2><h3>оглавление</h3><br>"
-    Print #hFile, "<a href=""" & StartupFile & """ target=""MainFrame"" onclick=""HideIt();return true"">Начальная страница</a><br>"
-    Print #hFile, "<a href=""" & FAQFile & """ target=""MainFrame"" onclick=""HideIt();return true"">ТИн и ЧаВо</a><br>"
-    'TO DO Вставить ссылки на авторов
+    Print #hFile, "<center><h2><u>EGCE</u></h2><h3>РѕРіР»Р°РІР»РµРЅРёРµ</h3><br>"
+    Print #hFile, "<a href=""" & StartupFile & """ target=""MainFrame"" onclick=""HideIt();return true"">РќР°С‡Р°Р»СЊРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a><br>"
+    Print #hFile, "<a href=""" & FAQFile & """ target=""MainFrame"" onclick=""HideIt();return true"">РўРРЅ Рё Р§Р°Р’Рѕ</a><br>"
+    'TO DO Р’СЃС‚Р°РІРёС‚СЊ СЃСЃС‹Р»РєРё РЅР° Р°РІС‚РѕСЂРѕРІ
     For i = 1 To LastRecNum
         Get hFile2, i, blValue
         If blValue = 1 Then
-            'Эта страница уже закачана
-            'Каждой ссылке присваиваем ID для того чтобы ее можно было выбрать клавишей TAB...
+            'Р­С‚Р° СЃС‚СЂР°РЅРёС†Р° СѓР¶Рµ Р·Р°РєР°С‡Р°РЅР°
+            'РљР°Р¶РґРѕР№ СЃСЃС‹Р»РєРµ РїСЂРёСЃРІР°РёРІР°РµРј ID РґР»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ РµРµ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РІС‹Р±СЂР°С‚СЊ РєР»Р°РІРёС€РµР№ TAB...
             Print #hFile, "<a ID=Anchor" & Format(i) & " href=""" & "pIndex" & Format(i) & HTMLext & """ target=""MainFrame"" onMouseOver=""window.status=''; return true""  onMouseOut=""window.status=''; return false"" onclick=""ShowIt();return true"">" & Format(i) & "</a>"
         Else
             Print #hFile, Chr(32) & Format(i) & Chr(32)
         End If
-        'По 10 ссылок в строке
+        'РџРѕ 10 СЃСЃС‹Р»РѕРє РІ СЃС‚СЂРѕРєРµ
         If i \ 10 = i / 10 Then
             Print #hFile, "<br>"
         End If
     Next i
-    Print #hFile, "<br><br>Авторы:<br>"
-    Print #hFile, "<a href=""" & ANamesPage & """ target=""MainFrame"" onclick=""ShowItA();return true"">по именам</a> | "
-    Print #hFile, "<a href=""" & ATimePage & """ target=""MainFrame"" onclick=""ShowItA();return true"">по ""стажу""</a><br>"
-    Print #hFile, "<a href=""" & ANumsPage & """ target=""MainFrame"" onclick=""ShowItA();return true"">по числу сообщений</a><br>"
-    Print #hFile, "<a href=""" & ASizePage & """ target=""MainFrame"" onclick=""ShowItA();return true"">по размеру сообщений</a>"
-    Print #hFile, "<br><br><a href="""" target=""MainFrame"" onclick=""HideIt();return true"">Показать файлы</a>"
+    Print #hFile, "<br><br>РђРІС‚РѕСЂС‹:<br>"
+    Print #hFile, "<a href=""" & ANamesPage & """ target=""MainFrame"" onclick=""ShowItA();return true"">РїРѕ РёРјРµРЅР°Рј</a> | "
+    Print #hFile, "<a href=""" & ATimePage & """ target=""MainFrame"" onclick=""ShowItA();return true"">РїРѕ ""СЃС‚Р°Р¶Сѓ""</a><br>"
+    Print #hFile, "<a href=""" & ANumsPage & """ target=""MainFrame"" onclick=""ShowItA();return true"">РїРѕ С‡РёСЃР»Сѓ СЃРѕРѕР±С‰РµРЅРёР№</a><br>"
+    Print #hFile, "<a href=""" & ASizePage & """ target=""MainFrame"" onclick=""ShowItA();return true"">РїРѕ СЂР°Р·РјРµСЂСѓ СЃРѕРѕР±С‰РµРЅРёР№</a>"
+    Print #hFile, "<br><br><a href="""" target=""MainFrame"" onclick=""HideIt();return true"">РџРѕРєР°Р·Р°С‚СЊ С„Р°Р№Р»С‹</a>"
     Print #hFile, "<br><br>"
     Print #hFile, "<DIV ID=SearchDiv STYLE=""visibility: Hidden"">"
-    Print #hFile, "<B>Найти на странице: </B><INPUT ID=MySearch TYPE=text onfocus=""PatternChanged()"">"
+    Print #hFile, "<B>РќР°Р№С‚Рё РЅР° СЃС‚СЂР°РЅРёС†Рµ: </B><INPUT ID=MySearch TYPE=text onfocus=""PatternChanged()"">"
     Print #hFile, "<BUTTON onclick=""doOK()"">OK</BUTTON><br>"
-    Print #hFile, "<INPUT ID=match TYPE=CHECKBOX VALUE=4 UNCHECKED>Регистр"
-    Print #hFile, "<INPUT ID=whole TYPE=CHECKBOX VALUE=2 UNCHECKED>Слово"
+    Print #hFile, "<INPUT ID=match TYPE=CHECKBOX VALUE=4 UNCHECKED>Р РµРіРёСЃС‚СЂ"
+    Print #hFile, "<INPUT ID=whole TYPE=CHECKBOX VALUE=2 UNCHECKED>РЎР»РѕРІРѕ"
     Print #hFile, "</DIV><br>"
     Print #hFile, "<font size=1>"
-    Print #hFile, "Рекомендуемое разрешение: 1024x768<br>"
-    Print #hFile, "Рекомендуемый браузер: IE 4.01 или выше<br>"
+    Print #hFile, "Р РµРєРѕРјРµРЅРґСѓРµРјРѕРµ СЂР°Р·СЂРµС€РµРЅРёРµ: 1024x768<br>"
+    Print #hFile, "Р РµРєРѕРјРµРЅРґСѓРµРјС‹Р№ Р±СЂР°СѓР·РµСЂ: IE 4.01 РёР»Рё РІС‹С€Рµ<br>"
     'Add version information
     Print #hFile, "Elite Games Conference Extractor (EGCE)<br>v. " & App.Major & "." & App.Minor & "." & App.Revision & "<br>"
     Print #hFile, "EGCE &copy Copyright 2001 <b>Rade</b><br>"
-    Print #hFile, "Elite Games &copy 1999-2001 Сергей Петровичев a.k.a. Ranger"
+    Print #hFile, "Elite Games &copy 1999-2001 РЎРµСЂРіРµР№ РџРµС‚СЂРѕРІРёС‡РµРІ a.k.a. Ranger"
     Print #hFile, "</font></center>"
     Print #hFile, "</BODY></HTML>"
     Close hFile2
     Close hFile
     
-    ''TO DO организовать поиск файдов с похожими названиями и добавить их в TOC
-    '(сделать это в начале функции)
+    ''TO DO РѕСЂРіР°РЅРёР·РѕРІР°С‚СЊ РїРѕРёСЃРє С„Р°Р№РґРѕРІ СЃ РїРѕС…РѕР¶РёРјРё РЅР°Р·РІР°РЅРёСЏРјРё Рё РґРѕР±Р°РІРёС‚СЊ РёС… РІ TOC
+    '(СЃРґРµР»Р°С‚СЊ СЌС‚Рѕ РІ РЅР°С‡Р°Р»Рµ С„СѓРЅРєС†РёРё)
     
-    'Проверить индекс и, если надо, обновить!! Вставить ссылки до Close hFile
-    ''TO DO параметр из настроек!!!
+    'РџСЂРѕРІРµСЂРёС‚СЊ РёРЅРґРµРєСЃ Рё, РµСЃР»Рё РЅР°РґРѕ, РѕР±РЅРѕРІРёС‚СЊ!! Р’СЃС‚Р°РІРёС‚СЊ СЃСЃС‹Р»РєРё РґРѕ Close hFile
+    ''TO DO РїР°СЂР°РјРµС‚СЂ РёР· РЅР°СЃС‚СЂРѕРµРє!!!
     Call UpdateIndex(True)
-    'Покажем HTML
+    'РџРѕРєР°Р¶РµРј HTML
     Call ShowHTML
 End Function
 
 '********************************************
-'* Загрузка строк из файла ресурса          *
-'* Малость модифицировано под наши нужды    *
-'* Все более менее нестандартное вырезано   *
-'* нафиг чтобы не глючить по каждому поводу *
+'* Р—Р°РіСЂСѓР·РєР° СЃС‚СЂРѕРє РёР· С„Р°Р№Р»Р° СЂРµСЃСѓСЂСЃР°          *
+'* РњР°Р»РѕСЃС‚СЊ РјРѕРґРёС„РёС†РёСЂРѕРІР°РЅРѕ РїРѕРґ РЅР°С€Рё РЅСѓР¶РґС‹    *
+'* Р’СЃРµ Р±РѕР»РµРµ РјРµРЅРµРµ РЅРµСЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ РІС‹СЂРµР·Р°РЅРѕ   *
+'* РЅР°С„РёРі С‡С‚РѕР±С‹ РЅРµ РіР»СЋС‡РёС‚СЊ РїРѕ РєР°Р¶РґРѕРјСѓ РїРѕРІРѕРґСѓ *
 '********************************************
 Sub LoadResStrings(frm As Form)
 Dim ctl As Control
@@ -627,9 +627,9 @@ Dim nVal As Integer
     'property for menu items and the Tag property
     'for all other controls
     
-'ЗАГЛУШКА!!!!!!!!!!!!!!!!!!!!
+'Р—РђР“Р›РЈРЁРљРђ!!!!!!!!!!!!!!!!!!!!
 Exit Sub
-'ЗАГЛУШКА!!!!!!!!!!!!!!!!!!!!
+'Р—РђР“Р›РЈРЁРљРђ!!!!!!!!!!!!!!!!!!!!
 
     For Each ctl In frm.Controls
         'Set ctl.Font = fnt
@@ -641,7 +641,7 @@ Exit Sub
         ElseIf sCtlType = "TabStrip" Then
             For Each obj In ctl.Tabs
                 If Not obj.Tag = strEmpty Then
-                    'Tag <> 0  =>загружаем значения из файла ресурсов'
+                    'Tag <> 0  =>Р·Р°РіСЂСѓР¶Р°РµРј Р·РЅР°С‡РµРЅРёСЏ РёР· С„Р°Р№Р»Р° СЂРµСЃСѓСЂСЃРѕРІ'
                     obj.Caption = LoadResString(CInt(obj.Tag))
                 End If
                 ''obj.Caption = LoadResString(CInt(obj.Tag))
@@ -659,7 +659,7 @@ Exit Sub
             Next
             For Each obj In ctl.Panels
                 If Not (CInt(obj.Tag)) = 0 Then
-                    'Tag <> 0  =>загружаем значения из файла ресурсов'
+                    'Tag <> 0  =>Р·Р°РіСЂСѓР¶Р°РµРј Р·РЅР°С‡РµРЅРёСЏ РёР· С„Р°Р№Р»Р° СЂРµСЃСѓСЂСЃРѕРІ'
                     obj.Text = LoadResString(CInt(obj.Tag))
                 End If
             Next
@@ -677,8 +677,8 @@ Exit Sub
 End Sub
 
 '**************************************************
-'* Чистит строку от мусора, который мешает        *
-'* корректной работе со строками                  *
+'* Р§РёСЃС‚РёС‚ СЃС‚СЂРѕРєСѓ РѕС‚ РјСѓСЃРѕСЂР°, РєРѕС‚РѕСЂС‹Р№ РјРµС€Р°РµС‚        *
+'* РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р±РѕС‚Рµ СЃРѕ СЃС‚СЂРѕРєР°РјРё                  *
 '**************************************************
 Public Function ClearGarbage(ByVal strString As String) As String
 Dim tmpString As String
@@ -689,13 +689,13 @@ Dim tmpString As String
 End Function
 
 '***********************************************
-'* Пишет главный индекс для показа результатов *
-'* ForceOverwrite = TRUE указывает на          *
-'*      необходимость принудительной           *
-'*      перезаписи                             *
+'* РџРёС€РµС‚ РіР»Р°РІРЅС‹Р№ РёРЅРґРµРєСЃ РґР»СЏ РїРѕРєР°Р·Р° СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ *
+'* ForceOverwrite = TRUE СѓРєР°Р·С‹РІР°РµС‚ РЅР°          *
+'*      РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕР№           *
+'*      РїРµСЂРµР·Р°РїРёСЃРё                             *
 '***********************************************
 Sub UpdateIndex(ByVal ForceOverwrite As Boolean)
-    'Для начала создадим стартовую страницу
+    'Р”Р»СЏ РЅР°С‡Р°Р»Р° СЃРѕР·РґР°РґРёРј СЃС‚Р°СЂС‚РѕРІСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
     If Dir(App.Path & DataPath & StartupFile) <> "" Then
         If ForceOverwrite Then
             Kill (App.Path & DataPath & StartupFile)
@@ -703,21 +703,21 @@ Sub UpdateIndex(ByVal ForceOverwrite As Boolean)
     End If
     hFile = FreeFile
     Open (App.Path & DataPath & StartupFile) For Output As hFile
-    Print #hFile, "<HTML><HEAD><TITLE>Стартовая страница EliteGames Conference Extractor</TITLE>"
+    Print #hFile, "<HTML><HEAD><TITLE>РЎС‚Р°СЂС‚РѕРІР°СЏ СЃС‚СЂР°РЅРёС†Р° EliteGames Conference Extractor</TITLE>"
     Print #hFile, "<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; CHARSET=Windows-1251"">"
     Print #hFile, "<META http-equiv=Pragma content=no-cache>"
     Print #hFile, "<META name=GENERATOR content=""EGCE""></HEAD>"
     Print #hFile, "<BODY alink=#000088 vlink=#008800 link=#008800><CENTER>"
-    Print #hFile, "<h3>Архив старой конференции Elite Games</H3>"
-    Print #hFile, "<h4>Выберите ссылку слева для демонстрации соответствующей страницы<br>"
-    Print #hFile, "или одну из нижеследующих для получения более подробной информации<br>в Интернете:</H4>"
+    Print #hFile, "<h3>РђСЂС…РёРІ СЃС‚Р°СЂРѕР№ РєРѕРЅС„РµСЂРµРЅС†РёРё Elite Games</H3>"
+    Print #hFile, "<h4>Р’С‹Р±РµСЂРёС‚Рµ СЃСЃС‹Р»РєСѓ СЃР»РµРІР° РґР»СЏ РґРµРјРѕРЅСЃС‚СЂР°С†РёРё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµР№ СЃС‚СЂР°РЅРёС†С‹<br>"
+    Print #hFile, "РёР»Рё РѕРґРЅСѓ РёР· РЅРёР¶РµСЃР»РµРґСѓСЋС‰РёС… РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ Р±РѕР»РµРµ РїРѕРґСЂРѕР±РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё<br>РІ РРЅС‚РµСЂРЅРµС‚Рµ:</H4>"
     Print #hFile, "<a href=""http://www.elite-russia.net/"">Elite Games</A><br>"
-    Print #hFile, "<a href=""http://book.by.ru/cgi-bin///book.cgi?book=Elitegames"">Старая конференция Elite Games</A><br>"
-    Print #hFile, "<a href=""http://x-dron.narod.ru/"">Сайт X-Dron'а</A>"
+    Print #hFile, "<a href=""http://book.by.ru/cgi-bin///book.cgi?book=Elitegames"">РЎС‚Р°СЂР°СЏ РєРѕРЅС„РµСЂРµРЅС†РёСЏ Elite Games</A><br>"
+    Print #hFile, "<a href=""http://x-dron.narod.ru/"">РЎР°Р№С‚ X-Dron'Р°</A>"
     Print #hFile, "</CENTER></BODY></HTML>"
     Close hFile
     
-    'Теперь займемся индексом
+    'РўРµРїРµСЂСЊ Р·Р°Р№РјРµРјСЃСЏ РёРЅРґРµРєСЃРѕРј
     If Dir(App.Path & DataPath & IndexFile) <> "" Then
         If ForceOverwrite Then
             Kill (App.Path & DataPath & IndexFile)
@@ -730,15 +730,15 @@ Sub UpdateIndex(ByVal ForceOverwrite As Boolean)
     Print #hFile, "<frame name=LeftFrame src=""pagesTOC.html"" style='mso-linked-frame:auto'>"
     Print #hFile, "<frame name=MainFrame src=""Startup.html"" style='mso-linked-frame:auto'>"
     Print #hFile, "<noframes><BODY>"
-    Print #hFile, "Ваш браузер не поддерживает фреймы. Вы увидите только оглавление.<BR><BR>"
-    Print #hFile, "<a href=""pagesTOC.html"">Оглавление</A>"
+    Print #hFile, "Р’Р°С€ Р±СЂР°СѓР·РµСЂ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ С„СЂРµР№РјС‹. Р’С‹ СѓРІРёРґРёС‚Рµ С‚РѕР»СЊРєРѕ РѕРіР»Р°РІР»РµРЅРёРµ.<BR><BR>"
+    Print #hFile, "<a href=""pagesTOC.html"">РћРіР»Р°РІР»РµРЅРёРµ</A>"
     Print #hFile, "</BODY></HTML>"
     Close hFile
 End Sub
 
 '********************************************
-'* Показывает окошки с сообщеними, если их  *
-'* текст хранится в файле ресурсов          *
+'* РџРѕРєР°Р·С‹РІР°РµС‚ РѕРєРѕС€РєРё СЃ СЃРѕРѕР±С‰РµРЅРёРјРё, РµСЃР»Рё РёС…  *
+'* С‚РµРєСЃС‚ С…СЂР°РЅРёС‚СЃСЏ РІ С„Р°Р№Р»Рµ СЂРµСЃСѓСЂСЃРѕРІ          *
 '********************************************
 Public Function ShowMsgBox(ByVal resMsg As Long, ByVal MsgFlags As Long, ByVal resCaption As Long, Optional ByVal msgboxHelp As Long = -6) As VbMsgBoxResult
 Dim strHelp As String
@@ -746,18 +746,18 @@ Dim strCaption As String
     strHelp = LoadResString(resMsg)
     strCaption = LoadResString(resCaption)
     If msgboxHelp = -6 Then
-        'Индекс контекстно-зависимой помощи не указан - помощи не будет!
-        'Спасение утопающих - дело рук самих утопающих!
+        'РРЅРґРµРєСЃ РєРѕРЅС‚РµРєСЃС‚РЅРѕ-Р·Р°РІРёСЃРёРјРѕР№ РїРѕРјРѕС‰Рё РЅРµ СѓРєР°Р·Р°РЅ - РїРѕРјРѕС‰Рё РЅРµ Р±СѓРґРµС‚!
+        'РЎРїР°СЃРµРЅРёРµ СѓС‚РѕРїР°СЋС‰РёС… - РґРµР»Рѕ СЂСѓРє СЃР°РјРёС… СѓС‚РѕРїР°СЋС‰РёС…!
         ShowMsgBox = MsgBox(strHelp, MsgFlags, strCaption)
     Else
-        'Ну что ж, поможем убогим :))
-        'TO DO Что там с именем файла справки? Уточнить!!!
+        'РќСѓ С‡С‚Рѕ Р¶, РїРѕРјРѕР¶РµРј СѓР±РѕРіРёРј :))
+        'TO DO Р§С‚Рѕ С‚Р°Рј СЃ РёРјРµРЅРµРј С„Р°Р№Р»Р° СЃРїСЂР°РІРєРё? РЈС‚РѕС‡РЅРёС‚СЊ!!!
         ShowMsgBox = MsgBox(strHelp, MsgFlags, strCaption, , msgboxHelp)
     End If
 End Function
 
 '**********************************************
-'* Стирает пробелы в начале и в конце строки  *
+'* РЎС‚РёСЂР°РµС‚ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ Рё РІ РєРѕРЅС†Рµ СЃС‚СЂРѕРєРё  *
 '**********************************************
 Public Function RemoveSpaces(ByVal strString As String) As String
 Dim tmpString As String
@@ -772,7 +772,7 @@ Dim tmpString As String
 End Function
 
 '**********************************************
-'*      Записывает таблицу стилей CSS         *
+'*      Р—Р°РїРёСЃС‹РІР°РµС‚ С‚Р°Р±Р»РёС†Сѓ СЃС‚РёР»РµР№ CSS         *
 '**********************************************
 Public Sub WriteCSS()
 Dim hFile As Long
@@ -861,8 +861,8 @@ Dim hFile As Long
 End Sub
 
 '**********************************************
-'*    Записывает скрипт управления панелью    *
-'*    навигатора                              *
+'*    Р—Р°РїРёСЃС‹РІР°РµС‚ СЃРєСЂРёРїС‚ СѓРїСЂР°РІР»РµРЅРёСЏ РїР°РЅРµР»СЊСЋ    *
+'*    РЅР°РІРёРіР°С‚РѕСЂР°                              *
 '**********************************************
 Public Sub WritePane()
 Dim hFile As Long
