@@ -11,7 +11,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-Attribute VB_Description = "Этот класс возьмет на себя обслуживание базы данных по авторам."
+Attribute VB_Description = "Р­С‚РѕС‚ РєР»Р°СЃСЃ РІРѕР·СЊРјРµС‚ РЅР° СЃРµР±СЏ РѕР±СЃР»СѓР¶РёРІР°РЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С… РїРѕ Р°РІС‚РѕСЂР°Рј."
 Attribute VB_Ext_KEY = "SavedWithClassBuilder6" ,"Yes"
 Attribute VB_Ext_KEY = "Top_Level" ,"Yes"
 Option Explicit
@@ -28,8 +28,8 @@ Option Compare Text
 
 Private Const TMPfile = "tmpAut.db"
 
-'Локальные переменные используются ТОЛЬКО для интефейса класса
-'Работа с файлом производится через переменную типа tAuthor
+'Р›РѕРєР°Р»СЊРЅС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РўРћР›Р¬РљРћ РґР»СЏ РёРЅС‚РµС„РµР№СЃР° РєР»Р°СЃСЃР°
+'Р Р°Р±РѕС‚Р° СЃ С„Р°Р№Р»РѕРј РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ С‡РµСЂРµР· РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° tAuthor
 Private mvarLastRecNum As Long  'local copy      Read-Only
 Private mvarNickname As String  'local copy
 Private mvarTotalSize As Long   'local copy
@@ -42,9 +42,9 @@ Private mvarFirstDate As String 'local copy
 Private mvarFirstDateLen As Long 'local copy
 
 
-Private hFile As Long           'Указатель на файл, локальная переменная
-Private hAuthor As tAuthor      'Переменная для работы с файлом
-Private hHistory As tHistory    'Переменная для работы с журналом
+Private hFile As Long           'РЈРєР°Р·Р°С‚РµР»СЊ РЅР° С„Р°Р№Р», Р»РѕРєР°Р»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ
+Private hAuthor As tAuthor      'РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С„Р°Р№Р»РѕРј
+Private hHistory As tHistory    'РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р¶СѓСЂРЅР°Р»РѕРј
 
 'local variable(s) to hold property value(s)
 Public Property Let FirstDateLen(ByVal vData As Long)
@@ -159,14 +159,14 @@ Dim hFile As Long
 End Property
 
 '**********************************************************
-'*       Поиск параметра tokenname в базе данных          *
-'*  Mode=0 - поиск по имени                               *
-'*  Mode=1 - поиск по e-mail (возможны несколько адресов) *
-'*  На выходе получаем номер найденной записи в БД,       *
-'*  либо 0, если такая запись не существует               *
-'*  При поиске по eMail, ID задает номер автора в БД.     *
-'*  В этом случае 0 возвращается, если адрес в БД  для ID *
-'*  отсутствует или отличается от указанного.             *
+'*       РџРѕРёСЃРє РїР°СЂР°РјРµС‚СЂР° tokenname РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…          *
+'*  Mode=0 - РїРѕРёСЃРє РїРѕ РёРјРµРЅРё                               *
+'*  Mode=1 - РїРѕРёСЃРє РїРѕ e-mail (РІРѕР·РјРѕР¶РЅС‹ РЅРµСЃРєРѕР»СЊРєРѕ Р°РґСЂРµСЃРѕРІ) *
+'*  РќР° РІС‹С…РѕРґРµ РїРѕР»СѓС‡Р°РµРј РЅРѕРјРµСЂ РЅР°Р№РґРµРЅРЅРѕР№ Р·Р°РїРёСЃРё РІ Р‘Р”,       *
+'*  Р»РёР±Рѕ 0, РµСЃР»Рё С‚Р°РєР°СЏ Р·Р°РїРёСЃСЊ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚               *
+'*  РџСЂРё РїРѕРёСЃРєРµ РїРѕ eMail, ID Р·Р°РґР°РµС‚ РЅРѕРјРµСЂ Р°РІС‚РѕСЂР° РІ Р‘Р”.     *
+'*  Р’ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ 0 РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ, РµСЃР»Рё Р°РґСЂРµСЃ РІ Р‘Р”  РґР»СЏ ID *
+'*  РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РёР»Рё РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ СѓРєР°Р·Р°РЅРЅРѕРіРѕ.             *
 '**********************************************************
 Public Function SearchDB(ByVal Mode As enSearchMode, ByVal tokenname As String, ByVal tokenlen As Long, Optional ByVal ID As Long = -6) As Long
 Dim i As Long
@@ -175,53 +175,53 @@ Dim UpperBound As Long
 Dim hAuthor As tAuthor
     On Error GoTo SearchDBErr
 
-'Запись в лог программы
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
 LogEvent ("[Authors.SearcheDB] routine started")
     SearchDB = 0
     If CheckFile(ucAuthorsDB) Then
         UpperBound = LastRecNum
         hFile = FreeFile
         Open (App.Path & DataPath & AuthorsFile) For Random As hFile Len = Len(hAuthor)
-        'Проверим один раз - сэкономим много времени!
+        'РџСЂРѕРІРµСЂРёРј РѕРґРёРЅ СЂР°Р· - СЃСЌРєРѕРЅРѕРјРёРј РјРЅРѕРіРѕ РІСЂРµРјРµРЅРё!
         Select Case Mode
-            Case ucSearchByName: 'Поиск по имени
+            Case ucSearchByName: 'РџРѕРёСЃРє РїРѕ РёРјРµРЅРё
                 For i = 1 To UpperBound
                     Get hFile, i, hAuthor
                     If hAuthor.NicknameLen = tokenlen Then
-                        'Сократим время сравнения. Будем сравнивать ники только в
-                        'том случае, если число символов в них одинаково.
+                        'РЎРѕРєСЂР°С‚РёРј РІСЂРµРјСЏ СЃСЂР°РІРЅРµРЅРёСЏ. Р‘СѓРґРµРј СЃСЂР°РІРЅРёРІР°С‚СЊ РЅРёРєРё С‚РѕР»СЊРєРѕ РІ
+                        'С‚РѕРј СЃР»СѓС‡Р°Рµ, РµСЃР»Рё С‡РёСЃР»Рѕ СЃРёРјРІРѕР»РѕРІ РІ РЅРёС… РѕРґРёРЅР°РєРѕРІРѕ.
                         If Left(hAuthor.Nickname, hAuthor.NicknameLen) = Left(tokenname, tokenlen) Then
                             SearchDB = i
                             i = UpperBound
                         End If
                     End If
                 Next i
-'Запись в лог программы
-LogEvent ("[Authors.SearcheDB] Поиск по имени, результат " + Str(SearchDB))
-            Case ucSearchByMail: 'Поиск по e-mail
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.SearcheDB] РџРѕРёСЃРє РїРѕ РёРјРµРЅРё, СЂРµР·СѓР»СЊС‚Р°С‚ " + Str(SearchDB))
+            Case ucSearchByMail: 'РџРѕРёСЃРє РїРѕ e-mail
                 If ID > 0 Then
-                    'Задан ID автора, что сильно облегчит проверку
+                    'Р—Р°РґР°РЅ ID Р°РІС‚РѕСЂР°, С‡С‚Рѕ СЃРёР»СЊРЅРѕ РѕР±Р»РµРіС‡РёС‚ РїСЂРѕРІРµСЂРєСѓ
                     If ID <= UpperBound Then
-                        'ID должен быть не больше числа зарегестрированных авторов
+                        'ID РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РЅРµ Р±РѕР»СЊС€Рµ С‡РёСЃР»Р° Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… Р°РІС‚РѕСЂРѕРІ
                         Get hFile, ID, hAuthor
                         If InStr(1, hAuthor.email, Left(tokenname, tokenlen), vbTextCompare) <> 0 Then
-                            'Есть такой адрес!
+                            'Р•СЃС‚СЊ С‚Р°РєРѕР№ Р°РґСЂРµСЃ!
                             SearchDB = ID
                         End If
                     End If
                 Else
-                    'Придется шарить по всей БД
+                    'РџСЂРёРґРµС‚СЃСЏ С€Р°СЂРёС‚СЊ РїРѕ РІСЃРµР№ Р‘Р”
                     For i = 1 To UpperBound
                         Get hFile, i, hAuthor
                         If InStr(1, hAuthor.email, Left(tokenname, tokenlen), vbTextCompare) <> 0 Then
-                            'Есть такой адрес!
+                            'Р•СЃС‚СЊ С‚Р°РєРѕР№ Р°РґСЂРµСЃ!
                             SearchDB = i
                             i = UpperBound
                         End If
                     Next i
                 End If
-'Запись в лог программы
-LogEvent ("[Authors.SearcheDB] Поиск по eMail, результат " + Str(SearchDB))
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.SearcheDB] РџРѕРёСЃРє РїРѕ eMail, СЂРµР·СѓР»СЊС‚Р°С‚ " + Str(SearchDB))
         End Select
         Close hFile
     End If
@@ -233,141 +233,141 @@ End Function
 
 'LOGIC APPROVED. INDEPENDENT VARIABLES.
 '************************************************************
-'* На основе БД по авторам записывает временный файл,       *
-'* отсортированный по определенному ключу                   *
+'* РќР° РѕСЃРЅРѕРІРµ Р‘Р” РїРѕ Р°РІС‚РѕСЂР°Рј Р·Р°РїРёСЃС‹РІР°РµС‚ РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»,       *
+'* РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РїРѕ РѕРїСЂРµРґРµР»РµРЅРЅРѕРјСѓ РєР»СЋС‡Сѓ                   *
 '************************************************************
 Public Function SortDB(ByVal Mode As enAuthorFiles) As Boolean
 Dim hFile1 As Long
 Dim i As Long, j As Long
 Dim BestPos As Long
 Dim TMPrec As tAuthor
-Dim strSample As String     'Для сортировки строк
-Dim lValue As Long          'Для сортировки числовых значений
+Dim strSample As String     'Р”Р»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё СЃС‚СЂРѕРє
+Dim lValue As Long          'Р”Р»СЏ СЃРѕСЂС‚РёСЂРѕРІРєРё С‡РёСЃР»РѕРІС‹С… Р·РЅР°С‡РµРЅРёР№
     On Error GoTo SortDBErr
     
-    'В случае некорректных значений Mode, SortDB возвратит False
+    'Р’ СЃР»СѓС‡Р°Рµ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹С… Р·РЅР°С‡РµРЅРёР№ Mode, SortDB РІРѕР·РІСЂР°С‚РёС‚ False
     SortDB = True
     If CheckFile(ucAuthorsDB) Then
-        'Копируем БД авторов во временный файл для последующей обработки
+        'РљРѕРїРёСЂСѓРµРј Р‘Р” Р°РІС‚РѕСЂРѕРІ РІРѕ РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РѕР±СЂР°Р±РѕС‚РєРё
 ''{FIXED} TO DO BUG file already open
         FileCopy (App.Path & DataPath & AuthorsFile), (App.Path & DataPath & TMPfile)
-        'Открываем временный файл
+        'РћС‚РєСЂС‹РІР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
         hFile1 = FreeFile
         Open (App.Path & DataPath & TMPfile) For Random As hFile1 Len = Len(hAuthor)
         Select Case Mode
             Case ucAuthorsNames:
                     strSample = strEmpty
-                    'Сортируем по убыванию (так проще)
-                    For i = 1 To LastRecNum 'Файлы пока идентичны, так что можно и так сделать
-                        BestPos = i         'Если не изменится, значит, переставлять не нужно
-                        Seek hFile1, i      'Указываем место, с какого надо читать файл
+                    'РЎРѕСЂС‚РёСЂСѓРµРј РїРѕ СѓР±С‹РІР°РЅРёСЋ (С‚Р°Рє РїСЂРѕС‰Рµ)
+                    For i = 1 To LastRecNum 'Р¤Р°Р№Р»С‹ РїРѕРєР° РёРґРµРЅС‚РёС‡РЅС‹, С‚Р°Рє С‡С‚Рѕ РјРѕР¶РЅРѕ Рё С‚Р°Рє СЃРґРµР»Р°С‚СЊ
+                        BestPos = i         'Р•СЃР»Рё РЅРµ РёР·РјРµРЅРёС‚СЃСЏ, Р·РЅР°С‡РёС‚, РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ РЅРµ РЅСѓР¶РЅРѕ
+                        Seek hFile1, i      'РЈРєР°Р·С‹РІР°РµРј РјРµСЃС‚Рѕ, СЃ РєР°РєРѕРіРѕ РЅР°РґРѕ С‡РёС‚Р°С‚СЊ С„Р°Р№Р»
                         For j = i To LastRecNum
-                            'Читаем очередную запись
+                            'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ
                             Get hFile1, , TMPrec
-                            'Сравниваем ники: если текущий ник ближе к концу алфавита...
+                            'РЎСЂР°РІРЅРёРІР°РµРј РЅРёРєРё: РµСЃР»Рё С‚РµРєСѓС‰РёР№ РЅРёРє Р±Р»РёР¶Рµ Рє РєРѕРЅС†Сѓ Р°Р»С„Р°РІРёС‚Р°...
                             If strSample < Left(TMPrec.Nickname, TMPrec.NicknameLen) Then
                                 strSample = Left(TMPrec.Nickname, TMPrec.NicknameLen)
-                                BestPos = Seek(hFile1) - 1 'Запомнить положение лучшей записи
+                                BestPos = Seek(hFile1) - 1 'Р—Р°РїРѕРјРЅРёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ Р»СѓС‡С€РµР№ Р·Р°РїРёСЃРё
                             End If
                         Next j
                         If Not (BestPos = i) Then
-                            Get hFile1, i, hAuthor          'Прочитать старую запись
-                            Get hFile1, BestPos, TMPrec     'Прочитать новую запись
+                            Get hFile1, i, hAuthor          'РџСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
+                            Get hFile1, BestPos, TMPrec     'РџСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, i
-                            Put hFile1, , TMPrec            'Записываем новую запись
+                            Put hFile1, , TMPrec            'Р—Р°РїРёСЃС‹РІР°РµРј РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, BestPos
-                            Put hFile1, , hAuthor           'Записываем старую запись
+                            Put hFile1, , hAuthor           'Р—Р°РїРёСЃС‹РІР°РµРј СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
                         End If
-                        strSample = strEmpty  'Обнуляем, чтобы корректно продолжать сравнения
+                        strSample = strEmpty  'РћР±РЅСѓР»СЏРµРј, С‡С‚РѕР±С‹ РєРѕСЂСЂРµРєС‚РЅРѕ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЃСЂР°РІРЅРµРЅРёСЏ
                     Next i
             Case ucAuthorsNums:
                     lValue = 0
-                    'Сортируем по убыванию (так проще)
-                    For i = 1 To LastRecNum 'Файлы пока идентичны, так что можно и так сделать
-                        BestPos = i         'Если не изменится, значит, переставлять не нужно
-                        Seek hFile1, i      'Указываем место, с какого надо читать файл
+                    'РЎРѕСЂС‚РёСЂСѓРµРј РїРѕ СѓР±С‹РІР°РЅРёСЋ (С‚Р°Рє РїСЂРѕС‰Рµ)
+                    For i = 1 To LastRecNum 'Р¤Р°Р№Р»С‹ РїРѕРєР° РёРґРµРЅС‚РёС‡РЅС‹, С‚Р°Рє С‡С‚Рѕ РјРѕР¶РЅРѕ Рё С‚Р°Рє СЃРґРµР»Р°С‚СЊ
+                        BestPos = i         'Р•СЃР»Рё РЅРµ РёР·РјРµРЅРёС‚СЃСЏ, Р·РЅР°С‡РёС‚, РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ РЅРµ РЅСѓР¶РЅРѕ
+                        Seek hFile1, i      'РЈРєР°Р·С‹РІР°РµРј РјРµСЃС‚Рѕ, СЃ РєР°РєРѕРіРѕ РЅР°РґРѕ С‡РёС‚Р°С‚СЊ С„Р°Р№Р»
                         For j = i To LastRecNum
-                            'Читаем очередную запись
+                            'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ
                             Get hFile1, , TMPrec
-                            'Сравниваем число постингов
+                            'РЎСЂР°РІРЅРёРІР°РµРј С‡РёСЃР»Рѕ РїРѕСЃС‚РёРЅРіРѕРІ
                             If lValue < TMPrec.TotalNums Then
                                 lValue = TMPrec.TotalNums
-                                BestPos = Seek(hFile1) - 1 'Запомнить положение лучшей записи
+                                BestPos = Seek(hFile1) - 1 'Р—Р°РїРѕРјРЅРёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ Р»СѓС‡С€РµР№ Р·Р°РїРёСЃРё
                             End If
                         Next j
                         If Not (BestPos = i) Then
-                            Get hFile1, i, hAuthor          'Прочитать старую запись
-                            Get hFile1, BestPos, TMPrec     'Прочитать новую запись
+                            Get hFile1, i, hAuthor          'РџСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
+                            Get hFile1, BestPos, TMPrec     'РџСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, i
-                            Put hFile1, , TMPrec            'Записываем новую запись
+                            Put hFile1, , TMPrec            'Р—Р°РїРёСЃС‹РІР°РµРј РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, BestPos
-                            Put hFile1, , hAuthor           'Записываем старую запись
+                            Put hFile1, , hAuthor           'Р—Р°РїРёСЃС‹РІР°РµРј СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
                         End If
-                        lValue = 0      'Обнуляем, чтобы корректно продолжать сравнения
+                        lValue = 0      'РћР±РЅСѓР»СЏРµРј, С‡С‚РѕР±С‹ РєРѕСЂСЂРµРєС‚РЅРѕ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЃСЂР°РІРЅРµРЅРёСЏ
                     Next i
             Case ucAuthorsSize:
                     lValue = 0
-                    'Сортируем по убыванию (так проще)
-                    For i = 1 To LastRecNum 'Файлы пока идентичны, так что можно и так сделать
-                        BestPos = i         'Если не изменится, значит, переставлять не нужно
-                        Seek hFile1, i      'Указываем место, с какого надо читать файл
+                    'РЎРѕСЂС‚РёСЂСѓРµРј РїРѕ СѓР±С‹РІР°РЅРёСЋ (С‚Р°Рє РїСЂРѕС‰Рµ)
+                    For i = 1 To LastRecNum 'Р¤Р°Р№Р»С‹ РїРѕРєР° РёРґРµРЅС‚РёС‡РЅС‹, С‚Р°Рє С‡С‚Рѕ РјРѕР¶РЅРѕ Рё С‚Р°Рє СЃРґРµР»Р°С‚СЊ
+                        BestPos = i         'Р•СЃР»Рё РЅРµ РёР·РјРµРЅРёС‚СЃСЏ, Р·РЅР°С‡РёС‚, РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ РЅРµ РЅСѓР¶РЅРѕ
+                        Seek hFile1, i      'РЈРєР°Р·С‹РІР°РµРј РјРµСЃС‚Рѕ, СЃ РєР°РєРѕРіРѕ РЅР°РґРѕ С‡РёС‚Р°С‚СЊ С„Р°Р№Р»
                         For j = i To LastRecNum
-                            'Читаем очередную запись
+                            'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ
                             Get hFile1, , TMPrec
-                            'Сравниваем размер постингов
+                            'РЎСЂР°РІРЅРёРІР°РµРј СЂР°Р·РјРµСЂ РїРѕСЃС‚РёРЅРіРѕРІ
                             If lValue < TMPrec.TotalSize Then
                                 lValue = TMPrec.TotalSize
-                                BestPos = Seek(hFile1) - 1 'Запомнить положение лучшей записи
+                                BestPos = Seek(hFile1) - 1 'Р—Р°РїРѕРјРЅРёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ Р»СѓС‡С€РµР№ Р·Р°РїРёСЃРё
                             End If
                         Next j
                         If Not (BestPos = i) Then
-                            Get hFile1, i, hAuthor          'Прочитать старую запись
-                            Get hFile1, BestPos, TMPrec     'Прочитать новую запись
+                            Get hFile1, i, hAuthor          'РџСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
+                            Get hFile1, BestPos, TMPrec     'РџСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, i
-                            Put hFile1, , TMPrec            'Записываем новую запись
+                            Put hFile1, , TMPrec            'Р—Р°РїРёСЃС‹РІР°РµРј РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                             Seek hFile1, BestPos
-                            Put hFile1, , hAuthor           'Записываем старую запись
+                            Put hFile1, , hAuthor           'Р—Р°РїРёСЃС‹РІР°РµРј СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
                         End If
-                        lValue = 0      'Обнуляем, чтобы корректно продолжать сравнения
+                        lValue = 0      'РћР±РЅСѓР»СЏРµРј, С‡С‚РѕР±С‹ РєРѕСЂСЂРµРєС‚РЅРѕ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЃСЂР°РІРЅРµРЅРёСЏ
                     Next i
             Case ucAuthorsTime:
-                'Сортировка по времени первого сообщения
+                'РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РІСЂРµРјРµРЅРё РїРµСЂРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
                 strSample = strEmpty
-                'Сортируем по убыванию (так проще)
-                'Авторы-ветераны конфы будут расположены в конце списка
-                For i = 1 To LastRecNum 'Файлы пока идентичны, так что можно и так сделать
-                    BestPos = i         'Если не изменится, значит, переставлять не нужно
-                    Seek hFile1, i      'Указываем место, с какого надо читать файл
+                'РЎРѕСЂС‚РёСЂСѓРµРј РїРѕ СѓР±С‹РІР°РЅРёСЋ (С‚Р°Рє РїСЂРѕС‰Рµ)
+                'РђРІС‚РѕСЂС‹-РІРµС‚РµСЂР°РЅС‹ РєРѕРЅС„С‹ Р±СѓРґСѓС‚ СЂР°СЃРїРѕР»РѕР¶РµРЅС‹ РІ РєРѕРЅС†Рµ СЃРїРёСЃРєР°
+                For i = 1 To LastRecNum 'Р¤Р°Р№Р»С‹ РїРѕРєР° РёРґРµРЅС‚РёС‡РЅС‹, С‚Р°Рє С‡С‚Рѕ РјРѕР¶РЅРѕ Рё С‚Р°Рє СЃРґРµР»Р°С‚СЊ
+                    BestPos = i         'Р•СЃР»Рё РЅРµ РёР·РјРµРЅРёС‚СЃСЏ, Р·РЅР°С‡РёС‚, РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ РЅРµ РЅСѓР¶РЅРѕ
+                    Seek hFile1, i      'РЈРєР°Р·С‹РІР°РµРј РјРµСЃС‚Рѕ, СЃ РєР°РєРѕРіРѕ РЅР°РґРѕ С‡РёС‚Р°С‚СЊ С„Р°Р№Р»
                     For j = i To LastRecNum
-                        'Читаем очередную запись
+                        'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ
                         Get hFile1, , TMPrec
-                        'Сравниваем даты
+                        'РЎСЂР°РІРЅРёРІР°РµРј РґР°С‚С‹
                         If strSample < Left(TMPrec.FirstDate, TMPrec.FirstDateLen) Then
                             strSample = Left(TMPrec.FirstDate, TMPrec.FirstDateLen)
-                            BestPos = Seek(hFile1) - 1 'Запомнить положение лучшей записи
+                            BestPos = Seek(hFile1) - 1 'Р—Р°РїРѕРјРЅРёС‚СЊ РїРѕР»РѕР¶РµРЅРёРµ Р»СѓС‡С€РµР№ Р·Р°РїРёСЃРё
                         End If
                     Next j
                     If Not (BestPos = i) Then
-                        Get hFile1, i, hAuthor          'Прочитать старую запись
-                        Get hFile1, BestPos, TMPrec     'Прочитать новую запись
+                        Get hFile1, i, hAuthor          'РџСЂРѕС‡РёС‚Р°С‚СЊ СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
+                        Get hFile1, BestPos, TMPrec     'РџСЂРѕС‡РёС‚Р°С‚СЊ РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                         Seek hFile1, i
-                        Put hFile1, , TMPrec            'Записываем новую запись
+                        Put hFile1, , TMPrec            'Р—Р°РїРёСЃС‹РІР°РµРј РЅРѕРІСѓСЋ Р·Р°РїРёСЃСЊ
                         Seek hFile1, BestPos
-                        Put hFile1, , hAuthor           'Записываем старую запись
+                        Put hFile1, , hAuthor           'Р—Р°РїРёСЃС‹РІР°РµРј СЃС‚Р°СЂСѓСЋ Р·Р°РїРёСЃСЊ
                     End If
-                    strSample = strEmpty  'Обнуляем, чтобы корректно продолжать сравнения
+                    strSample = strEmpty  'РћР±РЅСѓР»СЏРµРј, С‡С‚РѕР±С‹ РєРѕСЂСЂРµРєС‚РЅРѕ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЃСЂР°РІРЅРµРЅРёСЏ
                 Next i
             Case Else:
-                'Задан некорректный параметр
+                'Р—Р°РґР°РЅ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РїР°СЂР°РјРµС‚СЂ
                 SortDB = False
         End Select
-        'Закрываем файл
+        'Р—Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»
         Close hFile1
     Else
-        'БД по авторам не обнаружена
+        'Р‘Р” РїРѕ Р°РІС‚РѕСЂР°Рј РЅРµ РѕР±РЅР°СЂСѓР¶РµРЅР°
         SortDB = False
     End If
-    'Временный файл записан. Переводом его в HTML займется WriteAHTMLs
+    'Р’СЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» Р·Р°РїРёСЃР°РЅ. РџРµСЂРµРІРѕРґРѕРј РµРіРѕ РІ HTML Р·Р°Р№РјРµС‚СЃСЏ WriteAHTMLs
     Exit Function
     
 SortDBErr:
@@ -376,7 +376,7 @@ End Function
 
 'LOGIC APPROVED. INDEPENDENT VARIABLES.
 '************************************************************
-'*     Записывает HTML-файлы оглавления БД авторов          *
+'*     Р—Р°РїРёСЃС‹РІР°РµС‚ HTML-С„Р°Р№Р»С‹ РѕРіР»Р°РІР»РµРЅРёСЏ Р‘Р” Р°РІС‚РѕСЂРѕРІ          *
 '************************************************************
 Public Function WriteAHTMLs() As Boolean
 Dim i As Long, j As Long
@@ -384,47 +384,47 @@ Dim hFile1 As Long
 Dim hFile2 As Long
 Dim lTMPval As Long
     On Error GoTo WriteAHTMLsErr
-''TO DO ВНИМАНИЕ!!! Записывать только ПОСЛЕДНИЙ e-mail из нескольких возможных!!!
-    'Применим метод "от противного": если будет хоть одна ошибка, то тогда WriteAHTMLs = False
+''TO DO Р’РќРРњРђРќРР•!!! Р—Р°РїРёСЃС‹РІР°С‚СЊ С‚РѕР»СЊРєРѕ РџРћРЎР›Р•Р”РќРР™ e-mail РёР· РЅРµСЃРєРѕР»СЊРєРёС… РІРѕР·РјРѕР¶РЅС‹С…!!!
+    'РџСЂРёРјРµРЅРёРј РјРµС‚РѕРґ "РѕС‚ РїСЂРѕС‚РёРІРЅРѕРіРѕ": РµСЃР»Рё Р±СѓРґРµС‚ С…РѕС‚СЊ РѕРґРЅР° РѕС€РёР±РєР°, С‚Рѕ С‚РѕРіРґР° WriteAHTMLs = False
     WriteAHTMLs = True
     For i = 1 To 4
         If SortDB(i) Then
-            'Открываем временный файл
+            'РћС‚РєСЂС‹РІР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
             hFile2 = FreeFile
             Open (App.Path & DataPath & TMPfile) For Random As hFile2 Len = Len(hAuthor)
             Select Case i
-                Case 1: 'Сортировка по именам авторов
+                Case 1: 'РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РёРјРµРЅР°Рј Р°РІС‚РѕСЂРѕРІ
                     If CheckFile(ucAuthorsNames) Then
                         Kill App.Path & DataPath & ANamesPage
                     End If
-                    'Открываем HTML-файл
+                    'РћС‚РєСЂС‹РІР°РµРј HTML-С„Р°Р№Р»
                     hFile1 = FreeFile
                     Open (App.Path & DataPath & ANamesPage) For Output As hFile1
-                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - Авторы в алфавитном порядке</TITLE>"
-                Case 2: 'Сортировка по количеству сообщений
+                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - РђРІС‚РѕСЂС‹ РІ Р°Р»С„Р°РІРёС‚РЅРѕРј РїРѕСЂСЏРґРєРµ</TITLE>"
+                Case 2: 'РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ СЃРѕРѕР±С‰РµРЅРёР№
                     If CheckFile(ucAuthorsNums) Then
                         Kill App.Path & DataPath & ANumsPage
                     End If
-                    'Открываем HTML-файл
+                    'РћС‚РєСЂС‹РІР°РµРј HTML-С„Р°Р№Р»
                     hFile1 = FreeFile
                     Open (App.Path & DataPath & ANumsPage) For Output As hFile1
-                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - Авторы по количеству сообщений</TITLE>"
-                Case 3: 'Сортировка по размеру сообщений
+                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - РђРІС‚РѕСЂС‹ РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ СЃРѕРѕР±С‰РµРЅРёР№</TITLE>"
+                Case 3: 'РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СЂР°Р·РјРµСЂСѓ СЃРѕРѕР±С‰РµРЅРёР№
                     If CheckFile(ucAuthorsSize) Then
                         Kill App.Path & DataPath & ASizePage
                     End If
-                    'Открываем HTML-файл
+                    'РћС‚РєСЂС‹РІР°РµРј HTML-С„Р°Р№Р»
                     hFile1 = FreeFile
                     Open (App.Path & DataPath & ASizePage) For Output As hFile1
-                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - Авторы по суммарному размеру сообщений</TITLE>"
-                Case 4: 'Сортировка по времени первого сообщения
+                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - РђРІС‚РѕСЂС‹ РїРѕ СЃСѓРјРјР°СЂРЅРѕРјСѓ СЂР°Р·РјРµСЂСѓ СЃРѕРѕР±С‰РµРЅРёР№</TITLE>"
+                Case 4: 'РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РІСЂРµРјРµРЅРё РїРµСЂРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
                     If CheckFile(ucAuthorsTime) Then
                         Kill App.Path & DataPath & ATimePage
                     End If
-                    'Открываем HTML-файл
+                    'РћС‚РєСЂС‹РІР°РµРј HTML-С„Р°Р№Р»
                     hFile1 = FreeFile
                     Open (App.Path & DataPath & ATimePage) For Output As hFile1
-                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - Авторы по времени появления первого сообщения</TITLE>"
+                    Print #hFile1, "<HTML><HEAD><TITLE>EGCE - РђРІС‚РѕСЂС‹ РїРѕ РІСЂРµРјРµРЅРё РїРѕСЏРІР»РµРЅРёСЏ РїРµСЂРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ</TITLE>"
             End Select
             Print #hFile1, "<LINK HREF=""" & CSSFile & """ REL=stylesheet TYPE=""text/css"">"
             Print #hFile1, "<META HTTP-EQUIV=""Content-Type"" CONTENT=""text/html; CHARSET=Windows-1251"">"
@@ -440,22 +440,22 @@ Dim lTMPval As Long
             ''Print #hFile1, "}</STYLE></HEAD>"
             Print #hFile1, "</HEAD><BODY><CENTER>"
             Print #hFile1, "<TABLE style='text-align:justify' border=0 cellPadding=5 cellSpacing=1 width=""85%""><TBODY>"
-            ''Print #hFile1, "<TR><TD vAlign=center width=""40%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Автор</B></FONT></TD>"
-            ''Print #hFile1, "<TD vAlign=center width=""13%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Сообщений</B></FONT></TD>"
-            ''Print #hFile1, "<TD vAlign=center width=""15%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Размер, байт</B></FONT></TD>"
-            ''Print #hFile1, "<TD vAlign=center width=""32%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Дата регистрации (ГГГГ.ММ.ДД)</B></FONT></TD></TR>"
-            Print #hFile1, "<TR><TD vAlign=center width=""40%"" bgColor=#000090><span class=""Info"">Автор</span></TD>"
-            Print #hFile1, "<TD vAlign=center width=""13%"" bgColor=#000090><span class=""Info"">Сообщений</span></TD>"
-            Print #hFile1, "<TD vAlign=center width=""15%"" bgColor=#000090><span class=""Info"">Размер, байт</span></TD>"
-            Print #hFile1, "<TD vAlign=center width=""32%"" bgColor=#000090><span class=""Info"">Дата регистрации (ГГГГ.ММ.ДД)</span></TD></TR>"
-            'Запись собственно информации
-            'Список во временном файле записан в обратном порядке! Учитываем это.
+            ''Print #hFile1, "<TR><TD vAlign=center width=""40%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>РђРІС‚РѕСЂ</B></FONT></TD>"
+            ''Print #hFile1, "<TD vAlign=center width=""13%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>РЎРѕРѕР±С‰РµРЅРёР№</B></FONT></TD>"
+            ''Print #hFile1, "<TD vAlign=center width=""15%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Р Р°Р·РјРµСЂ, Р±Р°Р№С‚</B></FONT></TD>"
+            ''Print #hFile1, "<TD vAlign=center width=""32%"" bgColor=#000090><FONT color=#FFFFFF face=""Verdana, Arial, Helvetica, Geneva"" size=1><B>Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё (Р“Р“Р“Р“.РњРњ.Р”Р”)</B></FONT></TD></TR>"
+            Print #hFile1, "<TR><TD vAlign=center width=""40%"" bgColor=#000090><span class=""Info"">РђРІС‚РѕСЂ</span></TD>"
+            Print #hFile1, "<TD vAlign=center width=""13%"" bgColor=#000090><span class=""Info"">РЎРѕРѕР±С‰РµРЅРёР№</span></TD>"
+            Print #hFile1, "<TD vAlign=center width=""15%"" bgColor=#000090><span class=""Info"">Р Р°Р·РјРµСЂ, Р±Р°Р№С‚</span></TD>"
+            Print #hFile1, "<TD vAlign=center width=""32%"" bgColor=#000090><span class=""Info"">Р”Р°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё (Р“Р“Р“Р“.РњРњ.Р”Р”)</span></TD></TR>"
+            'Р—Р°РїРёСЃСЊ СЃРѕР±СЃС‚РІРµРЅРЅРѕ РёРЅС„РѕСЂРјР°С†РёРё
+            'РЎРїРёСЃРѕРє РІРѕ РІСЂРµРјРµРЅРЅРѕРј С„Р°Р№Р»Рµ Р·Р°РїРёСЃР°РЅ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ! РЈС‡РёС‚С‹РІР°РµРј СЌС‚Рѕ.
             lTMPval = LastRecNum
             Select Case i
                 Case 1:
                     For j = lTMPval To 1 Step -1
                         Get hFile2, j, hAuthor
-                        'TO DO Включить запись ссылки на e-Mail автора
+                        'TO DO Р’РєР»СЋС‡РёС‚СЊ Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-Mail Р°РІС‚РѕСЂР°
                         Print #hFile1, "<TR><TD><B>" & Left(hAuthor.Nickname, hAuthor.NicknameLen) & "</B></TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalNums) & "</TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalSize) & "</TD>"
@@ -464,7 +464,7 @@ Dim lTMPval As Long
                 Case 2:
                     For j = 1 To lTMPval
                         Get hFile2, j, hAuthor
-                        'TO DO Включить запись ссылки на e-Mail автора
+                        'TO DO Р’РєР»СЋС‡РёС‚СЊ Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-Mail Р°РІС‚РѕСЂР°
                         Print #hFile1, "<TR><TD><B>" & Left(hAuthor.Nickname, hAuthor.NicknameLen) & "</B></TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalNums) & "</TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalSize) & "</TD>"
@@ -473,7 +473,7 @@ Dim lTMPval As Long
                 Case 3:
                     For j = 1 To lTMPval
                         Get hFile2, j, hAuthor
-                        'TO DO Включить запись ссылки на e-Mail автора
+                        'TO DO Р’РєР»СЋС‡РёС‚СЊ Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-Mail Р°РІС‚РѕСЂР°
                         Print #hFile1, "<TR><TD><B>" & Left(hAuthor.Nickname, hAuthor.NicknameLen) & "</B></TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalNums) & "</TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalSize) & "</TD>"
@@ -482,7 +482,7 @@ Dim lTMPval As Long
                 Case 4:
                     For j = lTMPval To 1 Step -1
                         Get hFile2, j, hAuthor
-                        'TO DO Включить запись ссылки на e-Mail автора
+                        'TO DO Р’РєР»СЋС‡РёС‚СЊ Р·Р°РїРёСЃСЊ СЃСЃС‹Р»РєРё РЅР° e-Mail Р°РІС‚РѕСЂР°
                         Print #hFile1, "<TR><TD><B>" & Left(hAuthor.Nickname, hAuthor.NicknameLen) & "</B></TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalNums) & "</TD>"
                         Print #hFile1, "<TD align=right>" & Format(hAuthor.TotalSize) & "</TD>"
@@ -495,14 +495,14 @@ Dim lTMPval As Long
             'Add version information
             Print #hFile1, "Elite Games Conference Extractor (EGCE) v. " & App.Major & "." & App.Minor & "." & App.Revision & "<br>"
             Print #hFile1, "EGCE &copy Copyright 2001 <b>Rade</b><br>"
-            Print #hFile1, "Elite Games &copy 1999-2001 Сергей Петровичев a.k.a. Ranger"
+            Print #hFile1, "Elite Games &copy 1999-2001 РЎРµСЂРіРµР№ РџРµС‚СЂРѕРІРёС‡РµРІ a.k.a. Ranger"
             Print #hFile1, "</font>"
             Print #hFile1, "</CENTER></BODY></HTML>"
-            'Закрываем временный файл
+            'Р—Р°РєСЂС‹РІР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
             Close hFile2
-            'Закрываем текущий HTML-файл с сведениями об авторах
+            'Р—Р°РєСЂС‹РІР°РµРј С‚РµРєСѓС‰РёР№ HTML-С„Р°Р№Р» СЃ СЃРІРµРґРµРЅРёСЏРјРё РѕР± Р°РІС‚РѕСЂР°С…
             Close hFile1
-            'Стираем временный файл
+            'РЎС‚РёСЂР°РµРј РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
             Kill App.Path & DataPath & TMPfile
         Else
             WriteAHTMLs = False
@@ -515,39 +515,39 @@ WriteAHTMLsErr:
 End Function
 
 '**********************************************************
-'* Проверяет наличие записи в БД авторов. Если запись     *
-'* есть, то обновляет ее, если нет, то создает ее         *
-'*      PrimaryMode - запись ника в БД, если его там нет  *
-'*      HistoryMode - обновление журнала и подсчет        *
-'*                    статистики по авторам               *
+'* РџСЂРѕРІРµСЂСЏРµС‚ РЅР°Р»РёС‡РёРµ Р·Р°РїРёСЃРё РІ Р‘Р” Р°РІС‚РѕСЂРѕРІ. Р•СЃР»Рё Р·Р°РїРёСЃСЊ     *
+'* РµСЃС‚СЊ, С‚Рѕ РѕР±РЅРѕРІР»СЏРµС‚ РµРµ, РµСЃР»Рё РЅРµС‚, С‚Рѕ СЃРѕР·РґР°РµС‚ РµРµ         *
+'*      PrimaryMode - Р·Р°РїРёСЃСЊ РЅРёРєР° РІ Р‘Р”, РµСЃР»Рё РµРіРѕ С‚Р°Рј РЅРµС‚  *
+'*      HistoryMode - РѕР±РЅРѕРІР»РµРЅРёРµ Р¶СѓСЂРЅР°Р»Р° Рё РїРѕРґСЃС‡РµС‚        *
+'*                    СЃС‚Р°С‚РёСЃС‚РёРєРё РїРѕ Р°РІС‚РѕСЂР°Рј               *
 '**********************************************************
 Public Function UpdateDB(ByVal Mode As enFileMode) As Boolean
 Dim SearchRes As Long
-Dim HistoryLen As Long       'Количество записей в журнале
-Dim hHFile As Long  'Указатель на файл журнала
+Dim HistoryLen As Long       'РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р¶СѓСЂРЅР°Р»Рµ
+Dim hHFile As Long  'РЈРєР°Р·Р°С‚РµР»СЊ РЅР° С„Р°Р№Р» Р¶СѓСЂРЅР°Р»Р°
 Dim hFile As Long
 Dim i As Long
 Dim hAuthor As tAuthor
     On Error GoTo UpdateDBErr
 
     UpdateDB = False
-'Запись в лог программы
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
 LogEvent ("[Authors.UpdateDB] entering routine")
     Select Case Mode
-        Case ucPrimaryMode: 'Проверка существования ников в главной БД
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] режим ucPrimaryMode")
-        ''TO DO исправить: оставить только поиск и запись новых, убрать подсчет длин
-        ''и количеств сообщений, это будет сделано в HistoryMode
+        Case ucPrimaryMode: 'РџСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РЅРёРєРѕРІ РІ РіР»Р°РІРЅРѕР№ Р‘Р”
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] СЂРµР¶РёРј ucPrimaryMode")
+        ''TO DO РёСЃРїСЂР°РІРёС‚СЊ: РѕСЃС‚Р°РІРёС‚СЊ С‚РѕР»СЊРєРѕ РїРѕРёСЃРє Рё Р·Р°РїРёСЃСЊ РЅРѕРІС‹С…, СѓР±СЂР°С‚СЊ РїРѕРґСЃС‡РµС‚ РґР»РёРЅ
+        ''Рё РєРѕР»РёС‡РµСЃС‚РІ СЃРѕРѕР±С‰РµРЅРёР№, СЌС‚Рѕ Р±СѓРґРµС‚ СЃРґРµР»Р°РЅРѕ РІ HistoryMode
             SearchRes = SearchDB(ucSearchByName, Nickname, NicknameLen)
             If Not (SearchRes = 0) Then
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Автор " + Left(Nickname, NicknameLen) + " уже зарегестрирован под номером " + Str(SearchRes))
-                'Запись уже существует, обновляем ее!
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РђРІС‚РѕСЂ " + Left(Nickname, NicknameLen) + " СѓР¶Рµ Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅ РїРѕРґ РЅРѕРјРµСЂРѕРј " + Str(SearchRes))
+                'Р—Р°РїРёСЃСЊ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РѕР±РЅРѕРІР»СЏРµРј РµРµ!
                 hFile = FreeFile
                 Open (App.Path & DataPath & AuthorsFile) For Random As hFile Len = Len(hAuthor)
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Файл авторов открыт")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р¤Р°Р№Р» Р°РІС‚РѕСЂРѕРІ РѕС‚РєСЂС‹С‚")
                 Get hFile, SearchRes, hAuthor
                                             'DEBUG routine
                                             If Left(hAuthor.Nickname, hAuthor.NicknameLen) = Nickname Then
@@ -556,24 +556,24 @@ LogEvent ("[Authors.UpdateDB] Файл авторов открыт")
                                                 Debug.Print "UpdateBD method -> ATTENTION!!! Nickname check failed!"
                                             End If
                                             'End of the DEBUG routine
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] eMail автора " + hAuthor.email)
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Было  постингов\размер " + Str(hAuthor.TotalNums) + " \ " + Str(hAuthor.TotalSize))
-                'Заполняем поля записи
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] eMail Р°РІС‚РѕСЂР° " + hAuthor.email)
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р‘С‹Р»Рѕ  РїРѕСЃС‚РёРЅРіРѕРІ\СЂР°Р·РјРµСЂ " + Str(hAuthor.TotalNums) + " \ " + Str(hAuthor.TotalSize))
+                'Р—Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ Р·Р°РїРёСЃРё
                 With hAuthor
                     .TotalSize = .TotalSize + TotalSize
                     .TotalNums = .TotalNums + TotalNums
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Стало постингов\размер " + Str(.TotalNums) + " \ " + Str(.TotalSize))
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РЎС‚Р°Р»Рѕ РїРѕСЃС‚РёРЅРіРѕРІ\СЂР°Р·РјРµСЂ " + Str(.TotalNums) + " \ " + Str(.TotalSize))
                                                 Debug.Print "UpdateDB method -> "; Nickname; " TotSize="; .TotalSize; "TotNum="; .TotalNums
                     If emailLen > 0 Then
-                    'e-mail указан - проверяем его наличие в БД
+                    'e-mail СѓРєР°Р·Р°РЅ - РїСЂРѕРІРµСЂСЏРµРј РµРіРѕ РЅР°Р»РёС‡РёРµ РІ Р‘Р”
                         If InStr(1, hAuthor.email, Left(email, emailLen), vbTextCompare) = 0 Then
                         ''If SearchDB(ucSearchByMail, email, emailLen, SearchRes) = 0 Then
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Поиск по eMail " + Left(email, emailLen) + " результатов не дал, добавляем адрес")
-                        ''Если поиск по e-mail =0, то добавляем адрес, иначе адрес уже есть
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РџРѕРёСЃРє РїРѕ eMail " + Left(email, emailLen) + " СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РЅРµ РґР°Р», РґРѕР±Р°РІР»СЏРµРј Р°РґСЂРµСЃ")
+                        ''Р•СЃР»Рё РїРѕРёСЃРє РїРѕ e-mail =0, С‚Рѕ РґРѕР±Р°РІР»СЏРµРј Р°РґСЂРµСЃ, РёРЅР°С‡Рµ Р°РґСЂРµСЃ СѓР¶Рµ РµСЃС‚СЊ
                             If .emailLen = 0 Then
                                 .email = Left(email, emailLen)
                                 .emailLen = emailLen
@@ -583,24 +583,24 @@ LogEvent ("[Authors.UpdateDB] Поиск по eMail " + Left(email, emailLen) + " резул
                             End If
                         End If
                     Else
-                        'Очистим поля (если надо)
+                        'РћС‡РёСЃС‚РёРј РїРѕР»СЏ (РµСЃР»Рё РЅР°РґРѕ)
                         If Not .emailLen > 0 Then
                             .emailLen = 0
                             .email = strEmpty
                         End If
                     End If
-                    'Обновим поле eMail для cAuthor, чтобы программа могла сразу же
-                    'обновить свои переменные для отражения текущей картины в HTML
-                    'Для этого проведем обратное присваивание
+                    'РћР±РЅРѕРІРёРј РїРѕР»Рµ eMail РґР»СЏ cAuthor, С‡С‚РѕР±С‹ РїСЂРѕРіСЂР°РјРјР° РјРѕРіР»Р° СЃСЂР°Р·Сѓ Р¶Рµ
+                    'РѕР±РЅРѕРІРёС‚СЊ СЃРІРѕРё РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РѕС‚СЂР°Р¶РµРЅРёСЏ С‚РµРєСѓС‰РµР№ РєР°СЂС‚РёРЅС‹ РІ HTML
+                    'Р”Р»СЏ СЌС‚РѕРіРѕ РїСЂРѕРІРµРґРµРј РѕР±СЂР°С‚РЅРѕРµ РїСЂРёСЃРІР°РёРІР°РЅРёРµ
                     emailLen = .emailLen
                     email = Left(.email, emailLen)
-                    'Проверяем, а не является ли эта запись более ранней?
-                    'Формат времени YYYY.MM.DD (HH:MM:SS)
+                    'РџСЂРѕРІРµСЂСЏРµРј, Р° РЅРµ СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЌС‚Р° Р·Р°РїРёСЃСЊ Р±РѕР»РµРµ СЂР°РЅРЅРµР№?
+                    'Р¤РѕСЂРјР°С‚ РІСЂРµРјРµРЅРё YYYY.MM.DD (HH:MM:SS)
                     If Not (FirstDateLen <= 0) Then
                         If Left(.FirstDate, .FirstDateLen) > Left(FirstDate, FirstDateLen) Then
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Обновление даты регистрации")
-                            'Откопали что-то постарее - обновим поля
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РћР±РЅРѕРІР»РµРЅРёРµ РґР°С‚С‹ СЂРµРіРёСЃС‚СЂР°С†РёРё")
+                            'РћС‚РєРѕРїР°Р»Рё С‡С‚Рѕ-С‚Рѕ РїРѕСЃС‚Р°СЂРµРµ - РѕР±РЅРѕРІРёРј РїРѕР»СЏ
                             .FirstDate = Left(FirstDate, FirstDateLen)
                             .FirstDateLen = FirstDateLen
                         End If
@@ -608,30 +608,30 @@ LogEvent ("[Authors.UpdateDB] Обновление даты регистрации")
                 End With
 ''{FIXED} TO DO BUG Bad record number
                 Put hFile, SearchRes, hAuthor
-                'Не будем экономить копейки, закроем файл сразу же после записи
+                'РќРµ Р±СѓРґРµРј СЌРєРѕРЅРѕРјРёС‚СЊ РєРѕРїРµР№РєРё, Р·Р°РєСЂРѕРµРј С„Р°Р№Р» СЃСЂР°Р·Сѓ Р¶Рµ РїРѕСЃР»Рµ Р·Р°РїРёСЃРё
                 Close hFile
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Файл авторов закрыт")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р¤Р°Р№Р» Р°РІС‚РѕСЂРѕРІ Р·Р°РєСЂС‹С‚")
                 UpdateDB = True
             Else
-                'Новая запись!
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Новый автор - " + Left(Nickname, NicknameLen))
+                'РќРѕРІР°СЏ Р·Р°РїРёСЃСЊ!
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РќРѕРІС‹Р№ Р°РІС‚РѕСЂ - " + Left(Nickname, NicknameLen))
                                                 Debug.Print "UpdateDB method -> new Nickname"
                 SearchRes = LastRecNum + 1
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Регистрация нового автора с ID " + Str(SearchRes))
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРѕРІРѕРіРѕ Р°РІС‚РѕСЂР° СЃ ID " + Str(SearchRes))
                 hFile = FreeFile
                 Open (App.Path & DataPath & AuthorsFile) For Random As hFile Len = Len(hAuthor)
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Файл авторов открыт")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р¤Р°Р№Р» Р°РІС‚РѕСЂРѕРІ РѕС‚РєСЂС‹С‚")
                 With hAuthor
                     .NicknameLen = NicknameLen
                     .Nickname = Left(Nickname, NicknameLen)
                     .TotalSize = TotalSize
                     .TotalNums = TotalNums
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Постингов\размер " + Str(.TotalNums) + " \ " + Str(.TotalSize))
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] РџРѕСЃС‚РёРЅРіРѕРІ\СЂР°Р·РјРµСЂ " + Str(.TotalNums) + " \ " + Str(.TotalSize))
                     If emailLen = 0 Then
                         .email = strEmpty
                         .emailLen = 0
@@ -644,44 +644,44 @@ LogEvent ("[Authors.UpdateDB] Постингов\размер " + Str(.TotalNums) + " \ " + Str
                         .FirstDate = Left(FirstDate, FirstDateLen)
                     End If
                 End With
-''TO DO BUG bad record length? С какой стати?
+''TO DO BUG bad record length? РЎ РєР°РєРѕР№ СЃС‚Р°С‚Рё?
                 Put hFile, SearchRes, hAuthor
-                'Не будем экономить копейки, закроем файл сразу же после записи
+                'РќРµ Р±СѓРґРµРј СЌРєРѕРЅРѕРјРёС‚СЊ РєРѕРїРµР№РєРё, Р·Р°РєСЂРѕРµРј С„Р°Р№Р» СЃСЂР°Р·Сѓ Р¶Рµ РїРѕСЃР»Рµ Р·Р°РїРёСЃРё
                 Close hFile
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Файл авторов закрыт")
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р¤Р°Р№Р» Р°РІС‚РѕСЂРѕРІ Р·Р°РєСЂС‹С‚")
                 UpdateDB = True
             End If
-        Case ucHistoryMode: 'Сбор статистики и обновление главной БД
-            Dim lElements() As Long     'Указатель на записи в файле авторов
+        Case ucHistoryMode: 'РЎР±РѕСЂ СЃС‚Р°С‚РёСЃС‚РёРєРё Рё РѕР±РЅРѕРІР»РµРЅРёРµ РіР»Р°РІРЅРѕР№ Р‘Р”
+            Dim lElements() As Long     'РЈРєР°Р·Р°С‚РµР»СЊ РЅР° Р·Р°РїРёСЃРё РІ С„Р°Р№Р»Рµ Р°РІС‚РѕСЂРѕРІ
                         
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Режим ucHistoryMode")
-            '(ID,0) - Число сообщений
-            '(ID,1) - Размер сообщений
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Всего авторов в БД " + Str(LastRecNum))
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р РµР¶РёРј ucHistoryMode")
+            '(ID,0) - Р§РёСЃР»Рѕ СЃРѕРѕР±С‰РµРЅРёР№
+            '(ID,1) - Р Р°Р·РјРµСЂ СЃРѕРѕР±С‰РµРЅРёР№
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р’СЃРµРіРѕ Р°РІС‚РѕСЂРѕРІ РІ Р‘Р” " + Str(LastRecNum))
             ReDim lElements(LastRecNum, 1)
-'Запись в лог программы
-LogEvent ("[Authors.UpdateDB] Рестарт статистикии БД авторов")
-            'Стираем в БД авторов статистику
+'Р—Р°РїРёСЃСЊ РІ Р»РѕРі РїСЂРѕРіСЂР°РјРјС‹
+LogEvent ("[Authors.UpdateDB] Р РµСЃС‚Р°СЂС‚ СЃС‚Р°С‚РёСЃС‚РёРєРёРё Р‘Р” Р°РІС‚РѕСЂРѕРІ")
+            'РЎС‚РёСЂР°РµРј РІ Р‘Р” Р°РІС‚РѕСЂРѕРІ СЃС‚Р°С‚РёСЃС‚РёРєСѓ
             RestartDB (ucClearMathOnly)
-            'Открываем журнал
+            'РћС‚РєСЂС‹РІР°РµРј Р¶СѓСЂРЅР°Р»
             hHFile = FreeFile
             Open (App.Path & DataPath & HistoryFile) For Random As hHFile Len = Len(hHistory)
-''''''''''            'Открываем БД авторов
+''''''''''            'РћС‚РєСЂС‹РІР°РµРј Р‘Р” Р°РІС‚РѕСЂРѕРІ
 ''''''''''            hFile = FreeFile
 ''''''''''            Open (App.Path & DataPath & AuthorsFile) For Random As hFile Len = Len(hAuthor)
-            'Определяем количество записей в журнале
+            'РћРїСЂРµРґРµР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р¶СѓСЂРЅР°Р»Рµ
             HistoryLen = LOF(hHFile) \ Len(hHistory)
-            If HistoryLen > 0 Then   'Журнал существует
+            If HistoryLen > 0 Then   'Р–СѓСЂРЅР°Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚
                 For i = 1 To HistoryLen
-                    'Читаем очередную запись в журнале
+                    'Р§РёС‚Р°РµРј РѕС‡РµСЂРµРґРЅСѓСЋ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»Рµ
                     Get hHFile, i, hHistory
                     If hHistory.AuthorID > 0 Then
                         lElements(hHistory.AuthorID, 0) = lElements(hHistory.AuthorID, 0) + 1
                         lElements(hHistory.AuthorID, 1) = lElements(hHistory.AuthorID, 1) + hHistory.MsgSize
-''''''''''                        'Читаем соответствующую ей запись в БД авторов
+''''''''''                        'Р§РёС‚Р°РµРј СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РµР№ Р·Р°РїРёСЃСЊ РІ Р‘Р” Р°РІС‚РѕСЂРѕРІ
 ''''''''''                        Get hFile, hHistory.AuthorID, hAuthor
 ''''''''''                        hAuthor.TotalNums = hAuthor.TotalNums + 1
 ''''''''''                        hAuthor.TotalSize = hAuthor.TotalSize + hHistory.MsgSize
@@ -699,7 +699,7 @@ LogEvent ("[Authors.UpdateDB] Рестарт статистикии БД авторов")
                         Put hFile, i, hAuthor
             Next i
             Close hFile
-            ReDim lElements(0, 0) 'Возвращаем память системе
+            ReDim lElements(0, 0) 'Р’РѕР·РІСЂР°С‰Р°РµРј РїР°РјСЏС‚СЊ СЃРёСЃС‚РµРјРµ
             UpdateDB = True
     End Select
     Exit Function
@@ -709,15 +709,15 @@ UpdateDBErr:
 End Function
 
 '************************************************************
-'*         Проверить существование файла                    *
-'*  ucAuthorsDB:    БД по авторам                           *
-'*  ucAuthorsNames: HTML-страница с авторами в алфавитном   *
-'*                  порядке                                 *
-'*  ucAuthorsNums:  HTML-страница с авторами по количеству  *
-'*                  сообщений                               *
-'*  ucAuthorsSize:  HTML-страница с авторами по размеру     *
-'*                  сообщений                               *
-'*  ucHistoryDB:    журнал закачанных сообщений             *
+'*         РџСЂРѕРІРµСЂРёС‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ С„Р°Р№Р»Р°                    *
+'*  ucAuthorsDB:    Р‘Р” РїРѕ Р°РІС‚РѕСЂР°Рј                           *
+'*  ucAuthorsNames: HTML-СЃС‚СЂР°РЅРёС†Р° СЃ Р°РІС‚РѕСЂР°РјРё РІ Р°Р»С„Р°РІРёС‚РЅРѕРј   *
+'*                  РїРѕСЂСЏРґРєРµ                                 *
+'*  ucAuthorsNums:  HTML-СЃС‚СЂР°РЅРёС†Р° СЃ Р°РІС‚РѕСЂР°РјРё РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ  *
+'*                  СЃРѕРѕР±С‰РµРЅРёР№                               *
+'*  ucAuthorsSize:  HTML-СЃС‚СЂР°РЅРёС†Р° СЃ Р°РІС‚РѕСЂР°РјРё РїРѕ СЂР°Р·РјРµСЂСѓ     *
+'*                  СЃРѕРѕР±С‰РµРЅРёР№                               *
+'*  ucHistoryDB:    Р¶СѓСЂРЅР°Р» Р·Р°РєР°С‡Р°РЅРЅС‹С… СЃРѕРѕР±С‰РµРЅРёР№             *
 '************************************************************
 Private Function CheckFile(ByVal Mode As enAuthorFiles) As Boolean
     On Error GoTo CheckFileErr
@@ -727,7 +727,7 @@ Private Function CheckFile(ByVal Mode As enAuthorFiles) As Boolean
         Case ucAuthorsDB:
             CheckFile = IIf(Dir(App.Path & DataPath & AuthorsFile, vbNormal) <> "", True, False)
             ''If (Dir(App.Path & DataPath & AuthorsFile, vbNormal) <> "") Then
-            ''    'OK, файл существует
+            ''    'OK, С„Р°Р№Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚
             ''    CheckFile = True
             ''End If
         Case ucAuthorsNames:
@@ -747,10 +747,10 @@ CheckFileErr:
 End Function
 
 '***********************************************************
-'* Рестарт БД: стирает всю информацию, кроме имен и e-mail *
-'* Функция обслуживания БД, в основном, нужна при отладке, *
-'* но никто не мешает включить ее в поздних версиях        *
-'* Возвращает FALSE, если БД нет или она пуста             *
+'* Р РµСЃС‚Р°СЂС‚ Р‘Р”: СЃС‚РёСЂР°РµС‚ РІСЃСЋ РёРЅС„РѕСЂРјР°С†РёСЋ, РєСЂРѕРјРµ РёРјРµРЅ Рё e-mail *
+'* Р¤СѓРЅРєС†РёСЏ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ Р‘Р”, РІ РѕСЃРЅРѕРІРЅРѕРј, РЅСѓР¶РЅР° РїСЂРё РѕС‚Р»Р°РґРєРµ, *
+'* РЅРѕ РЅРёРєС‚Рѕ РЅРµ РјРµС€Р°РµС‚ РІРєР»СЋС‡РёС‚СЊ РµРµ РІ РїРѕР·РґРЅРёС… РІРµСЂСЃРёСЏС…        *
+'* Р’РѕР·РІСЂР°С‰Р°РµС‚ FALSE, РµСЃР»Рё Р‘Р” РЅРµС‚ РёР»Рё РѕРЅР° РїСѓСЃС‚Р°             *
 '***********************************************************
 Public Function RestartDB(ByVal Mode As enRestartADB) As Boolean
 Dim hFileAtmp As Long
@@ -762,43 +762,43 @@ Dim i As Long
     RestartDB = False
     Select Case Mode
         Case ucClearAll:
-            frmBrowser.Label14.Caption = "рестарт базы данных авторов - полное удаление информации"
+            frmBrowser.Label14.Caption = "СЂРµСЃС‚Р°СЂС‚ Р±Р°Р·С‹ РґР°РЅРЅС‹С… Р°РІС‚РѕСЂРѕРІ - РїРѕР»РЅРѕРµ СѓРґР°Р»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё"
             frmBrowser.Label14.Refresh
             If CheckFile(ucAuthorsDB) Then
                 Kill (App.Path & DataPath & AuthorsFile)
             End If
         Case ucClearMathOnly:
-            frmBrowser.Label14.Caption = "рестарт базы данных авторов - удаление статистической информации"
+            frmBrowser.Label14.Caption = "СЂРµСЃС‚Р°СЂС‚ Р±Р°Р·С‹ РґР°РЅРЅС‹С… Р°РІС‚РѕСЂРѕРІ - СѓРґР°Р»РµРЅРёРµ СЃС‚Р°С‚РёСЃС‚РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРё"
             frmBrowser.Label14.Refresh
             If CheckFile(ucAuthorsDB) Then
-                'Определяем количество записей БД
+                'РћРїСЂРµРґРµР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ Р‘Р”
                 UpperBound = LastRecNum
                 hFileA = FreeFile
                 Open (App.Path & DataPath & AuthorsFile) For Random As hFileA Len = Len(hAuthor)
-                'Если временный файл существует, стереть его
+                'Р•СЃР»Рё РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, СЃС‚РµСЂРµС‚СЊ РµРіРѕ
                 If (Dir(App.Path & DataPath & TMPfile, vbNormal) <> "") Then
-                    'файл существует, стираем
+                    'С„Р°Р№Р» СЃСѓС‰РµСЃС‚РІСѓРµС‚, СЃС‚РёСЂР°РµРј
                     Kill (App.Path & DataPath & TMPfile)
                 End If
-                'Временный файл
+                'Р’СЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
                 hFileAtmp = FreeFile
                 Open (App.Path & DataPath & TMPfile) For Random As hFileAtmp Len = Len(hAuthor)
                 For i = 1 To UpperBound
-                    'Читаем запись
+                    'Р§РёС‚Р°РµРј Р·Р°РїРёСЃСЊ
                     Get hFileA, , hAuthor
-                    'Очищаем лишнее
+                    'РћС‡РёС‰Р°РµРј Р»РёС€РЅРµРµ
                     hAuthor.TotalSize = 0
                     hAuthor.TotalNums = 0
-                    'Пишем во временный файл
+                    'РџРёС€РµРј РІРѕ РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
                     Put hFileAtmp, i, hAuthor
                 Next i
-                'Закрываем файлы (именно в этой последовательности, иначе ОШИБКА!!!)
+                'Р—Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»С‹ (РёРјРµРЅРЅРѕ РІ СЌС‚РѕР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё, РёРЅР°С‡Рµ РћРЁРР‘РљРђ!!!)
                 Close hFileA
                 Close hFileAtmp
-                'Стираем старый
+                'РЎС‚РёСЂР°РµРј СЃС‚Р°СЂС‹Р№
 ''{FIXED}TO DO BUG FILE ALREADY OPEN
                 Kill (App.Path & DataPath & AuthorsFile)
-                'Переименовываем
+                'РџРµСЂРµРёРјРµРЅРѕРІС‹РІР°РµРј
 ''{FIXED} FILE NOT FOUND
                 Name (App.Path & DataPath & TMPfile) As (App.Path & DataPath & AuthorsFile)
                 RestartDB = True
